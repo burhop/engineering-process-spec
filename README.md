@@ -38,3 +38,9 @@ be added as their semantics become clear.
 Use issues for questions and proposals, and pull requests for specification
 changes. Keep implementation code in Wright for now. Licensing and external
 contribution terms will be decided before inviting outside adoption.
+
+## Project direction and research
+
+- [Vision and agreed boundaries](VISION.md)
+- [Research brief](RESEARCH.md)
+- [Agent instructions](AGENTS.md)
