@@ -1,0 +1,5749 @@
+{
+  "format": "epx-conformance-report",
+  "version": "0.1.0-draft.1",
+  "suite": "epx-core-black-box",
+  "profile": "urn:engineering-process-spec:core:0.1.0-draft.1",
+  "startedAt": "2026-09-08T00:04:02.408046+00:00",
+  "command": [
+    "/usr/local/bin/python",
+    "/workspace/tests/conformance/run_core.py",
+    "--out",
+    ".work/conformance-final-overflow-20260907",
+    "--jobs",
+    "4"
+  ],
+  "platform": {
+    "system": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+    "python": "3.12.14 (main, Sep  1 2026, 00:10:07) [GCC 14.2.0]",
+    "clientPlatform": "linux"
+  },
+  "containerImage": "sha256:bc34601c3182659df5949c8ed8339bd0d44d2a6a8195a5f43e27d45bbd83a7fd",
+  "dependencies": {
+    "engineering-process-kit": "0.1.0.dev1",
+    "cwltool": "3.2.20260720092025",
+    "streamflow": "0.2.0rc2",
+    "jsonschema": "4.26.0",
+    "cwl-utils": "0.41",
+    "schema-salad": "8.10.20260825112551"
+  },
+  "node": {
+    "command": [
+      "/usr/local/bin/node",
+      "--version"
+    ],
+    "exitCode": 0,
+    "stdout": "v24.13.1",
+    "stderr": ""
+  },
+  "repository": {
+    "command": [
+      "git",
+      "-c",
+      "safe.directory=/workspace",
+      "rev-parse",
+      "HEAD"
+    ],
+    "exitCode": null,
+    "reason": "[Errno 2] No such file or directory: 'git'"
+  },
+  "sourceSnapshotBefore": {
+    "applications/node/base.mjs": "4f4af73ece8ccbc57ae1c88a32d0f0ce6866db13d99fce118b04ad845bcff2b8",
+    "applications/node/cli.mjs": "4a84abcced81960116645265a64ba8835cde0e7b435428b474a9d9fe91458189",
+    "applications/node/index.mjs": "819c9e7121208cb3787d77bf20c0ffb04ca95b082a46ff3c83e1bc68646bda3e",
+    "applications/node/mcp-call.mjs": "895d0230e3972344e4529105156ceabd6d5a08215d7969521d8a8f1851215041",
+    "applications/node/mcp.mjs": "334b91ced3b6414a77bc47360446467a1d758fc75d1a416ee13ca6f01e7bc7a3",
+    "applications/node/package-lock.json": "91a88db3278c213512086b69bb3a38e16dd5acdde915bac2efa798aec64a7f73",
+    "applications/node/package.json": "5863b56af2037e000ab05a912843a6c2ee9c62b0fbc2e67b70b47edb1656b076",
+    "applications/node/package.mjs": "224696bd1c36d123ea14a3dfb15b3a7e94890f9b8ee682f6125bc56dcb5be994",
+    "applications/node/replacement.mjs": "b9aecab644819c5649b802534a38ae4b1a479f19aa382f97dcaaddd3dd9588c2",
+    "applications/node/smoke.mjs": "7120b84f2dafd5eca0be6f389b96646fe4a5328da9ff2223563e8f66c0061a66",
+    "conformance/cases.json": "43c9e90987b97d4c2b884234735b324ae36aa14e610734f7d471e0bac4a80231",
+    "examples/calculation/contracts/engineering.mass.tool.json": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+    "examples/calculation/contracts/engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+    "examples/calculation/expected.json": "eb5a56fecd742f96d1f3a1554295cd164a56656bfceb38c8ed7562316d347928",
+    "examples/calculation/inputs/job.json": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+    "examples/calculation/requirements.json": "a7614aa828c1c91f2825387e3361a14f52f418fdf55f50477482abadfe41701c",
+    "examples/calculation/ro-crate-metadata.json": "05fa616c1a00e302eb2fdce99d7563393e45b5cdf414a138f3a2417aac93cec6",
+    "examples/calculation/workflow.cwl.json": "49e2df2773de2286d1cfdb8f21509a60144d72408d9d324e728c32df2bd8f785",
+    "examples/calculation-replacement/contracts/engineering.mass.tool.json": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+    "examples/calculation-replacement/contracts/engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+    "examples/calculation-replacement/expected.json": "eb5a56fecd742f96d1f3a1554295cd164a56656bfceb38c8ed7562316d347928",
+    "examples/calculation-replacement/inputs/job.json": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+    "examples/calculation-replacement/provenance/replaced-requirements.json": "a7614aa828c1c91f2825387e3361a14f52f418fdf55f50477482abadfe41701c",
+    "examples/calculation-replacement/requirements.json": "2571cd108afc62e95b8077f7058cf7b785746f6cb3b4b94ba8dadb409a471a6f",
+    "examples/calculation-replacement/ro-crate-metadata.json": "eaacd88ae9e021de1345677de9ce39b1613ead4d292cfcfaf42117878b9d5391",
+    "examples/calculation-replacement/workflow.cwl.json": "49e2df2773de2286d1cfdb8f21509a60144d72408d9d324e728c32df2bd8f785",
+    "examples/inspection-approval/contracts/engineering.mass.tool.json": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+    "examples/inspection-approval/contracts/engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+    "examples/inspection-approval/expected.json": "dc2a7ec6758994af1c55b4a6a0f05d2c8c1b24d19db38e97aaf1349faea54162",
+    "examples/inspection-approval/inputs/job.json": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+    "examples/inspection-approval/requirements.json": "e0210945f5a6588a9584c38dbc6b8b1ae258f0bf9be1dc52b5644d10aeb121d2",
+    "examples/inspection-approval/ro-crate-metadata.json": "a50b8926473b4401b70e3c37efcaa970890162b709e71ddd487d9b1398f9a6c4",
+    "examples/inspection-approval/workflow.cwl.json": "49e2df2773de2286d1cfdb8f21509a60144d72408d9d324e728c32df2bd8f785",
+    "examples/minimal/contracts/engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+    "examples/minimal/expected.json": "02736936cb086cc111b06b53d55d06281c96b1a8d3aae70f3e8d9e3ad3496363",
+    "examples/minimal/inputs/job.json": "3de2fd209761c9c20d7f505a2e4a39acf90e3217ba6bc78a66c5f30b0e180429",
+    "examples/minimal/requirements.json": "6dc0beb968bd328f38711cd49874aab7d50778da39226e987c3ac05a0c11f034",
+    "examples/minimal/ro-crate-metadata.json": "19587c30c77faf21a6cd72909dba18ff83d989732f1117256e3bbdf5c33292a6",
+    "examples/minimal/workflow.cwl.json": "5399a1463d42ed1753010188644f998c964235aec6481abec5abf51a3149f616",
+    "examples/mock-handoff/contracts/engineering.mass.tool.json": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+    "examples/mock-handoff/contracts/engineering.record.tool.json": "53a014825a124a0956f7df871a29e67cb014e454b4d87ca456844e936b72f2d4",
+    "examples/mock-handoff/contracts/engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+    "examples/mock-handoff/expected.json": "77cdd17b4665e183f5549e4d7178eac7337ead922a5d20ed676fd5e76da7524d",
+    "examples/mock-handoff/inputs/job.json": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+    "examples/mock-handoff/requirements.json": "d53a3b3765ac4fc262ed72486849f22506095379d97c3ae2a84d6df26fd8eaad",
+    "examples/mock-handoff/ro-crate-metadata.json": "095fb6f827eaaf9ca1cd1221b158c28e17c01116886f22a96ca0ac598b69c7f2",
+    "examples/mock-handoff/workflow.cwl.json": "1bca579e69a98be43a0ef1a6065e8576fa6d1c43be157b42a36ab3446b17863b",
+    "examples/solid-edge-capture/capture-required.json": "56b9c247feb8d81166f2afdd91f10184dbf3b3395885ee8139f0949ce988f7d6",
+    "schemas/bindings.schema.json": "b4ff9a27e7f83bbc95ef68a8b6fba90f8c9841bc5dcebc58a43ddaf3ea2b3e2b",
+    "schemas/requirements.schema.json": "44fd2c56bf35d285ccbaaab72d8d10a0fe26586a0664fcdf694ad1378fe09ed1",
+    "schemas/run.schema.json": "f0d76b5d291ae13f0c892df0bbe2d48197f1b10bd32d3d3aed437b74db6e3f4e",
+    "spec/core-draft.md": "cfae159c4c89122f4f9024b29f685ede82223e5093e9a1ba50f5a1f1b6d271b4",
+    "src/epx/__init__.py": "56b438f993b5cd1ba899ebee1d7ee42dd8bf0f804d859169a6847be80bf31c7a",
+    "src/epx/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/epx/acceptance.py": "aa6340330cac88dc51f4a3068923975ab1474e2d6ce0b94c96aa5490399923e8",
+    "src/epx/adapter.py": "471b47eb60911d2792fa66e03c75b8a8fc9ddb375af5a04140a1eb1de208f08f",
+    "src/epx/cli.py": "18ed6e02e6c36d4b4ebb24d95a1e8aaa8af0f76a1fd33bbda6f6e6b31799b571",
+    "src/epx/errors.py": "daf4dd04fce21fcb9590813bbfaa18ac44293b6aba8207e0a986fbeddebded27",
+    "src/epx/jsonio.py": "c8259d4cbfbf6adbe573217f96d97954e6d44cd07f5ec6516c13f76f2496c793",
+    "src/epx/mcp.py": "adbc5bfd0c531b82e6b253b4b14b188b5b17119332e807198382e31bc6c4a2bb",
+    "src/epx/package.py": "64982c98fb56716c19dc78006eccc98c7440f608d4dc93c45f45f0dd436802db",
+    "src/epx/replacement.py": "f05ca171422cb61123f3a1faaaba452f4309bfd6be199d50cc3f423ea7077e06",
+    "src/epx/runner.py": "2d7f4597497f9ad5134cd6f285f8e45a91f50632d8dc32264785667b7e497a6c",
+    "tests/conformance/export_evidence.py": "0a303004c054f043d69855775a3bbaa65a1c492960401ef31f8b2e0ff509d1af",
+    "tests/conformance/run_core.py": "2ab3b758c9bdc37932ef83820bd8c895ea46939785d0bd804ab6d2b96a200de0",
+    "tests/providers/mock_mcp_server.py": "bdc4173533f1c7d265947f5cae51cb91131af74e110312cbd0685bde4c31446f"
+  },
+  "claimedRoles": [
+    "reader",
+    "editor",
+    "binder",
+    "executor",
+    "adapter"
+  ],
+  "roleLimitations": {
+    "editor": "Byte-preserving save and explicit provider replacement only; no general editing UI or transformation equivalence is claimed."
+  },
+  "installedPythonArtifactBefore": {
+    "status": "installed",
+    "version": "0.1.0.dev1",
+    "filesSha256": {
+      "engineering_process_kit-0.1.0.dev1.dist-info/METADATA": "30ec7d980b13c215137674c1a9012eba26d3bb28ac68ca4c5ef6d7088c8e06a8",
+      "engineering_process_kit-0.1.0.dev1.dist-info/RECORD": "53ecdcaf8593b7364ba018da43b502b82c609c380ff602c84ba52506a3f3985d",
+      "engineering_process_kit-0.1.0.dev1.dist-info/direct_url.json": "c9fd47d5e69f1c67db5894b0c902424bd83825037cc3fd27f6ffa3390991dce0",
+      "engineering_process_kit-0.1.0.dev1.dist-info/entry_points.txt": "8395808cd6c22bd90f5742ef8e52219a7d79bf791ce3d11ae261579ca776fa91",
+      "epx/__init__.py": "56b438f993b5cd1ba899ebee1d7ee42dd8bf0f804d859169a6847be80bf31c7a",
+      "epx/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "epx/acceptance.py": "aa6340330cac88dc51f4a3068923975ab1474e2d6ce0b94c96aa5490399923e8",
+      "epx/adapter.py": "471b47eb60911d2792fa66e03c75b8a8fc9ddb375af5a04140a1eb1de208f08f",
+      "epx/cli.py": "18ed6e02e6c36d4b4ebb24d95a1e8aaa8af0f76a1fd33bbda6f6e6b31799b571",
+      "epx/errors.py": "daf4dd04fce21fcb9590813bbfaa18ac44293b6aba8207e0a986fbeddebded27",
+      "epx/jsonio.py": "c8259d4cbfbf6adbe573217f96d97954e6d44cd07f5ec6516c13f76f2496c793",
+      "epx/mcp.py": "adbc5bfd0c531b82e6b253b4b14b188b5b17119332e807198382e31bc6c4a2bb",
+      "epx/package.py": "64982c98fb56716c19dc78006eccc98c7440f608d4dc93c45f45f0dd436802db",
+      "epx/replacement.py": "f05ca171422cb61123f3a1faaaba452f4309bfd6be199d50cc3f423ea7077e06",
+      "epx/runner.py": "2d7f4597497f9ad5134cd6f285f8e45a91f50632d8dc32264785667b7e497a6c",
+      "epx/schemas/__init__.py": "ae328bde839913f9cb2ef6007de70216baf66026f4124951feaad19f6e2a988c",
+      "epx/schemas/bindings.schema.json": "b4ff9a27e7f83bbc95ef68a8b6fba90f8c9841bc5dcebc58a43ddaf3ea2b3e2b",
+      "epx/schemas/requirements.schema.json": "44fd2c56bf35d285ccbaaab72d8d10a0fe26586a0664fcdf694ad1378fe09ed1",
+      "epx/schemas/run.schema.json": "f0d76b5d291ae13f0c892df0bbe2d48197f1b10bd32d3d3aed437b74db6e3f4e"
+    },
+    "installOrigin": {
+      "archive_info": {
+        "hash": "sha256=fe020381bfbe61a047b7b615f0d8d7ddaafbaa5fbb06cd886049539cfc67ef9c",
+        "hashes": {
+          "sha256": "fe020381bfbe61a047b7b615f0d8d7ddaafbaa5fbb06cd886049539cfc67ef9c"
+        }
+      },
+      "url": "file:///workspace/.work/final-wheels-6/engineering_process_kit-0.1.0.dev1-py3-none-any.whl"
+    }
+  },
+  "nodeArtifactBefore": {
+    "entrypoint": "/tmp/epx-node/package/cli.mjs",
+    "filesSha256": {
+      "/tmp/epx-node/package/base.mjs": "4f4af73ece8ccbc57ae1c88a32d0f0ce6866db13d99fce118b04ad845bcff2b8",
+      "/tmp/epx-node/package/cli.mjs": "4a84abcced81960116645265a64ba8835cde0e7b435428b474a9d9fe91458189",
+      "/tmp/epx-node/package/index.mjs": "819c9e7121208cb3787d77bf20c0ffb04ca95b082a46ff3c83e1bc68646bda3e",
+      "/tmp/epx-node/package/mcp-call.mjs": "895d0230e3972344e4529105156ceabd6d5a08215d7969521d8a8f1851215041",
+      "/tmp/epx-node/package/mcp.mjs": "334b91ced3b6414a77bc47360446467a1d758fc75d1a416ee13ca6f01e7bc7a3",
+      "/tmp/epx-node/package/package.json": "5863b56af2037e000ab05a912843a6c2ee9c62b0fbc2e67b70b47edb1656b076",
+      "/tmp/epx-node/package/package.mjs": "224696bd1c36d123ea14a3dfb15b3a7e94890f9b8ee682f6125bc56dcb5be994",
+      "/tmp/epx-node/package/replacement.mjs": "b9aecab644819c5649b802534a38ae4b1a479f19aa382f97dcaaddd3dd9588c2",
+      "/tmp/epx-node/package/schemas/bindings.schema.json": "b4ff9a27e7f83bbc95ef68a8b6fba90f8c9841bc5dcebc58a43ddaf3ea2b3e2b",
+      "/tmp/epx-node/package/schemas/manifest.json": "1a152b42c79bc21d8791d896f36a8d724e407a40a76f64d3bf1f5edf690e15a5",
+      "/tmp/epx-node/package/schemas/requirements.schema.json": "44fd2c56bf35d285ccbaaab72d8d10a0fe26586a0664fcdf694ad1378fe09ed1",
+      "/tmp/epx-node/package/schemas/run.schema.json": "f0d76b5d291ae13f0c892df0bbe2d48197f1b10bd32d3d3aed437b74db6e3f4e",
+      "/tmp/epx-node/package/smoke.mjs": "7120b84f2dafd5eca0be6f389b96646fe4a5328da9ff2223563e8f66c0061a66"
+    },
+    "resolvedDependencies": {
+      "ajv": {
+        "version": "8.18.0",
+        "packageJsonSha256": "720f862de3e496df05e074c33df5174db92c47e60726e41ab1338cfefda9754c"
+      },
+      "yauzl": {
+        "version": "3.2.1",
+        "packageJsonSha256": "acbdf064d3e0f5d48ea6ae587a06288c18649f53e787c9d66342263927e68574"
+      }
+    },
+    "archive": {
+      "path": "/workspace/applications/node/.work/epx-node-adopter-0.1.0-draft.1.tgz",
+      "sha256": "17af3719d4be63ef330ba1368a65fb1232e8539f550b46f461460b44824fb525",
+      "installedFilesMatch": {
+        "package/schemas/bindings.schema.json": true,
+        "package/schemas/manifest.json": true,
+        "package/package.json": true,
+        "package/schemas/requirements.schema.json": true,
+        "package/schemas/run.schema.json": true,
+        "package/README.md": true,
+        "package/THIRD_PARTY.md": true,
+        "package/base.mjs": true,
+        "package/cli.mjs": true,
+        "package/index.mjs": true,
+        "package/mcp-call.mjs": true,
+        "package/mcp.mjs": true,
+        "package/package.mjs": true,
+        "package/replacement.mjs": true,
+        "package/smoke.mjs": true,
+        "package/scripts/sync-schemas.mjs": true
+      },
+      "allMatch": true
+    }
+  },
+  "scopeLimitations": [
+    "A finite fixture suite demonstrates its listed behaviors, not all possible upstream CWL/MCP behavior.",
+    "The two paths share schemas/fixtures and may share upstream parsing libraries; their CLI/interpreter/resolver/adapter identities are recorded separately.",
+    "Editor evidence is limited to byte-preserving save and explicit provider replacement through public CLIs; no general editor UI is claimed.",
+    "B05 uses actual loopback HTTP with controlled target-platform metadata, not actual cross-OS CAD execution or authenticated service identity.",
+    "Real Solid Edge and richer human approval remain outside this mock core and are never counted as passed."
+  ],
+  "cases": [
+    {
+      "id": "A01-EVIDENCE",
+      "title": "Missing observed acceptance field is indeterminate",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 39,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A01-EVIDENCE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A01-EVIDENCE/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A01-EVIDENCE/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/A01-EVIDENCE"
+    },
+    {
+      "id": "A01-FAIL",
+      "title": "Correct-schema wrong measurement fails engineering acceptance",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "OUT-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 39,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A01-FAIL/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A01-FAIL/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A01-FAIL/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/A01-FAIL"
+    },
+    {
+      "id": "A02-ARGUMENTS",
+      "title": "Invalid tool arguments fail before engineering invocation",
+      "implementation": "node",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "BIND-004",
+        "RES-003",
+        "ACC-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-ARGUMENTS/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-ARGUMENTS/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-ARGUMENTS/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/A02-ARGUMENTS"
+    },
+    {
+      "id": "A02-CRITERION-UNITS",
+      "title": "Acceptance converts only supported equivalent units",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "ACC-001",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 41,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-CRITERION-UNITS/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-CRITERION-UNITS/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-CRITERION-UNITS/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/A02-CRITERION-UNITS"
+    },
+    {
+      "id": "A02-DIMENSION",
+      "title": "Incompatible quantity dimensions are invalid",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "ACC-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-DIMENSION/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-DIMENSION/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-DIMENSION/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/A02-DIMENSION"
+    },
+    {
+      "id": "A02-INPUT-UNITS",
+      "title": "Equivalent declared input units produce the same mass",
+      "implementation": "node",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "CWL-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 41,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-INPUT-UNITS/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-INPUT-UNITS/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-INPUT-UNITS/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/A02-INPUT-UNITS"
+    },
+    {
+      "id": "A02-OUTPUT-UNIT",
+      "title": "Wrong-dimension observed tool result is rejected before acceptance",
+      "implementation": "node",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "BIND-004",
+        "OUT-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 41,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-OUTPUT-UNIT/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-OUTPUT-UNIT/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-OUTPUT-UNIT/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/A02-OUTPUT-UNIT"
+    },
+    {
+      "id": "A02-OVERFLOW",
+      "title": "Finite observed result with overflowing conversion remains indeterminate",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "OUT-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 39,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-OVERFLOW/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-OVERFLOW/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-OVERFLOW/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/A02-OVERFLOW"
+    },
+    {
+      "id": "A02-UNSUPPORTED",
+      "title": "Undeclared acceptance units are unsupported, not guessed",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "ACC-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-UNSUPPORTED/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-UNSUPPORTED/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/A02-UNSUPPORTED/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/A02-UNSUPPORTED"
+    },
+    {
+      "id": "A03",
+      "title": "Authorized human approval with exact subject revisions",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "ACC-003"
+      ],
+      "scope": "approval",
+      "mandatory": false,
+      "status": "not run",
+      "reason": "Requires a separately specified approval profile, authorized human identity, exact subject revisions, durable decisions and stale-approval tests; this core intentionally does not implement approval.",
+      "assertionCount": 0,
+      "failedAssertions": [],
+      "executedCommands": []
+    },
+    {
+      "id": "B01",
+      "title": "Same verified provider rebinds from another local path",
+      "implementation": "node",
+      "roles": [
+        "binder",
+        "executor"
+      ],
+      "requirements": [
+        "CORE-003",
+        "BIND-001",
+        "BIND-002",
+        "BIND-006"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 49,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B01/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B01/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B01/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B01/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B01/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B01/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B01/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B01"
+    },
+    {
+      "id": "B02",
+      "title": "Same tool names on another logical binding are not substitutes",
+      "implementation": "node",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "BIND-001",
+        "BIND-002",
+        "BIND-004",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B02/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B02/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B02/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B02/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B02/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B02/bindings.json",
+          "--engine",
+          "streamflow"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B02/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B02/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B02"
+    },
+    {
+      "id": "B03",
+      "title": "Changed server default application is rejected",
+      "implementation": "node",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "BIND-001",
+        "BIND-003",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B03/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B03/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B03/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B03/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B03/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B03/bindings.json",
+          "--engine",
+          "streamflow"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B03/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B03/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B03"
+    },
+    {
+      "id": "B04-APPLICATION",
+      "title": "Wrong application version rejects execution",
+      "implementation": "node",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "CORE-003",
+        "BIND-001",
+        "BIND-003",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-APPLICATION/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-APPLICATION/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-APPLICATION/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-APPLICATION/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-APPLICATION/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-APPLICATION/bindings.json",
+          "--engine",
+          "streamflow"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-APPLICATION/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-APPLICATION/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B04-APPLICATION"
+    },
+    {
+      "id": "B04-CONTRACT",
+      "title": "Discovered schema drift rejects execution",
+      "implementation": "node",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "CORE-003",
+        "BIND-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-CONTRACT/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-CONTRACT/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-CONTRACT/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-CONTRACT/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-CONTRACT/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-CONTRACT/bindings.json",
+          "--engine",
+          "streamflow"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-CONTRACT/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-CONTRACT/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B04-CONTRACT"
+    },
+    {
+      "id": "B04-LAUNCHER",
+      "title": "Unverified launcher bytes cannot establish intended identity",
+      "implementation": "node",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "BIND-001",
+        "BIND-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-LAUNCHER/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-LAUNCHER/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-LAUNCHER/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-LAUNCHER/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-LAUNCHER/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-LAUNCHER/bindings.json",
+          "--engine",
+          "streamflow"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-LAUNCHER/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-LAUNCHER/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B04-LAUNCHER"
+    },
+    {
+      "id": "B04-PROTOCOL",
+      "title": "Untested required MCP protocol is not silently upgraded",
+      "implementation": "node",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "CORE-003",
+        "BIND-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-PROTOCOL/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-PROTOCOL/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-PROTOCOL/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-PROTOCOL/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-PROTOCOL/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-PROTOCOL/bindings.json",
+          "--engine",
+          "streamflow"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-PROTOCOL/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B04-PROTOCOL/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B04-PROTOCOL"
+    },
+    {
+      "id": "B05",
+      "title": "Actual loopback HTTP binding evaluates controlled target platform",
+      "implementation": "node",
+      "roles": [
+        "binder",
+        "executor"
+      ],
+      "requirements": [
+        "BIND-002",
+        "BIND-003",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 47,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B05"
+    },
+    {
+      "id": "B05-UNAVAILABLE",
+      "title": "Unsupported execution target preserves the definition",
+      "implementation": "node",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05-UNAVAILABLE/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05-UNAVAILABLE/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05-UNAVAILABLE/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05-UNAVAILABLE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05-UNAVAILABLE/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05-UNAVAILABLE/bindings.json",
+          "--engine",
+          "streamflow"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05-UNAVAILABLE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B05-UNAVAILABLE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B05-UNAVAILABLE"
+    },
+    {
+      "id": "B06-ABSENT",
+      "title": "Absent external resource retains its identity and cause",
+      "implementation": "node",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 25,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-ABSENT/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-ABSENT/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-ABSENT/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-ABSENT/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-ABSENT/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-ABSENT/bindings.json",
+          "--engine",
+          "streamflow"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-ABSENT/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-ABSENT/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B06-ABSENT"
+    },
+    {
+      "id": "B06-DENIED",
+      "title": "Denied resource is not called deleted",
+      "implementation": "node",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 25,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-DENIED/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-DENIED/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-DENIED/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-DENIED/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-DENIED/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-DENIED/bindings.json",
+          "--engine",
+          "streamflow"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-DENIED/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-DENIED/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B06-DENIED"
+    },
+    {
+      "id": "B06-REVISION",
+      "title": "Wrong external resource revision rejects execution",
+      "implementation": "node",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 24,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-REVISION/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-REVISION/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-REVISION/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-REVISION/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-REVISION/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-REVISION/bindings.json",
+          "--engine",
+          "streamflow"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-REVISION/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/B06-REVISION/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/B06-REVISION"
+    },
+    {
+      "id": "C-MCP01",
+      "title": "Three fixed MCP calls hand off results and record one mutation",
+      "implementation": "node",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "CWL-001",
+        "CWL-003",
+        "CWL-005",
+        "RES-001",
+        "RES-003",
+        "OUT-001",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 50,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/C-MCP01/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/C-MCP01/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/C-MCP01/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/C-MCP01"
+    },
+    {
+      "id": "C-MCP04",
+      "title": "Later failure retains identified successful partial output",
+      "implementation": "node",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "CWL-005",
+        "OUT-001",
+        "OUT-002",
+        "OUT-003",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 36,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/C-MCP04/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/C-MCP04/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/C-MCP04/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/C-MCP04"
+    },
+    {
+      "id": "C-MCP05",
+      "title": "Lost mutation response remains unknown with no replay",
+      "implementation": "node",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "RES-003",
+        "OUT-001",
+        "OUT-002",
+        "OUT-003",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 53,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/C-MCP05/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/C-MCP05/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/C-MCP05/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/C-MCP05"
+    },
+    {
+      "id": "CORE-AUTHORITY",
+      "title": "Metadata and process authority cannot disagree",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CORE-002",
+        "PKG-002",
+        "PKG-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CORE-AUTHORITY/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CORE-AUTHORITY/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CORE-AUTHORITY/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CORE-AUTHORITY"
+    },
+    {
+      "id": "CORE-VERSION",
+      "title": "Unknown required profile version is unsupported",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CORE-003",
+        "PKG-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CORE-VERSION/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CORE-VERSION/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CORE-VERSION/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CORE-VERSION"
+    },
+    {
+      "id": "CWL-CONTEXT",
+      "title": "Shared input cannot supply local run context",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-CONTEXT/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-CONTEXT/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-CONTEXT/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CWL-CONTEXT"
+    },
+    {
+      "id": "CWL-CONTEXT-SOURCE",
+      "title": "Task cannot replace reserved receiving context",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-003",
+        "CWL-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-CONTEXT-SOURCE/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-CONTEXT-SOURCE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-CONTEXT-SOURCE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CWL-CONTEXT-SOURCE"
+    },
+    {
+      "id": "CWL-EXTRA-ARGS",
+      "title": "Tool cannot inject undeclared command arguments",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-EXTRA-ARGS/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-EXTRA-ARGS/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-EXTRA-ARGS/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CWL-EXTRA-ARGS"
+    },
+    {
+      "id": "CWL-OUTPUT-GLOB",
+      "title": "Missing required final File prevents workflow success",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "CWL-005",
+        "OUT-001",
+        "OUT-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 11,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-OUTPUT-GLOB/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-OUTPUT-GLOB/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-OUTPUT-GLOB/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CWL-OUTPUT-GLOB"
+    },
+    {
+      "id": "CWL-OUTPUT-NO-GLOB",
+      "title": "A missing final output binding cannot masquerade as success",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "CWL-005",
+        "OUT-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 11,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-OUTPUT-NO-GLOB/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-OUTPUT-NO-GLOB/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-OUTPUT-NO-GLOB/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CWL-OUTPUT-NO-GLOB"
+    },
+    {
+      "id": "CWL-OUTPUT-SOURCE",
+      "title": "Workflow outputSource must resolve",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-OUTPUT-SOURCE/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-OUTPUT-SOURCE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-OUTPUT-SOURCE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CWL-OUTPUT-SOURCE"
+    },
+    {
+      "id": "CWL-REQUIRED",
+      "title": "Required exchange semantics cannot be removed silently",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-REQUIRED/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-REQUIRED/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-REQUIRED/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CWL-REQUIRED"
+    },
+    {
+      "id": "CWL-SIGNATURE",
+      "title": "Adapter argument names remain fixed",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-SIGNATURE/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-SIGNATURE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-SIGNATURE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CWL-SIGNATURE"
+    },
+    {
+      "id": "CWL-UNKNOWN",
+      "title": "Unknown required CWL feature is unsupported",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-001",
+        "CWL-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-UNKNOWN/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-UNKNOWN/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-UNKNOWN/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CWL-UNKNOWN"
+    },
+    {
+      "id": "CWL-UNKNOWN-FIELD",
+      "title": "Unrecognized CWL structural field is invalid",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-UNKNOWN-FIELD/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-UNKNOWN-FIELD/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/CWL-UNKNOWN-FIELD/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/CWL-UNKNOWN-FIELD"
+    },
+    {
+      "id": "E01",
+      "title": "Two-step deterministic calculation on the actual engine",
+      "implementation": "node",
+      "roles": [
+        "reader",
+        "binder",
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "CORE-001",
+        "CORE-002",
+        "CORE-003",
+        "CWL-001",
+        "CWL-002",
+        "CWL-003",
+        "CWL-004",
+        "CWL-005",
+        "BIND-001",
+        "BIND-003",
+        "BIND-004",
+        "OUT-001",
+        "ACC-001",
+        "ACC-002",
+        "CONF-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 41,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E01/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E01/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E01/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/E01"
+    },
+    {
+      "id": "E02",
+      "title": "Real Solid Edge two-executor handoff",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "RES-001",
+        "OUT-001",
+        "ACC-002"
+      ],
+      "scope": "real-cad",
+      "mandatory": false,
+      "status": "not run",
+      "reason": "Requires authenticated intended CAD/MCP identity and schemas, distributable native fixture bytes and an isolated supported CAD installation; no such integration was executed.",
+      "assertionCount": 0,
+      "failedAssertions": [],
+      "executedCommands": []
+    },
+    {
+      "id": "E03-RPC",
+      "title": "JSON-RPC error remains distinct from tool isError",
+      "implementation": "node",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "RES-003",
+        "OUT-003",
+        "DIAG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 33,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E03-RPC/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E03-RPC/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E03-RPC/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/E03-RPC"
+    },
+    {
+      "id": "E03-SCHEMA",
+      "title": "Malformed structured output cannot pass execution",
+      "implementation": "node",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "BIND-004",
+        "OUT-003",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 41,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E03-SCHEMA/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E03-SCHEMA/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E03-SCHEMA/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/E03-SCHEMA"
+    },
+    {
+      "id": "E03-TOOL",
+      "title": "MCP isError remains a tool execution failure",
+      "implementation": "node",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "RES-003",
+        "OUT-001",
+        "OUT-002",
+        "OUT-003",
+        "DIAG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 41,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E03-TOOL/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E03-TOOL/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/E03-TOOL/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/E03-TOOL"
+    },
+    {
+      "id": "E04",
+      "title": "Real native-save then STEP-export failure",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "OUT-002"
+      ],
+      "scope": "real-cad",
+      "mandatory": false,
+      "status": "not run",
+      "reason": "Requires the real CAD prerequisites plus a controlled native-save/STEP-export failure and retained partial artifacts; the mock record tool does not demonstrate CAD saving.",
+      "assertionCount": 0,
+      "failedAssertions": [],
+      "executedCommands": []
+    },
+    {
+      "id": "E05",
+      "title": "Real CAD disconnect after possible mutation",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "RES-003",
+        "OUT-002"
+      ],
+      "scope": "real-cad",
+      "mandatory": false,
+      "status": "not run",
+      "reason": "Requires the real CAD prerequisites and an opt-in controlled disconnect after possible mutation, with reconciliation evidence; mock unknown-outcome behavior is separate.",
+      "assertionCount": 0,
+      "failedAssertions": [],
+      "executedCommands": []
+    },
+    {
+      "id": "OUT-NONOVERWRITE",
+      "title": "Existing run evidence is never overwritten",
+      "implementation": "node",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "OUT-001",
+        "PKG-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 11,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/OUT-NONOVERWRITE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/OUT-NONOVERWRITE/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/OUT-NONOVERWRITE/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/OUT-NONOVERWRITE"
+    },
+    {
+      "id": "P01",
+      "title": "Missing intended provider survives inspection and no-op save",
+      "implementation": "node",
+      "roles": [
+        "reader",
+        "binder"
+      ],
+      "requirements": [
+        "PKG-002",
+        "PKG-003",
+        "PKG-004",
+        "BIND-001",
+        "BIND-005",
+        "DIAG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 19,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "inspect",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P01/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P01/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P01/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P01/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P01/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/P01"
+    },
+    {
+      "id": "P01-ZIP",
+      "title": "ZIP import and no-op archive save preserve bytes",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-001",
+        "PKG-002",
+        "PKG-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 12,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P01-ZIP/received.zip"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P01-ZIP/received.zip",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P01-ZIP/preserved.zip"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/P01-ZIP"
+    },
+    {
+      "id": "P02",
+      "title": "Unknown required feature is preserved and unsupported",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-003",
+        "PKG-004",
+        "CORE-003",
+        "ACC-003",
+        "DIAG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P02/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P02/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P02/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/P02"
+    },
+    {
+      "id": "P02-METADATA",
+      "title": "Unfamiliar optional metadata survives inspection/save",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-003",
+        "PKG-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 12,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "inspect",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P02-METADATA/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P02-METADATA/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P02-METADATA/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/P02-METADATA"
+    },
+    {
+      "id": "P03-CYCLE",
+      "title": "Cyclic dataflow is invalid",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-001",
+        "CWL-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-CYCLE/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-CYCLE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-CYCLE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/P03-CYCLE"
+    },
+    {
+      "id": "P03-GRAPH",
+      "title": "Broken graph reference is invalid",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CORE-002",
+        "CWL-001",
+        "CWL-005",
+        "DIAG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-GRAPH/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-GRAPH/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-GRAPH/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/P03-GRAPH"
+    },
+    {
+      "id": "P03-NONFINITE",
+      "title": "Non-finite job numbers are rejected without execution",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-003",
+        "ACC-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-NONFINITE/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-NONFINITE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-NONFINITE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/P03-NONFINITE"
+    },
+    {
+      "id": "P03-OPERATION",
+      "title": "Invocation identity disagrees with requirements",
+      "implementation": "node",
+      "roles": [
+        "reader",
+        "adapter"
+      ],
+      "requirements": [
+        "CORE-002",
+        "CWL-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-OPERATION/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-OPERATION/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P03-OPERATION/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/P03-OPERATION"
+    },
+    {
+      "id": "P04-CORRUPT",
+      "title": "Corrupt payload cannot masquerade as inventoried input",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-002",
+        "RES-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P04-CORRUPT/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P04-CORRUPT/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P04-CORRUPT/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/P04-CORRUPT"
+    },
+    {
+      "id": "P04-MISSING",
+      "title": "Missing payload is distinct from external availability",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-001",
+        "PKG-002",
+        "RES-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P04-MISSING/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P04-MISSING/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/P04-MISSING/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/P04-MISSING"
+    },
+    {
+      "id": "PKG-CRATE-DATE",
+      "title": "RO-Crate root missing date is invalid",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-CRATE-DATE/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-CRATE-DATE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-CRATE-DATE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/PKG-CRATE-DATE"
+    },
+    {
+      "id": "PKG-CRATE-LICENSE",
+      "title": "RO-Crate root missing license is invalid",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-CRATE-LICENSE/package"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-CRATE-LICENSE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-CRATE-LICENSE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/PKG-CRATE-LICENSE"
+    },
+    {
+      "id": "PKG-DUPLICATE",
+      "title": "ZIP duplicate members are invalid",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-DUPLICATE/received.zip"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-DUPLICATE/received.zip",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-DUPLICATE/preserved.zip"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/PKG-DUPLICATE"
+    },
+    {
+      "id": "PKG-SYMLINK",
+      "title": "ZIP symbolic-link member is invalid",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-SYMLINK/received.zip"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-SYMLINK/received.zip",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-SYMLINK/preserved.zip"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/PKG-SYMLINK"
+    },
+    {
+      "id": "PKG-TRAVERSAL",
+      "title": "ZIP parent traversal is not materialized",
+      "implementation": "node",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-TRAVERSAL/received.zip"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-TRAVERSAL/received.zip",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/PKG-TRAVERSAL/preserved.zip"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/PKG-TRAVERSAL"
+    },
+    {
+      "id": "R01",
+      "title": "Explicit provider revision is validated while original stays intact",
+      "implementation": "node",
+      "roles": [
+        "reader",
+        "binder",
+        "executor",
+        "editor"
+      ],
+      "requirements": [
+        "PKG-004",
+        "BIND-006",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 69,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/node/R01/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/R01/bindings.json"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "replace",
+          "/workspace/.work/conformance-final-overflow-20260907/node/R01/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/R01/explicit-replacement",
+          "--binding",
+          "engineering",
+          "--with",
+          "/workspace/.work/conformance-final-overflow-20260907/node/R01/explicit-intended-provider.json",
+          "--revision",
+          "1.explicit-replacement"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/node/R01/explicit-replacement"
+        ],
+        [
+          "/usr/local/bin/node",
+          "/tmp/epx-node/package/cli.mjs",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/node/R01/explicit-replacement",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/node/R01/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/node/R01/bindings.json",
+          "--engine",
+          "streamflow"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "node/R01"
+    },
+    {
+      "id": "A01-EVIDENCE",
+      "title": "Missing observed acceptance field is indeterminate",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 39,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A01-EVIDENCE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A01-EVIDENCE/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A01-EVIDENCE/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/A01-EVIDENCE"
+    },
+    {
+      "id": "A01-FAIL",
+      "title": "Correct-schema wrong measurement fails engineering acceptance",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "OUT-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 39,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A01-FAIL/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A01-FAIL/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A01-FAIL/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/A01-FAIL"
+    },
+    {
+      "id": "A02-ARGUMENTS",
+      "title": "Invalid tool arguments fail before engineering invocation",
+      "implementation": "python",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "BIND-004",
+        "RES-003",
+        "ACC-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-ARGUMENTS/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-ARGUMENTS/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-ARGUMENTS/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/A02-ARGUMENTS"
+    },
+    {
+      "id": "A02-CRITERION-UNITS",
+      "title": "Acceptance converts only supported equivalent units",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "ACC-001",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 41,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-CRITERION-UNITS/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-CRITERION-UNITS/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-CRITERION-UNITS/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/A02-CRITERION-UNITS"
+    },
+    {
+      "id": "A02-DIMENSION",
+      "title": "Incompatible quantity dimensions are invalid",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "ACC-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-DIMENSION/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-DIMENSION/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-DIMENSION/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/A02-DIMENSION"
+    },
+    {
+      "id": "A02-INPUT-UNITS",
+      "title": "Equivalent declared input units produce the same mass",
+      "implementation": "python",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "CWL-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 41,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-INPUT-UNITS/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-INPUT-UNITS/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-INPUT-UNITS/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/A02-INPUT-UNITS"
+    },
+    {
+      "id": "A02-OUTPUT-UNIT",
+      "title": "Wrong-dimension observed tool result is rejected before acceptance",
+      "implementation": "python",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "BIND-004",
+        "OUT-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 36,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-OUTPUT-UNIT/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-OUTPUT-UNIT/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-OUTPUT-UNIT/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/A02-OUTPUT-UNIT"
+    },
+    {
+      "id": "A02-OVERFLOW",
+      "title": "Finite observed result with overflowing conversion remains indeterminate",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "OUT-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "failed",
+      "reason": "Execution outcome matches observed case: expected 'succeeded'; observed 'failed'",
+      "assertionCount": 9,
+      "failedAssertions": [
+        {
+          "assertion": "Execution outcome matches observed case",
+          "expected": "succeeded",
+          "observed": "failed",
+          "passed": false
+        }
+      ],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-OVERFLOW/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-OVERFLOW/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-OVERFLOW/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/A02-OVERFLOW"
+    },
+    {
+      "id": "A02-UNSUPPORTED",
+      "title": "Undeclared acceptance units are unsupported, not guessed",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "ACC-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-UNSUPPORTED/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-UNSUPPORTED/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/A02-UNSUPPORTED/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/A02-UNSUPPORTED"
+    },
+    {
+      "id": "A03",
+      "title": "Authorized human approval with exact subject revisions",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "ACC-003"
+      ],
+      "scope": "approval",
+      "mandatory": false,
+      "status": "not run",
+      "reason": "Requires a separately specified approval profile, authorized human identity, exact subject revisions, durable decisions and stale-approval tests; this core intentionally does not implement approval.",
+      "assertionCount": 0,
+      "failedAssertions": [],
+      "executedCommands": []
+    },
+    {
+      "id": "B01",
+      "title": "Same verified provider rebinds from another local path",
+      "implementation": "python",
+      "roles": [
+        "binder",
+        "executor"
+      ],
+      "requirements": [
+        "CORE-003",
+        "BIND-001",
+        "BIND-002",
+        "BIND-006"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 49,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B01/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B01/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B01/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B01/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B01/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B01/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B01/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B01"
+    },
+    {
+      "id": "B02",
+      "title": "Same tool names on another logical binding are not substitutes",
+      "implementation": "python",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "BIND-001",
+        "BIND-002",
+        "BIND-004",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B02/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B02/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B02/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B02/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B02/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B02/bindings.json",
+          "--engine",
+          "cwltool"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B02/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B02/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B02"
+    },
+    {
+      "id": "B03",
+      "title": "Changed server default application is rejected",
+      "implementation": "python",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "BIND-001",
+        "BIND-003",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B03/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B03/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B03/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B03/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B03/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B03/bindings.json",
+          "--engine",
+          "cwltool"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B03/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B03/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B03"
+    },
+    {
+      "id": "B04-APPLICATION",
+      "title": "Wrong application version rejects execution",
+      "implementation": "python",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "CORE-003",
+        "BIND-001",
+        "BIND-003",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-APPLICATION/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-APPLICATION/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-APPLICATION/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-APPLICATION/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-APPLICATION/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-APPLICATION/bindings.json",
+          "--engine",
+          "cwltool"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-APPLICATION/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-APPLICATION/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B04-APPLICATION"
+    },
+    {
+      "id": "B04-CONTRACT",
+      "title": "Discovered schema drift rejects execution",
+      "implementation": "python",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "CORE-003",
+        "BIND-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-CONTRACT/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-CONTRACT/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-CONTRACT/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-CONTRACT/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-CONTRACT/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-CONTRACT/bindings.json",
+          "--engine",
+          "cwltool"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-CONTRACT/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-CONTRACT/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B04-CONTRACT"
+    },
+    {
+      "id": "B04-LAUNCHER",
+      "title": "Unverified launcher bytes cannot establish intended identity",
+      "implementation": "python",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "BIND-001",
+        "BIND-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-LAUNCHER/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-LAUNCHER/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-LAUNCHER/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-LAUNCHER/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-LAUNCHER/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-LAUNCHER/bindings.json",
+          "--engine",
+          "cwltool"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-LAUNCHER/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-LAUNCHER/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B04-LAUNCHER"
+    },
+    {
+      "id": "B04-PROTOCOL",
+      "title": "Untested required MCP protocol is not silently upgraded",
+      "implementation": "python",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "CORE-003",
+        "BIND-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-PROTOCOL/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-PROTOCOL/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-PROTOCOL/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-PROTOCOL/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-PROTOCOL/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-PROTOCOL/bindings.json",
+          "--engine",
+          "cwltool"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-PROTOCOL/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B04-PROTOCOL/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B04-PROTOCOL"
+    },
+    {
+      "id": "B05",
+      "title": "Actual loopback HTTP binding evaluates controlled target platform",
+      "implementation": "python",
+      "roles": [
+        "binder",
+        "executor"
+      ],
+      "requirements": [
+        "BIND-002",
+        "BIND-003",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 47,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B05"
+    },
+    {
+      "id": "B05-UNAVAILABLE",
+      "title": "Unsupported execution target preserves the definition",
+      "implementation": "python",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 23,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05-UNAVAILABLE/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05-UNAVAILABLE/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05-UNAVAILABLE/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05-UNAVAILABLE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05-UNAVAILABLE/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05-UNAVAILABLE/bindings.json",
+          "--engine",
+          "cwltool"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05-UNAVAILABLE/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B05-UNAVAILABLE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B05-UNAVAILABLE"
+    },
+    {
+      "id": "B06-ABSENT",
+      "title": "Absent external resource retains its identity and cause",
+      "implementation": "python",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 25,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-ABSENT/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-ABSENT/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-ABSENT/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-ABSENT/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-ABSENT/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-ABSENT/bindings.json",
+          "--engine",
+          "cwltool"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-ABSENT/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-ABSENT/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B06-ABSENT"
+    },
+    {
+      "id": "B06-DENIED",
+      "title": "Denied resource is not called deleted",
+      "implementation": "python",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 25,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-DENIED/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-DENIED/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-DENIED/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-DENIED/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-DENIED/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-DENIED/bindings.json",
+          "--engine",
+          "cwltool"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-DENIED/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-DENIED/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B06-DENIED"
+    },
+    {
+      "id": "B06-REVISION",
+      "title": "Wrong external resource revision rejects execution",
+      "implementation": "python",
+      "roles": [
+        "binder"
+      ],
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "BIND-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 24,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-REVISION/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-REVISION/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-REVISION/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-REVISION/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-REVISION/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-REVISION/bindings.json",
+          "--engine",
+          "cwltool"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-REVISION/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/B06-REVISION/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/B06-REVISION"
+    },
+    {
+      "id": "C-MCP01",
+      "title": "Three fixed MCP calls hand off results and record one mutation",
+      "implementation": "python",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "CWL-001",
+        "CWL-003",
+        "CWL-005",
+        "RES-001",
+        "RES-003",
+        "OUT-001",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 50,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/C-MCP01/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/C-MCP01/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/C-MCP01/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/C-MCP01"
+    },
+    {
+      "id": "C-MCP04",
+      "title": "Later failure retains identified successful partial output",
+      "implementation": "python",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "CWL-005",
+        "OUT-001",
+        "OUT-002",
+        "OUT-003",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 33,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/C-MCP04/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/C-MCP04/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/C-MCP04/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/C-MCP04"
+    },
+    {
+      "id": "C-MCP05",
+      "title": "Lost mutation response remains unknown with no replay",
+      "implementation": "python",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "RES-003",
+        "OUT-001",
+        "OUT-002",
+        "OUT-003",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 49,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/C-MCP05/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/C-MCP05/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/C-MCP05/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/C-MCP05"
+    },
+    {
+      "id": "CORE-AUTHORITY",
+      "title": "Metadata and process authority cannot disagree",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CORE-002",
+        "PKG-002",
+        "PKG-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CORE-AUTHORITY/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CORE-AUTHORITY/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CORE-AUTHORITY/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CORE-AUTHORITY"
+    },
+    {
+      "id": "CORE-VERSION",
+      "title": "Unknown required profile version is unsupported",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CORE-003",
+        "PKG-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CORE-VERSION/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CORE-VERSION/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CORE-VERSION/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CORE-VERSION"
+    },
+    {
+      "id": "CWL-CONTEXT",
+      "title": "Shared input cannot supply local run context",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-CONTEXT/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-CONTEXT/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-CONTEXT/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CWL-CONTEXT"
+    },
+    {
+      "id": "CWL-CONTEXT-SOURCE",
+      "title": "Task cannot replace reserved receiving context",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-003",
+        "CWL-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-CONTEXT-SOURCE/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-CONTEXT-SOURCE/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-CONTEXT-SOURCE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CWL-CONTEXT-SOURCE"
+    },
+    {
+      "id": "CWL-EXTRA-ARGS",
+      "title": "Tool cannot inject undeclared command arguments",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-EXTRA-ARGS/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-EXTRA-ARGS/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-EXTRA-ARGS/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CWL-EXTRA-ARGS"
+    },
+    {
+      "id": "CWL-OUTPUT-GLOB",
+      "title": "Missing required final File prevents workflow success",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "CWL-005",
+        "OUT-001",
+        "OUT-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 11,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-OUTPUT-GLOB/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-OUTPUT-GLOB/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-OUTPUT-GLOB/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CWL-OUTPUT-GLOB"
+    },
+    {
+      "id": "CWL-OUTPUT-NO-GLOB",
+      "title": "A missing final output binding cannot masquerade as success",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "CWL-005",
+        "OUT-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 11,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-OUTPUT-NO-GLOB/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-OUTPUT-NO-GLOB/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-OUTPUT-NO-GLOB/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CWL-OUTPUT-NO-GLOB"
+    },
+    {
+      "id": "CWL-OUTPUT-SOURCE",
+      "title": "Workflow outputSource must resolve",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-OUTPUT-SOURCE/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-OUTPUT-SOURCE/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-OUTPUT-SOURCE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CWL-OUTPUT-SOURCE"
+    },
+    {
+      "id": "CWL-REQUIRED",
+      "title": "Required exchange semantics cannot be removed silently",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-REQUIRED/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-REQUIRED/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-REQUIRED/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CWL-REQUIRED"
+    },
+    {
+      "id": "CWL-SIGNATURE",
+      "title": "Adapter argument names remain fixed",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-SIGNATURE/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-SIGNATURE/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-SIGNATURE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CWL-SIGNATURE"
+    },
+    {
+      "id": "CWL-UNKNOWN",
+      "title": "Unknown required CWL feature is unsupported",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-001",
+        "CWL-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-UNKNOWN/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-UNKNOWN/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-UNKNOWN/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CWL-UNKNOWN"
+    },
+    {
+      "id": "CWL-UNKNOWN-FIELD",
+      "title": "Unrecognized CWL structural field is invalid",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-UNKNOWN-FIELD/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-UNKNOWN-FIELD/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/CWL-UNKNOWN-FIELD/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/CWL-UNKNOWN-FIELD"
+    },
+    {
+      "id": "E01",
+      "title": "Two-step deterministic calculation on the actual engine",
+      "implementation": "python",
+      "roles": [
+        "reader",
+        "binder",
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "CORE-001",
+        "CORE-002",
+        "CORE-003",
+        "CWL-001",
+        "CWL-002",
+        "CWL-003",
+        "CWL-004",
+        "CWL-005",
+        "BIND-001",
+        "BIND-003",
+        "BIND-004",
+        "OUT-001",
+        "ACC-001",
+        "ACC-002",
+        "CONF-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 41,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E01/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E01/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E01/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/E01"
+    },
+    {
+      "id": "E02",
+      "title": "Real Solid Edge two-executor handoff",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "RES-001",
+        "OUT-001",
+        "ACC-002"
+      ],
+      "scope": "real-cad",
+      "mandatory": false,
+      "status": "not run",
+      "reason": "Requires authenticated intended CAD/MCP identity and schemas, distributable native fixture bytes and an isolated supported CAD installation; no such integration was executed.",
+      "assertionCount": 0,
+      "failedAssertions": [],
+      "executedCommands": []
+    },
+    {
+      "id": "E03-RPC",
+      "title": "JSON-RPC error remains distinct from tool isError",
+      "implementation": "python",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "RES-003",
+        "OUT-003",
+        "DIAG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 33,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E03-RPC/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E03-RPC/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E03-RPC/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/E03-RPC"
+    },
+    {
+      "id": "E03-SCHEMA",
+      "title": "Malformed structured output cannot pass execution",
+      "implementation": "python",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "BIND-004",
+        "OUT-003",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 36,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E03-SCHEMA/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E03-SCHEMA/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E03-SCHEMA/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/E03-SCHEMA"
+    },
+    {
+      "id": "E03-TOOL",
+      "title": "MCP isError remains a tool execution failure",
+      "implementation": "python",
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "requirements": [
+        "RES-003",
+        "OUT-001",
+        "OUT-002",
+        "OUT-003",
+        "DIAG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 36,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E03-TOOL/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E03-TOOL/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/E03-TOOL/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/E03-TOOL"
+    },
+    {
+      "id": "E04",
+      "title": "Real native-save then STEP-export failure",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "OUT-002"
+      ],
+      "scope": "real-cad",
+      "mandatory": false,
+      "status": "not run",
+      "reason": "Requires the real CAD prerequisites plus a controlled native-save/STEP-export failure and retained partial artifacts; the mock record tool does not demonstrate CAD saving.",
+      "assertionCount": 0,
+      "failedAssertions": [],
+      "executedCommands": []
+    },
+    {
+      "id": "E05",
+      "title": "Real CAD disconnect after possible mutation",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "RES-003",
+        "OUT-002"
+      ],
+      "scope": "real-cad",
+      "mandatory": false,
+      "status": "not run",
+      "reason": "Requires the real CAD prerequisites and an opt-in controlled disconnect after possible mutation, with reconciliation evidence; mock unknown-outcome behavior is separate.",
+      "assertionCount": 0,
+      "failedAssertions": [],
+      "executedCommands": []
+    },
+    {
+      "id": "OUT-NONOVERWRITE",
+      "title": "Existing run evidence is never overwritten",
+      "implementation": "python",
+      "roles": [
+        "executor"
+      ],
+      "requirements": [
+        "OUT-001",
+        "PKG-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 11,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/OUT-NONOVERWRITE/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/OUT-NONOVERWRITE/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/OUT-NONOVERWRITE/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/OUT-NONOVERWRITE"
+    },
+    {
+      "id": "P01",
+      "title": "Missing intended provider survives inspection and no-op save",
+      "implementation": "python",
+      "roles": [
+        "reader",
+        "binder"
+      ],
+      "requirements": [
+        "PKG-002",
+        "PKG-003",
+        "PKG-004",
+        "BIND-001",
+        "BIND-005",
+        "DIAG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 19,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "inspect",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P01/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P01/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P01/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P01/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P01/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/P01"
+    },
+    {
+      "id": "P01-ZIP",
+      "title": "ZIP import and no-op archive save preserve bytes",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-001",
+        "PKG-002",
+        "PKG-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 12,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P01-ZIP/received.zip"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P01-ZIP/received.zip",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P01-ZIP/preserved.zip"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/P01-ZIP"
+    },
+    {
+      "id": "P02",
+      "title": "Unknown required feature is preserved and unsupported",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-003",
+        "PKG-004",
+        "CORE-003",
+        "ACC-003",
+        "DIAG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P02/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P02/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P02/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/P02"
+    },
+    {
+      "id": "P02-METADATA",
+      "title": "Unfamiliar optional metadata survives inspection/save",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-003",
+        "PKG-004"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 12,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "inspect",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P02-METADATA/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P02-METADATA/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P02-METADATA/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/P02-METADATA"
+    },
+    {
+      "id": "P03-CYCLE",
+      "title": "Cyclic dataflow is invalid",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CWL-001",
+        "CWL-005"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-CYCLE/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-CYCLE/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-CYCLE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/P03-CYCLE"
+    },
+    {
+      "id": "P03-GRAPH",
+      "title": "Broken graph reference is invalid",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "CORE-002",
+        "CWL-001",
+        "CWL-005",
+        "DIAG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-GRAPH/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-GRAPH/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-GRAPH/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/P03-GRAPH"
+    },
+    {
+      "id": "P03-NONFINITE",
+      "title": "Non-finite job numbers are rejected without execution",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-003",
+        "ACC-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-NONFINITE/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-NONFINITE/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-NONFINITE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/P03-NONFINITE"
+    },
+    {
+      "id": "P03-OPERATION",
+      "title": "Invocation identity disagrees with requirements",
+      "implementation": "python",
+      "roles": [
+        "reader",
+        "adapter"
+      ],
+      "requirements": [
+        "CORE-002",
+        "CWL-003"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-OPERATION/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-OPERATION/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P03-OPERATION/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/P03-OPERATION"
+    },
+    {
+      "id": "P04-CORRUPT",
+      "title": "Corrupt payload cannot masquerade as inventoried input",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-002",
+        "RES-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P04-CORRUPT/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P04-CORRUPT/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P04-CORRUPT/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/P04-CORRUPT"
+    },
+    {
+      "id": "P04-MISSING",
+      "title": "Missing payload is distinct from external availability",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-001",
+        "PKG-002",
+        "RES-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P04-MISSING/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P04-MISSING/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/P04-MISSING/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/P04-MISSING"
+    },
+    {
+      "id": "PKG-CRATE-DATE",
+      "title": "RO-Crate root missing date is invalid",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-CRATE-DATE/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-CRATE-DATE/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-CRATE-DATE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/PKG-CRATE-DATE"
+    },
+    {
+      "id": "PKG-CRATE-LICENSE",
+      "title": "RO-Crate root missing license is invalid",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-CRATE-LICENSE/package"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-CRATE-LICENSE/package",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-CRATE-LICENSE/preserved"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/PKG-CRATE-LICENSE"
+    },
+    {
+      "id": "PKG-DUPLICATE",
+      "title": "ZIP duplicate members are invalid",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-DUPLICATE/received.zip"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-DUPLICATE/received.zip",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-DUPLICATE/preserved.zip"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/PKG-DUPLICATE"
+    },
+    {
+      "id": "PKG-SYMLINK",
+      "title": "ZIP symbolic-link member is invalid",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-SYMLINK/received.zip"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-SYMLINK/received.zip",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-SYMLINK/preserved.zip"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/PKG-SYMLINK"
+    },
+    {
+      "id": "PKG-TRAVERSAL",
+      "title": "ZIP parent traversal is not materialized",
+      "implementation": "python",
+      "roles": [
+        "reader"
+      ],
+      "requirements": [
+        "PKG-001"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 15,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-TRAVERSAL/received.zip"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preserve",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-TRAVERSAL/received.zip",
+          "/workspace/.work/conformance-final-overflow-20260907/python/PKG-TRAVERSAL/preserved.zip"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/PKG-TRAVERSAL"
+    },
+    {
+      "id": "R01",
+      "title": "Explicit provider revision is validated while original stays intact",
+      "implementation": "python",
+      "roles": [
+        "reader",
+        "binder",
+        "executor",
+        "editor"
+      ],
+      "requirements": [
+        "PKG-004",
+        "BIND-006",
+        "ACC-002"
+      ],
+      "scope": "core",
+      "mandatory": true,
+      "status": "passed",
+      "assertionCount": 69,
+      "failedAssertions": [],
+      "executedCommands": [
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "preflight",
+          "/workspace/.work/conformance-final-overflow-20260907/python/R01/package",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/R01/bindings.json"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "replace",
+          "/workspace/.work/conformance-final-overflow-20260907/python/R01/package",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/R01/explicit-replacement",
+          "--binding",
+          "engineering",
+          "--with",
+          "/workspace/.work/conformance-final-overflow-20260907/python/R01/explicit-intended-provider.json",
+          "--revision",
+          "1.explicit-replacement"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "validate",
+          "/workspace/.work/conformance-final-overflow-20260907/python/R01/explicit-replacement"
+        ],
+        [
+          "/usr/local/bin/python",
+          "-m",
+          "epx.cli",
+          "run",
+          "/workspace/.work/conformance-final-overflow-20260907/python/R01/explicit-replacement",
+          "--out",
+          "/workspace/.work/conformance-final-overflow-20260907/python/R01/run",
+          "--bindings",
+          "/workspace/.work/conformance-final-overflow-20260907/python/R01/bindings.json",
+          "--engine",
+          "cwltool"
+        ]
+      ],
+      "priorTransientEvidenceDirectory": "python/R01"
+    }
+  ],
+  "completedAt": "2026-09-08T00:07:16.354001+00:00",
+  "sourceSnapshotAfter": {
+    "applications/node/base.mjs": "4f4af73ece8ccbc57ae1c88a32d0f0ce6866db13d99fce118b04ad845bcff2b8",
+    "applications/node/cli.mjs": "4a84abcced81960116645265a64ba8835cde0e7b435428b474a9d9fe91458189",
+    "applications/node/index.mjs": "819c9e7121208cb3787d77bf20c0ffb04ca95b082a46ff3c83e1bc68646bda3e",
+    "applications/node/mcp-call.mjs": "895d0230e3972344e4529105156ceabd6d5a08215d7969521d8a8f1851215041",
+    "applications/node/mcp.mjs": "334b91ced3b6414a77bc47360446467a1d758fc75d1a416ee13ca6f01e7bc7a3",
+    "applications/node/package-lock.json": "91a88db3278c213512086b69bb3a38e16dd5acdde915bac2efa798aec64a7f73",
+    "applications/node/package.json": "5863b56af2037e000ab05a912843a6c2ee9c62b0fbc2e67b70b47edb1656b076",
+    "applications/node/package.mjs": "224696bd1c36d123ea14a3dfb15b3a7e94890f9b8ee682f6125bc56dcb5be994",
+    "applications/node/replacement.mjs": "b9aecab644819c5649b802534a38ae4b1a479f19aa382f97dcaaddd3dd9588c2",
+    "applications/node/smoke.mjs": "7120b84f2dafd5eca0be6f389b96646fe4a5328da9ff2223563e8f66c0061a66",
+    "conformance/cases.json": "43c9e90987b97d4c2b884234735b324ae36aa14e610734f7d471e0bac4a80231",
+    "examples/calculation/contracts/engineering.mass.tool.json": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+    "examples/calculation/contracts/engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+    "examples/calculation/expected.json": "eb5a56fecd742f96d1f3a1554295cd164a56656bfceb38c8ed7562316d347928",
+    "examples/calculation/inputs/job.json": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+    "examples/calculation/requirements.json": "a7614aa828c1c91f2825387e3361a14f52f418fdf55f50477482abadfe41701c",
+    "examples/calculation/ro-crate-metadata.json": "05fa616c1a00e302eb2fdce99d7563393e45b5cdf414a138f3a2417aac93cec6",
+    "examples/calculation/workflow.cwl.json": "49e2df2773de2286d1cfdb8f21509a60144d72408d9d324e728c32df2bd8f785",
+    "examples/calculation-replacement/contracts/engineering.mass.tool.json": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+    "examples/calculation-replacement/contracts/engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+    "examples/calculation-replacement/expected.json": "eb5a56fecd742f96d1f3a1554295cd164a56656bfceb38c8ed7562316d347928",
+    "examples/calculation-replacement/inputs/job.json": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+    "examples/calculation-replacement/provenance/replaced-requirements.json": "a7614aa828c1c91f2825387e3361a14f52f418fdf55f50477482abadfe41701c",
+    "examples/calculation-replacement/requirements.json": "2571cd108afc62e95b8077f7058cf7b785746f6cb3b4b94ba8dadb409a471a6f",
+    "examples/calculation-replacement/ro-crate-metadata.json": "eaacd88ae9e021de1345677de9ce39b1613ead4d292cfcfaf42117878b9d5391",
+    "examples/calculation-replacement/workflow.cwl.json": "49e2df2773de2286d1cfdb8f21509a60144d72408d9d324e728c32df2bd8f785",
+    "examples/inspection-approval/contracts/engineering.mass.tool.json": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+    "examples/inspection-approval/contracts/engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+    "examples/inspection-approval/expected.json": "dc2a7ec6758994af1c55b4a6a0f05d2c8c1b24d19db38e97aaf1349faea54162",
+    "examples/inspection-approval/inputs/job.json": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+    "examples/inspection-approval/requirements.json": "e0210945f5a6588a9584c38dbc6b8b1ae258f0bf9be1dc52b5644d10aeb121d2",
+    "examples/inspection-approval/ro-crate-metadata.json": "a50b8926473b4401b70e3c37efcaa970890162b709e71ddd487d9b1398f9a6c4",
+    "examples/inspection-approval/workflow.cwl.json": "49e2df2773de2286d1cfdb8f21509a60144d72408d9d324e728c32df2bd8f785",
+    "examples/minimal/contracts/engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+    "examples/minimal/expected.json": "02736936cb086cc111b06b53d55d06281c96b1a8d3aae70f3e8d9e3ad3496363",
+    "examples/minimal/inputs/job.json": "3de2fd209761c9c20d7f505a2e4a39acf90e3217ba6bc78a66c5f30b0e180429",
+    "examples/minimal/requirements.json": "6dc0beb968bd328f38711cd49874aab7d50778da39226e987c3ac05a0c11f034",
+    "examples/minimal/ro-crate-metadata.json": "19587c30c77faf21a6cd72909dba18ff83d989732f1117256e3bbdf5c33292a6",
+    "examples/minimal/workflow.cwl.json": "5399a1463d42ed1753010188644f998c964235aec6481abec5abf51a3149f616",
+    "examples/mock-handoff/contracts/engineering.mass.tool.json": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+    "examples/mock-handoff/contracts/engineering.record.tool.json": "53a014825a124a0956f7df871a29e67cb014e454b4d87ca456844e936b72f2d4",
+    "examples/mock-handoff/contracts/engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+    "examples/mock-handoff/expected.json": "77cdd17b4665e183f5549e4d7178eac7337ead922a5d20ed676fd5e76da7524d",
+    "examples/mock-handoff/inputs/job.json": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+    "examples/mock-handoff/requirements.json": "d53a3b3765ac4fc262ed72486849f22506095379d97c3ae2a84d6df26fd8eaad",
+    "examples/mock-handoff/ro-crate-metadata.json": "095fb6f827eaaf9ca1cd1221b158c28e17c01116886f22a96ca0ac598b69c7f2",
+    "examples/mock-handoff/workflow.cwl.json": "1bca579e69a98be43a0ef1a6065e8576fa6d1c43be157b42a36ab3446b17863b",
+    "examples/solid-edge-capture/capture-required.json": "56b9c247feb8d81166f2afdd91f10184dbf3b3395885ee8139f0949ce988f7d6",
+    "schemas/bindings.schema.json": "b4ff9a27e7f83bbc95ef68a8b6fba90f8c9841bc5dcebc58a43ddaf3ea2b3e2b",
+    "schemas/requirements.schema.json": "44fd2c56bf35d285ccbaaab72d8d10a0fe26586a0664fcdf694ad1378fe09ed1",
+    "schemas/run.schema.json": "f0d76b5d291ae13f0c892df0bbe2d48197f1b10bd32d3d3aed437b74db6e3f4e",
+    "spec/core-draft.md": "cfae159c4c89122f4f9024b29f685ede82223e5093e9a1ba50f5a1f1b6d271b4",
+    "src/epx/__init__.py": "56b438f993b5cd1ba899ebee1d7ee42dd8bf0f804d859169a6847be80bf31c7a",
+    "src/epx/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+    "src/epx/acceptance.py": "aa6340330cac88dc51f4a3068923975ab1474e2d6ce0b94c96aa5490399923e8",
+    "src/epx/adapter.py": "471b47eb60911d2792fa66e03c75b8a8fc9ddb375af5a04140a1eb1de208f08f",
+    "src/epx/cli.py": "18ed6e02e6c36d4b4ebb24d95a1e8aaa8af0f76a1fd33bbda6f6e6b31799b571",
+    "src/epx/errors.py": "daf4dd04fce21fcb9590813bbfaa18ac44293b6aba8207e0a986fbeddebded27",
+    "src/epx/jsonio.py": "c8259d4cbfbf6adbe573217f96d97954e6d44cd07f5ec6516c13f76f2496c793",
+    "src/epx/mcp.py": "adbc5bfd0c531b82e6b253b4b14b188b5b17119332e807198382e31bc6c4a2bb",
+    "src/epx/package.py": "64982c98fb56716c19dc78006eccc98c7440f608d4dc93c45f45f0dd436802db",
+    "src/epx/replacement.py": "f05ca171422cb61123f3a1faaaba452f4309bfd6be199d50cc3f423ea7077e06",
+    "src/epx/runner.py": "2d7f4597497f9ad5134cd6f285f8e45a91f50632d8dc32264785667b7e497a6c",
+    "tests/conformance/export_evidence.py": "0a303004c054f043d69855775a3bbaa65a1c492960401ef31f8b2e0ff509d1af",
+    "tests/conformance/run_core.py": "2ab3b758c9bdc37932ef83820bd8c895ea46939785d0bd804ab6d2b96a200de0",
+    "tests/providers/mock_mcp_server.py": "bdc4173533f1c7d265947f5cae51cb91131af74e110312cbd0685bde4c31446f"
+  },
+  "sourcesStableDuringRun": true,
+  "installedPythonArtifactAfter": {
+    "status": "installed",
+    "version": "0.1.0.dev1",
+    "filesSha256": {
+      "engineering_process_kit-0.1.0.dev1.dist-info/METADATA": "30ec7d980b13c215137674c1a9012eba26d3bb28ac68ca4c5ef6d7088c8e06a8",
+      "engineering_process_kit-0.1.0.dev1.dist-info/RECORD": "53ecdcaf8593b7364ba018da43b502b82c609c380ff602c84ba52506a3f3985d",
+      "engineering_process_kit-0.1.0.dev1.dist-info/direct_url.json": "c9fd47d5e69f1c67db5894b0c902424bd83825037cc3fd27f6ffa3390991dce0",
+      "engineering_process_kit-0.1.0.dev1.dist-info/entry_points.txt": "8395808cd6c22bd90f5742ef8e52219a7d79bf791ce3d11ae261579ca776fa91",
+      "epx/__init__.py": "56b438f993b5cd1ba899ebee1d7ee42dd8bf0f804d859169a6847be80bf31c7a",
+      "epx/__main__.py": "935a1c1166b0c1ea35a82256345000bf2c73ded718d77773bc27a71ecce28f7d",
+      "epx/acceptance.py": "aa6340330cac88dc51f4a3068923975ab1474e2d6ce0b94c96aa5490399923e8",
+      "epx/adapter.py": "471b47eb60911d2792fa66e03c75b8a8fc9ddb375af5a04140a1eb1de208f08f",
+      "epx/cli.py": "18ed6e02e6c36d4b4ebb24d95a1e8aaa8af0f76a1fd33bbda6f6e6b31799b571",
+      "epx/errors.py": "daf4dd04fce21fcb9590813bbfaa18ac44293b6aba8207e0a986fbeddebded27",
+      "epx/jsonio.py": "c8259d4cbfbf6adbe573217f96d97954e6d44cd07f5ec6516c13f76f2496c793",
+      "epx/mcp.py": "adbc5bfd0c531b82e6b253b4b14b188b5b17119332e807198382e31bc6c4a2bb",
+      "epx/package.py": "64982c98fb56716c19dc78006eccc98c7440f608d4dc93c45f45f0dd436802db",
+      "epx/replacement.py": "f05ca171422cb61123f3a1faaaba452f4309bfd6be199d50cc3f423ea7077e06",
+      "epx/runner.py": "2d7f4597497f9ad5134cd6f285f8e45a91f50632d8dc32264785667b7e497a6c",
+      "epx/schemas/__init__.py": "ae328bde839913f9cb2ef6007de70216baf66026f4124951feaad19f6e2a988c",
+      "epx/schemas/bindings.schema.json": "b4ff9a27e7f83bbc95ef68a8b6fba90f8c9841bc5dcebc58a43ddaf3ea2b3e2b",
+      "epx/schemas/requirements.schema.json": "44fd2c56bf35d285ccbaaab72d8d10a0fe26586a0664fcdf694ad1378fe09ed1",
+      "epx/schemas/run.schema.json": "f0d76b5d291ae13f0c892df0bbe2d48197f1b10bd32d3d3aed437b74db6e3f4e"
+    },
+    "installOrigin": {
+      "archive_info": {
+        "hash": "sha256=fe020381bfbe61a047b7b615f0d8d7ddaafbaa5fbb06cd886049539cfc67ef9c",
+        "hashes": {
+          "sha256": "fe020381bfbe61a047b7b615f0d8d7ddaafbaa5fbb06cd886049539cfc67ef9c"
+        }
+      },
+      "url": "file:///workspace/.work/final-wheels-6/engineering_process_kit-0.1.0.dev1-py3-none-any.whl"
+    }
+  },
+  "nodeArtifactAfter": {
+    "entrypoint": "/tmp/epx-node/package/cli.mjs",
+    "filesSha256": {
+      "/tmp/epx-node/package/base.mjs": "4f4af73ece8ccbc57ae1c88a32d0f0ce6866db13d99fce118b04ad845bcff2b8",
+      "/tmp/epx-node/package/cli.mjs": "4a84abcced81960116645265a64ba8835cde0e7b435428b474a9d9fe91458189",
+      "/tmp/epx-node/package/index.mjs": "819c9e7121208cb3787d77bf20c0ffb04ca95b082a46ff3c83e1bc68646bda3e",
+      "/tmp/epx-node/package/mcp-call.mjs": "895d0230e3972344e4529105156ceabd6d5a08215d7969521d8a8f1851215041",
+      "/tmp/epx-node/package/mcp.mjs": "334b91ced3b6414a77bc47360446467a1d758fc75d1a416ee13ca6f01e7bc7a3",
+      "/tmp/epx-node/package/package.json": "5863b56af2037e000ab05a912843a6c2ee9c62b0fbc2e67b70b47edb1656b076",
+      "/tmp/epx-node/package/package.mjs": "224696bd1c36d123ea14a3dfb15b3a7e94890f9b8ee682f6125bc56dcb5be994",
+      "/tmp/epx-node/package/replacement.mjs": "b9aecab644819c5649b802534a38ae4b1a479f19aa382f97dcaaddd3dd9588c2",
+      "/tmp/epx-node/package/schemas/bindings.schema.json": "b4ff9a27e7f83bbc95ef68a8b6fba90f8c9841bc5dcebc58a43ddaf3ea2b3e2b",
+      "/tmp/epx-node/package/schemas/manifest.json": "1a152b42c79bc21d8791d896f36a8d724e407a40a76f64d3bf1f5edf690e15a5",
+      "/tmp/epx-node/package/schemas/requirements.schema.json": "44fd2c56bf35d285ccbaaab72d8d10a0fe26586a0664fcdf694ad1378fe09ed1",
+      "/tmp/epx-node/package/schemas/run.schema.json": "f0d76b5d291ae13f0c892df0bbe2d48197f1b10bd32d3d3aed437b74db6e3f4e",
+      "/tmp/epx-node/package/smoke.mjs": "7120b84f2dafd5eca0be6f389b96646fe4a5328da9ff2223563e8f66c0061a66"
+    },
+    "resolvedDependencies": {
+      "ajv": {
+        "version": "8.18.0",
+        "packageJsonSha256": "720f862de3e496df05e074c33df5174db92c47e60726e41ab1338cfefda9754c"
+      },
+      "yauzl": {
+        "version": "3.2.1",
+        "packageJsonSha256": "acbdf064d3e0f5d48ea6ae587a06288c18649f53e787c9d66342263927e68574"
+      }
+    },
+    "archive": {
+      "path": "/workspace/applications/node/.work/epx-node-adopter-0.1.0-draft.1.tgz",
+      "sha256": "17af3719d4be63ef330ba1368a65fb1232e8539f550b46f461460b44824fb525",
+      "installedFilesMatch": {
+        "package/schemas/bindings.schema.json": true,
+        "package/schemas/manifest.json": true,
+        "package/package.json": true,
+        "package/schemas/requirements.schema.json": true,
+        "package/schemas/run.schema.json": true,
+        "package/README.md": true,
+        "package/THIRD_PARTY.md": true,
+        "package/base.mjs": true,
+        "package/cli.mjs": true,
+        "package/index.mjs": true,
+        "package/mcp-call.mjs": true,
+        "package/mcp.mjs": true,
+        "package/package.mjs": true,
+        "package/replacement.mjs": true,
+        "package/smoke.mjs": true,
+        "package/scripts/sync-schemas.mjs": true
+      },
+      "allMatch": true
+    }
+  },
+  "installedArtifactStableDuringRun": true,
+  "requirementCoverage": {
+    "python": {
+      "CORE-001": {
+        "status": "passed",
+        "cases": [
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CORE-002": {
+        "status": "passed",
+        "cases": [
+          "P03-GRAPH",
+          "P03-OPERATION",
+          "CORE-AUTHORITY",
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CORE-003": {
+        "status": "passed",
+        "cases": [
+          "P02",
+          "CORE-VERSION",
+          "B01",
+          "B04-CONTRACT",
+          "B04-PROTOCOL",
+          "B04-APPLICATION",
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "PKG-001": {
+        "status": "passed",
+        "cases": [
+          "P01-ZIP",
+          "P04-MISSING",
+          "PKG-TRAVERSAL",
+          "PKG-DUPLICATE",
+          "PKG-SYMLINK"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "PKG-002": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "P01-ZIP",
+          "P04-CORRUPT",
+          "P04-MISSING",
+          "CORE-AUTHORITY",
+          "PKG-CRATE-DATE",
+          "PKG-CRATE-LICENSE"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "PKG-003": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "P02",
+          "P02-METADATA",
+          "P03-NONFINITE",
+          "CORE-VERSION",
+          "CORE-AUTHORITY"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "PKG-004": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "P01-ZIP",
+          "P02",
+          "P02-METADATA",
+          "R01",
+          "OUT-NONOVERWRITE"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CWL-001": {
+        "status": "passed",
+        "cases": [
+          "P03-GRAPH",
+          "P03-CYCLE",
+          "CWL-UNKNOWN",
+          "E01",
+          "C-MCP01",
+          "CWL-UNKNOWN-FIELD"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CWL-002": {
+        "status": "passed",
+        "cases": [
+          "CWL-REQUIRED",
+          "CWL-UNKNOWN",
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CWL-003": {
+        "status": "passed",
+        "cases": [
+          "P03-OPERATION",
+          "E01",
+          "C-MCP01",
+          "CWL-CONTEXT-SOURCE",
+          "CWL-SIGNATURE",
+          "CWL-EXTRA-ARGS"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CWL-004": {
+        "status": "passed",
+        "cases": [
+          "CWL-CONTEXT",
+          "E01",
+          "CWL-CONTEXT-SOURCE"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CWL-005": {
+        "status": "passed",
+        "cases": [
+          "P03-GRAPH",
+          "P03-CYCLE",
+          "E01",
+          "C-MCP01",
+          "C-MCP04",
+          "A02-INPUT-UNITS",
+          "CWL-OUTPUT-SOURCE",
+          "CWL-OUTPUT-GLOB",
+          "CWL-OUTPUT-NO-GLOB"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-001": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "B01",
+          "B02",
+          "B03",
+          "B04-APPLICATION",
+          "B04-LAUNCHER",
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-002": {
+        "status": "passed",
+        "cases": [
+          "B01",
+          "B02",
+          "B04-LAUNCHER",
+          "B05"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-003": {
+        "status": "passed",
+        "cases": [
+          "B03",
+          "B04-PROTOCOL",
+          "B04-APPLICATION",
+          "B05",
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-004": {
+        "status": "passed",
+        "cases": [
+          "B02",
+          "B04-CONTRACT",
+          "E01",
+          "E03-SCHEMA",
+          "A02-ARGUMENTS",
+          "A02-OUTPUT-UNIT"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-005": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "B02",
+          "B03",
+          "B04-APPLICATION",
+          "B05",
+          "B05-UNAVAILABLE",
+          "B06-ABSENT",
+          "B06-DENIED",
+          "B06-REVISION"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-006": {
+        "status": "passed",
+        "cases": [
+          "B01",
+          "R01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "RES-001": {
+        "status": "passed",
+        "cases": [
+          "P04-CORRUPT",
+          "P04-MISSING",
+          "B06-ABSENT",
+          "B06-DENIED",
+          "B06-REVISION",
+          "C-MCP01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "RES-002": {
+        "status": "passed",
+        "cases": [
+          "B06-ABSENT",
+          "B06-DENIED",
+          "B06-REVISION"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "RES-003": {
+        "status": "passed",
+        "cases": [
+          "C-MCP01",
+          "E03-TOOL",
+          "E03-RPC",
+          "C-MCP05",
+          "A02-ARGUMENTS"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "OUT-001": {
+        "status": "failed",
+        "cases": [
+          "E01",
+          "C-MCP01",
+          "E03-TOOL",
+          "C-MCP04",
+          "C-MCP05",
+          "OUT-NONOVERWRITE",
+          "CWL-OUTPUT-GLOB",
+          "CWL-OUTPUT-NO-GLOB",
+          "A02-OVERFLOW"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "OUT-002": {
+        "status": "passed",
+        "cases": [
+          "E03-TOOL",
+          "C-MCP04",
+          "C-MCP05",
+          "CWL-OUTPUT-GLOB"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "OUT-003": {
+        "status": "passed",
+        "cases": [
+          "E03-TOOL",
+          "E03-RPC",
+          "E03-SCHEMA",
+          "C-MCP04",
+          "C-MCP05",
+          "A01-FAIL",
+          "A02-OUTPUT-UNIT"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "ACC-001": {
+        "status": "failed",
+        "cases": [
+          "P03-NONFINITE",
+          "E01",
+          "A01-FAIL",
+          "A02-INPUT-UNITS",
+          "A02-CRITERION-UNITS",
+          "A02-DIMENSION",
+          "A02-UNSUPPORTED",
+          "A02-ARGUMENTS",
+          "A02-OUTPUT-UNIT",
+          "A02-OVERFLOW"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "ACC-002": {
+        "status": "failed",
+        "cases": [
+          "E01",
+          "C-MCP01",
+          "E03-SCHEMA",
+          "C-MCP04",
+          "C-MCP05",
+          "A01-FAIL",
+          "A01-EVIDENCE",
+          "A02-INPUT-UNITS",
+          "A02-CRITERION-UNITS",
+          "R01",
+          "A02-OUTPUT-UNIT",
+          "A02-OVERFLOW"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "ACC-003": {
+        "status": "passed",
+        "cases": [
+          "P02"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "DIAG-001": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "P02",
+          "P03-GRAPH",
+          "E03-TOOL",
+          "E03-RPC"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CONF-001": {
+        "status": "passed",
+        "cases": [
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      }
+    },
+    "node": {
+      "CORE-001": {
+        "status": "passed",
+        "cases": [
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CORE-002": {
+        "status": "passed",
+        "cases": [
+          "P03-GRAPH",
+          "P03-OPERATION",
+          "CORE-AUTHORITY",
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CORE-003": {
+        "status": "passed",
+        "cases": [
+          "P02",
+          "CORE-VERSION",
+          "B01",
+          "B04-CONTRACT",
+          "B04-PROTOCOL",
+          "B04-APPLICATION",
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "PKG-001": {
+        "status": "passed",
+        "cases": [
+          "P01-ZIP",
+          "P04-MISSING",
+          "PKG-TRAVERSAL",
+          "PKG-DUPLICATE",
+          "PKG-SYMLINK"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "PKG-002": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "P01-ZIP",
+          "P04-CORRUPT",
+          "P04-MISSING",
+          "CORE-AUTHORITY",
+          "PKG-CRATE-DATE",
+          "PKG-CRATE-LICENSE"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "PKG-003": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "P02",
+          "P02-METADATA",
+          "P03-NONFINITE",
+          "CORE-VERSION",
+          "CORE-AUTHORITY"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "PKG-004": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "P01-ZIP",
+          "P02",
+          "P02-METADATA",
+          "R01",
+          "OUT-NONOVERWRITE"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CWL-001": {
+        "status": "passed",
+        "cases": [
+          "P03-GRAPH",
+          "P03-CYCLE",
+          "CWL-UNKNOWN",
+          "E01",
+          "C-MCP01",
+          "CWL-UNKNOWN-FIELD"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CWL-002": {
+        "status": "passed",
+        "cases": [
+          "CWL-REQUIRED",
+          "CWL-UNKNOWN",
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CWL-003": {
+        "status": "passed",
+        "cases": [
+          "P03-OPERATION",
+          "E01",
+          "C-MCP01",
+          "CWL-CONTEXT-SOURCE",
+          "CWL-SIGNATURE",
+          "CWL-EXTRA-ARGS"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CWL-004": {
+        "status": "passed",
+        "cases": [
+          "CWL-CONTEXT",
+          "E01",
+          "CWL-CONTEXT-SOURCE"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CWL-005": {
+        "status": "passed",
+        "cases": [
+          "P03-GRAPH",
+          "P03-CYCLE",
+          "E01",
+          "C-MCP01",
+          "C-MCP04",
+          "A02-INPUT-UNITS",
+          "CWL-OUTPUT-SOURCE",
+          "CWL-OUTPUT-GLOB",
+          "CWL-OUTPUT-NO-GLOB"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-001": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "B01",
+          "B02",
+          "B03",
+          "B04-APPLICATION",
+          "B04-LAUNCHER",
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-002": {
+        "status": "passed",
+        "cases": [
+          "B01",
+          "B02",
+          "B04-LAUNCHER",
+          "B05"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-003": {
+        "status": "passed",
+        "cases": [
+          "B03",
+          "B04-PROTOCOL",
+          "B04-APPLICATION",
+          "B05",
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-004": {
+        "status": "passed",
+        "cases": [
+          "B02",
+          "B04-CONTRACT",
+          "E01",
+          "E03-SCHEMA",
+          "A02-ARGUMENTS",
+          "A02-OUTPUT-UNIT"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-005": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "B02",
+          "B03",
+          "B04-APPLICATION",
+          "B05",
+          "B05-UNAVAILABLE",
+          "B06-ABSENT",
+          "B06-DENIED",
+          "B06-REVISION"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "BIND-006": {
+        "status": "passed",
+        "cases": [
+          "B01",
+          "R01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "RES-001": {
+        "status": "passed",
+        "cases": [
+          "P04-CORRUPT",
+          "P04-MISSING",
+          "B06-ABSENT",
+          "B06-DENIED",
+          "B06-REVISION",
+          "C-MCP01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "RES-002": {
+        "status": "passed",
+        "cases": [
+          "B06-ABSENT",
+          "B06-DENIED",
+          "B06-REVISION"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "RES-003": {
+        "status": "passed",
+        "cases": [
+          "C-MCP01",
+          "E03-TOOL",
+          "E03-RPC",
+          "C-MCP05",
+          "A02-ARGUMENTS"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "OUT-001": {
+        "status": "passed",
+        "cases": [
+          "E01",
+          "C-MCP01",
+          "E03-TOOL",
+          "C-MCP04",
+          "C-MCP05",
+          "OUT-NONOVERWRITE",
+          "CWL-OUTPUT-GLOB",
+          "CWL-OUTPUT-NO-GLOB",
+          "A02-OVERFLOW"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "OUT-002": {
+        "status": "passed",
+        "cases": [
+          "E03-TOOL",
+          "C-MCP04",
+          "C-MCP05",
+          "CWL-OUTPUT-GLOB"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "OUT-003": {
+        "status": "passed",
+        "cases": [
+          "E03-TOOL",
+          "E03-RPC",
+          "E03-SCHEMA",
+          "C-MCP04",
+          "C-MCP05",
+          "A01-FAIL",
+          "A02-OUTPUT-UNIT"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "ACC-001": {
+        "status": "passed",
+        "cases": [
+          "P03-NONFINITE",
+          "E01",
+          "A01-FAIL",
+          "A02-INPUT-UNITS",
+          "A02-CRITERION-UNITS",
+          "A02-DIMENSION",
+          "A02-UNSUPPORTED",
+          "A02-ARGUMENTS",
+          "A02-OUTPUT-UNIT",
+          "A02-OVERFLOW"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "ACC-002": {
+        "status": "passed",
+        "cases": [
+          "E01",
+          "C-MCP01",
+          "E03-SCHEMA",
+          "C-MCP04",
+          "C-MCP05",
+          "A01-FAIL",
+          "A01-EVIDENCE",
+          "A02-INPUT-UNITS",
+          "A02-CRITERION-UNITS",
+          "R01",
+          "A02-OUTPUT-UNIT",
+          "A02-OVERFLOW"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "ACC-003": {
+        "status": "passed",
+        "cases": [
+          "P02"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "DIAG-001": {
+        "status": "passed",
+        "cases": [
+          "P01",
+          "P02",
+          "P03-GRAPH",
+          "E03-TOOL",
+          "E03-RPC"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      },
+      "CONF-001": {
+        "status": "passed",
+        "cases": [
+          "E01"
+        ],
+        "scope": "Mapped observable assertions only; see case evidence and scope limitations."
+      }
+    }
+  },
+  "counts": {
+    "passed": 113,
+    "failed": 1,
+    "unsupported": 0,
+    "not run": 8
+  },
+  "fullCoreSelected": true,
+  "coreConformanceDemonstrated": false,
+  "summary": "Mandatory selected cases failed; inspect evidence before any conformance claim",
+  "diagnosticRetention": {
+    "kind": "summary",
+    "originalReportSha256": "4ee04f773a2ee7eb8594ac094683cd20bc2f94fa045d22c952f8de0ce04f490f",
+    "scope": "Earlier exploratory report. Exact tested identities, outcomes and failed assertions retained. Detailed old per-case files remain transient workspace evidence and are not in the final evidence.zip."
+  }
+}

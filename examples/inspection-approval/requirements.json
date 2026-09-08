@@ -1,0 +1,94 @@
+{
+  "format": "epx-requirements",
+  "version": "0.1.0-draft.1",
+  "profile": "urn:engineering-process-spec:core:0.1.0-draft.1",
+  "process": {
+    "id": "urn:engineering-process-spec:example:inspection-approval",
+    "revision": "1",
+    "entrypoint": "workflow.cwl.json#main"
+  },
+  "requiredFeatures": [
+    "cwl-mcp-core",
+    "quantity-acceptance",
+    "resource-revisions",
+    "human-approval"
+  ],
+  "bindings": {
+    "engineering": {
+      "implementation": {
+        "id": "urn:engineering-process-spec:mock-mcp",
+        "revision": "0.1.0-draft.1",
+        "artifactSha256": "bdc4173533f1c7d265947f5cae51cb91131af74e110312cbd0685bde4c31446f"
+      },
+      "application": {
+        "id": "urn:engineering-process-spec:mock-engineering",
+        "version": "0.1.0-draft.1"
+      },
+      "protocolVersion": "2025-11-25",
+      "executionPlatforms": [
+        "linux",
+        "win32",
+        "darwin"
+      ]
+    }
+  },
+  "operations": {
+    "main/volume": {
+      "binding": "engineering",
+      "tool": "engineering.volume",
+      "toolContract": "contracts/engineering.volume.tool.json",
+      "effect": "read-only"
+    },
+    "main/mass": {
+      "binding": "engineering",
+      "tool": "engineering.mass",
+      "toolContract": "contracts/engineering.mass.tool.json",
+      "effect": "read-only"
+    }
+  },
+  "resources": {
+    "plate": {
+      "binding": "engineering",
+      "uri": "mock://plate",
+      "revision": "r1"
+    }
+  },
+  "job": "inputs/job.json",
+  "acceptance": [
+    {
+      "id": "volume-quantity",
+      "node": "main/volume",
+      "valuePointer": "/structuredContent/value",
+      "unitPointer": "/structuredContent/unit",
+      "quantityPointer": "/structuredContent/quantity",
+      "quantity": "volume",
+      "unit": "m3",
+      "expected": 2e-05,
+      "absoluteTolerance": 1e-12
+    },
+    {
+      "id": "mass-quantity",
+      "node": "main/mass",
+      "valuePointer": "/structuredContent/value",
+      "unitPointer": "/structuredContent/unit",
+      "quantityPointer": "/structuredContent/quantity",
+      "quantity": "mass",
+      "unit": "kg",
+      "expected": 0.157,
+      "absoluteTolerance": 1e-06
+    }
+  ],
+  "extensions": {
+    "urn:engineering-process-spec:example-notes": {
+      "dataProvenance": "Synthetic test dimensions and density; no design or material certification.",
+      "providerScope": "Explicitly named test-only mock MCP, never Solid Edge."
+    },
+    "urn:engineering-process-spec:approval-proposal": {
+      "status": "preservation-only",
+      "role": "quality-inspector",
+      "subject": "Exact process revision and resulting measurement evidence; no decision supplied.",
+      "approval": "not-granted",
+      "scope": "Core executors must report unsupported before engineering calls."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "measurement": {
+      "additionalProperties": false,
+      "properties": {
+        "quantity": {
+          "enum": [
+            "mass",
+            "volume",
+            "length",
+            "thickness"
+          ],
+          "type": "string"
+        },
+        "unit": {
+          "enum": [
+            "kg",
+            "m3",
+            "mm3",
+            "m",
+            "mm"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "quantity",
+        "value",
+        "unit"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "measurement"
+  ],
+  "type": "object"
+}

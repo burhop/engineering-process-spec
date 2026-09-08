@@ -1,0 +1,14 @@
+2026-09-07T18:43:12.6424612-04:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application started. Press Ctrl+C to shut down.
+2026-09-07T18:43:12.6533191-04:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Hosting environment: Production
+2026-09-07T18:43:12.6534109-04:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Content root path: D:\repos\engineering-process-spec
+2026-09-07T18:43:12.9629734-04:00	INFO	[Synapse.Runner.Services.IWorkflowExecutionContext]	[0]	Workflow started.
+2026-09-07T18:43:12.9854656-04:00	INFO	[Synapse.Runner.Services.IWorkflowExecutionContext]	[0]	Task '/do/0/first' created.
+2026-09-07T18:43:12.9928091-04:00	INFO	[Synapse.Runner.Services.IWorkflowExecutionContext]	[0]	Task '/do/0/first' initialized.
+2026-09-07T18:43:13.0030071-04:00	INFO	[Synapse.Runner.Services.IWorkflowExecutionContext]	[0]	Task '/do/0/first' started.
+2026-09-07T18:43:13.0215857-04:00	INFO	[Synapse.Runner.Services.IWorkflowExecutionContext]	[0]	Task '/do/0/first' successfully executed.
+2026-09-07T18:43:13.0304185-04:00	INFO	[Synapse.Runner.Services.IWorkflowExecutionContext]	[0]	Task '/do/1/handoff' created.
+2026-09-07T18:43:13.0314716-04:00	INFO	[Synapse.Runner.Services.IWorkflowExecutionContext]	[0]	Task '/do/1/handoff' initialized.
+2026-09-07T18:43:13.0315639-04:00	INFO	[Synapse.Runner.Services.IWorkflowExecutionContext]	[0]	Task '/do/1/handoff' started.
+2026-09-07T18:43:13.2177634-04:00	INFO	[Synapse.Runner.Services.IWorkflowExecutionContext]	[0]	Task '/do/1/handoff' successfully executed.
+2026-09-07T18:43:13.2266905-04:00	INFO	[Synapse.Runner.Services.IWorkflowExecutionContext]	[0]	Workflow successfully executed.
+2026-09-07T18:43:13.2276570-04:00	INFO	[Microsoft.Hosting.Lifetime]	[0]	Application is shutting down...

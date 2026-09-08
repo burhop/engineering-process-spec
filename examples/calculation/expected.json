@@ -1,0 +1,22 @@
+{
+  "evidenceKind": "expected observations, not an execution report",
+  "execution": "succeeded",
+  "acceptance": "pass",
+  "approval": "not-requested",
+  "orderedNodes": [
+    "main/volume",
+    "main/mass"
+  ],
+  "structuredResults": {
+    "main/volume": {
+      "quantity": "volume",
+      "value": 2e-05,
+      "unit": "m3"
+    },
+    "main/mass": {
+      "quantity": "mass",
+      "value": 0.157,
+      "unit": "kg"
+    }
+  }
+}

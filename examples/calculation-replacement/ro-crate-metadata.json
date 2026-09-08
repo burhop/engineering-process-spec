@@ -1,0 +1,96 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.2/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "calculation-replacement",
+      "description": "Experimental fixed-call engineering process; mock provider, no CAD or material certification.",
+      "datePublished": "2026-09-07",
+      "license": "Licensing terms have not been selected; this metadata grants no additional permissions.",
+      "mainEntity": {
+        "@id": "workflow.cwl.json"
+      },
+      "conformsTo": [
+        {
+          "@id": "urn:engineering-process-spec:core:0.1.0-draft.1"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "contracts/engineering.mass.tool.json"
+        },
+        {
+          "@id": "contracts/engineering.volume.tool.json"
+        },
+        {
+          "@id": "expected.json"
+        },
+        {
+          "@id": "inputs/job.json"
+        },
+        {
+          "@id": "provenance/replaced-requirements.json"
+        },
+        {
+          "@id": "requirements.json"
+        },
+        {
+          "@id": "workflow.cwl.json"
+        }
+      ]
+    },
+    {
+      "@id": "contracts/engineering.mass.tool.json",
+      "@type": "File",
+      "sha256": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+      "contentSize": "1911"
+    },
+    {
+      "@id": "contracts/engineering.volume.tool.json",
+      "@type": "File",
+      "sha256": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+      "contentSize": "2419"
+    },
+    {
+      "@id": "expected.json",
+      "@type": "File",
+      "sha256": "eb5a56fecd742f96d1f3a1554295cd164a56656bfceb38c8ed7562316d347928",
+      "contentSize": "433"
+    },
+    {
+      "@id": "inputs/job.json",
+      "@type": "File",
+      "sha256": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+      "contentSize": "330"
+    },
+    {
+      "@id": "provenance/replaced-requirements.json",
+      "@type": "File",
+      "sha256": "a7614aa828c1c91f2825387e3361a14f52f418fdf55f50477482abadfe41701c",
+      "contentSize": "2395"
+    },
+    {
+      "@id": "requirements.json",
+      "@type": "File",
+      "sha256": "2571cd108afc62e95b8077f7058cf7b785746f6cb3b4b94ba8dadb409a471a6f",
+      "contentSize": "2950"
+    },
+    {
+      "@id": "workflow.cwl.json",
+      "@type": "File",
+      "sha256": "49e2df2773de2286d1cfdb8f21509a60144d72408d9d324e728c32df2bd8f785",
+      "contentSize": "5214"
+    }
+  ]
+}

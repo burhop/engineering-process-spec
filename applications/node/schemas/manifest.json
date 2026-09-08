@@ -1,0 +1,10 @@
+{
+  "format": "epx-generated-schema-manifest",
+  "version": "0.1.0-draft.1",
+  "source": "../../../schemas",
+  "sha256": {
+    "bindings.schema.json": "b4ff9a27e7f83bbc95ef68a8b6fba90f8c9841bc5dcebc58a43ddaf3ea2b3e2b",
+    "requirements.schema.json": "44fd2c56bf35d285ccbaaab72d8d10a0fe26586a0664fcdf694ad1378fe09ed1",
+    "run.schema.json": "f0d76b5d291ae13f0c892df0bbe2d48197f1b10bd32d3d3aed437b74db6e3f4e"
+  }
+}

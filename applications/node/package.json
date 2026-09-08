@@ -1,0 +1,35 @@
+{
+  "name": "epx-node-adopter",
+  "version": "0.1.0-draft.1",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./index.mjs",
+    "./schemas/*": "./schemas/*"
+  },
+  "files": [
+    "*.mjs",
+    "schemas/*.json",
+    "scripts/sync-schemas.mjs",
+    "README.md",
+    "THIRD_PARTY.md"
+  ],
+  "description": "Independent experimental engineering-process receiver and MCP adapter",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "epx-node": "./cli.mjs",
+    "epx-mcp-call": "./mcp-call.mjs"
+  },
+  "scripts": {
+    "build": "node scripts/sync-schemas.mjs",
+    "prepack": "npm run build",
+    "check:schemas": "node scripts/sync-schemas.mjs --check",
+    "test": "npm run check:schemas && node --test test/*.test.mjs"
+  },
+  "dependencies": {
+    "ajv": "8.18.0",
+    "yauzl": "3.2.1"
+  }
+}

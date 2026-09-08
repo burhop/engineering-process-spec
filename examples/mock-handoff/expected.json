@@ -1,0 +1,36 @@
+{
+  "evidenceKind": "expected observations, not an execution report",
+  "execution": "succeeded",
+  "acceptance": "pass",
+  "approval": "not-requested",
+  "orderedNodes": [
+    "main/volume",
+    "main/mass",
+    "main/record"
+  ],
+  "structuredResults": {
+    "main/volume": {
+      "quantity": "volume",
+      "value": 2e-05,
+      "unit": "m3"
+    },
+    "main/mass": {
+      "quantity": "mass",
+      "value": 0.157,
+      "unit": "kg"
+    },
+    "main/record": {
+      "stored": true,
+      "measurement": {
+        "quantity": "mass",
+        "value": 0.157,
+        "unit": "kg"
+      },
+      "resource": {
+        "id": "mock://plate",
+        "provider": "urn:engineering-process-spec:mock-engineering",
+        "revision": "r2"
+      }
+    }
+  }
+}

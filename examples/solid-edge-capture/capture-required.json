@@ -1,0 +1,52 @@
+{
+  "format": "epx-integration-capture-plan",
+  "status": "capture-required",
+  "executable": false,
+  "scope": "Historical identity evidence and required inputs; not a conforming core process or live-provider fixture",
+  "intendedImplementation": "https://github.com/burhop/SolidEdgeMCP",
+  "intendedApplicationProvider": "solid_edge",
+  "historicalEvidence": {
+    "observationDate": "2026-09-07",
+    "wrightCheckoutCommit": "87706742e62af82fa5a43f147b59e6d98e105024",
+    "solidEdgeMcpCheckoutCommit": "f58a783d2bfad4cff97c818bb63d42c1485d305a",
+    "checkoutHadUncommittedChanges": true,
+    "installationLocalServerUuid": "965a99c8-130d-4e64-96b0-18db066027b0",
+    "reportedServerName": "solid-edge-mcp",
+    "reportedServerVersion": "0.2.0",
+    "reportedProviderVersion": "1.0.0+f58a783d2bfad4cff97c818bb63d42c1485d305a",
+    "reportedSolidEdgeVersion": "226.00.01.04",
+    "meaning": "Trace and source observations, not frozen current executable identities or compatibility ranges"
+  },
+  "sourceToPreserve": {
+    "role": "original Wright source, retained unchanged as provenance when explicitly supplied",
+    "providedInThisTemplate": false,
+    "recordedSourcePath": "artifacts/workflow-campaign/fixtures/smoke-20260907/files/workflows/cad-result-handoff.workflow.wflow",
+    "recordedSourceSha256": "db094563ebde16e1229e119f9f87dcc573ed2db3e3dce62b3dff137ce0134f36",
+    "sourceTaskKind": "AI-directed CAD task; a fixed-call variant needs explicit authorship, not assumed equivalence"
+  },
+  "intendedOutcome": {
+    "copyOriginal": true,
+    "variable": "MaterialThickness",
+    "desiredValue": 2.5,
+    "unit": "mm",
+    "absoluteTolerance": 0.001,
+    "handoff": "The same explicitly identified resulting document and revision",
+    "export": "STEP output with separately stated acceptance; file creation alone is insufficient"
+  },
+  "requiredCapture": [
+    "Authorized original source and native model bytes with provenance and exact digests",
+    "Frozen provider binary and dependency identities including relevant uncommitted changes",
+    "Actual supported MCP protocol negotiation and tools/list snapshots",
+    "Explicit solid_edge application identity/version and provider-specific resource evidence",
+    "Supported isolated execution environment, permissions and receiving connection",
+    "Explicitly authored fixed-call variant preserving exact provider, arguments and data handoff",
+    "Measured acceptance, original-file preservation, partial failure and unknown-mutation evidence"
+  ],
+  "unavailableReceivingInstallation": {
+    "condition": "No verified compatible local or remote Solid Edge provider",
+    "preservation": "Retain this capture plan and any supplied original source bytes; never rewrite as a generic CAD task",
+    "diagnostic": "Capture is incomplete; intended Solid Edge provider is unavailable or unverified",
+    "engineeringCalls": 0,
+    "allowedNextAction": "Configure a verified instance of the intended provider, or explicitly author a replacement process with a new revision and revalidate"
+  }
+}

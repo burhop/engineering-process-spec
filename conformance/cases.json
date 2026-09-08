@@ -1,0 +1,1245 @@
+{
+  "suite": "epx-core-black-box",
+  "version": "0.1.0-draft.1",
+  "profile": "urn:engineering-process-spec:core:0.1.0-draft.1",
+  "note": "C-MCP cases are explicit mock adaptations and never mark real CAD cases passed. Editor coverage is bounded to byte-preserving save and explicit provider replacement through public CLIs.",
+  "cases": [
+    {
+      "id": "P01",
+      "title": "Missing intended provider survives inspection and no-op save",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preserve-missing",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-002",
+        "PKG-003",
+        "PKG-004",
+        "BIND-001",
+        "BIND-005",
+        "DIAG-001"
+      ],
+      "roles": [
+        "reader",
+        "binder"
+      ]
+    },
+    {
+      "id": "P01-ZIP",
+      "title": "ZIP import and no-op archive save preserve bytes",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preserve-zip",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-001",
+        "PKG-002",
+        "PKG-004"
+      ],
+      "roles": [
+        "reader"
+      ]
+    },
+    {
+      "id": "P02",
+      "title": "Unknown required feature is preserved and unsupported",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-003",
+        "PKG-004",
+        "CORE-003",
+        "ACC-003",
+        "DIAG-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "unknown-feature",
+      "category": "unsupported"
+    },
+    {
+      "id": "P02-METADATA",
+      "title": "Unfamiliar optional metadata survives inspection/save",
+      "scope": "core",
+      "mandatory": true,
+      "action": "optional-metadata",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-003",
+        "PKG-004"
+      ],
+      "roles": [
+        "reader"
+      ]
+    },
+    {
+      "id": "P03-GRAPH",
+      "title": "Broken graph reference is invalid",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CORE-002",
+        "CWL-001",
+        "CWL-005",
+        "DIAG-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "broken-reference",
+      "category": "invalid"
+    },
+    {
+      "id": "P03-CYCLE",
+      "title": "Cyclic dataflow is invalid",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-001",
+        "CWL-005"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "cycle",
+      "category": "invalid"
+    },
+    {
+      "id": "P03-OPERATION",
+      "title": "Invocation identity disagrees with requirements",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CORE-002",
+        "CWL-003"
+      ],
+      "roles": [
+        "reader",
+        "adapter"
+      ],
+      "edit": "operation-mismatch",
+      "category": "invalid"
+    },
+    {
+      "id": "P03-NONFINITE",
+      "title": "Non-finite job numbers are rejected without execution",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-003",
+        "ACC-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "nonfinite-job",
+      "category": "invalid"
+    },
+    {
+      "id": "P04-CORRUPT",
+      "title": "Corrupt payload cannot masquerade as inventoried input",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-002",
+        "RES-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "corrupt-job",
+      "category": "invalid"
+    },
+    {
+      "id": "P04-MISSING",
+      "title": "Missing payload is distinct from external availability",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-001",
+        "PKG-002",
+        "RES-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "missing-job",
+      "category": "invalid"
+    },
+    {
+      "id": "PKG-TRAVERSAL",
+      "title": "ZIP parent traversal is not materialized",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject-zip",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "zipFault": "traversal",
+      "category": "invalid"
+    },
+    {
+      "id": "PKG-DUPLICATE",
+      "title": "ZIP duplicate members are invalid",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject-zip",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "zipFault": "duplicate",
+      "category": "invalid"
+    },
+    {
+      "id": "PKG-SYMLINK",
+      "title": "ZIP symbolic-link member is invalid",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject-zip",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "zipFault": "symlink",
+      "category": "invalid"
+    },
+    {
+      "id": "CORE-VERSION",
+      "title": "Unknown required profile version is unsupported",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CORE-003",
+        "PKG-003"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "profile-version",
+      "category": "unsupported"
+    },
+    {
+      "id": "CORE-AUTHORITY",
+      "title": "Metadata and process authority cannot disagree",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CORE-002",
+        "PKG-002",
+        "PKG-003"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "authority-mismatch",
+      "category": "invalid"
+    },
+    {
+      "id": "CWL-REQUIRED",
+      "title": "Required exchange semantics cannot be removed silently",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-002"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "missing-exchange",
+      "category": "invalid"
+    },
+    {
+      "id": "CWL-UNKNOWN",
+      "title": "Unknown required CWL feature is unsupported",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-001",
+        "CWL-002"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "unknown-cwl",
+      "category": "unsupported"
+    },
+    {
+      "id": "CWL-CONTEXT",
+      "title": "Shared input cannot supply local run context",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-004"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "injected-context",
+      "category": "invalid"
+    },
+    {
+      "id": "B01",
+      "title": "Same verified provider rebinds from another local path",
+      "scope": "core",
+      "mandatory": true,
+      "action": "rebind",
+      "fixture": "calculation",
+      "requirements": [
+        "CORE-003",
+        "BIND-001",
+        "BIND-002",
+        "BIND-006"
+      ],
+      "roles": [
+        "binder",
+        "executor"
+      ]
+    },
+    {
+      "id": "B02",
+      "title": "Same tool names on another logical binding are not substitutes",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "calculation",
+      "requirements": [
+        "BIND-001",
+        "BIND-002",
+        "BIND-004",
+        "BIND-005"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "bindingEdit": "other-binding",
+      "category": "unavailable"
+    },
+    {
+      "id": "B03",
+      "title": "Changed server default application is rejected",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "calculation",
+      "requirements": [
+        "BIND-001",
+        "BIND-003",
+        "BIND-005"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "fault": "changed-default",
+      "category": "unavailable"
+    },
+    {
+      "id": "B04-CONTRACT",
+      "title": "Discovered schema drift rejects execution",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CORE-003",
+        "BIND-004"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "edit": "schema-drift",
+      "category": "unavailable"
+    },
+    {
+      "id": "B04-PROTOCOL",
+      "title": "Untested required MCP protocol is not silently upgraded",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CORE-003",
+        "BIND-003"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "edit": "protocol-version",
+      "category": "unavailable"
+    },
+    {
+      "id": "B04-APPLICATION",
+      "title": "Wrong application version rejects execution",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CORE-003",
+        "BIND-001",
+        "BIND-003",
+        "BIND-005"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "edit": "application-version",
+      "category": "unavailable"
+    },
+    {
+      "id": "B04-LAUNCHER",
+      "title": "Unverified launcher bytes cannot establish intended identity",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "calculation",
+      "requirements": [
+        "BIND-001",
+        "BIND-002"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "bindingEdit": "launcher-digest",
+      "category": "unavailable"
+    },
+    {
+      "id": "B05",
+      "title": "Actual loopback HTTP binding evaluates controlled target platform",
+      "scope": "core",
+      "mandatory": true,
+      "action": "http",
+      "fixture": "calculation",
+      "requirements": [
+        "BIND-002",
+        "BIND-003",
+        "BIND-005"
+      ],
+      "roles": [
+        "binder",
+        "executor"
+      ]
+    },
+    {
+      "id": "B05-UNAVAILABLE",
+      "title": "Unsupported execution target preserves the definition",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "calculation",
+      "requirements": [
+        "BIND-005"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "edit": "platform-unavailable",
+      "category": "unavailable"
+    },
+    {
+      "id": "B06-ABSENT",
+      "title": "Absent external resource retains its identity and cause",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "mock-handoff",
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "BIND-005"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "resourceState": "absent",
+      "category": "unavailable",
+      "diagnosticCode": "EPX_RESOURCE_ABSENT"
+    },
+    {
+      "id": "B06-DENIED",
+      "title": "Denied resource is not called deleted",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "mock-handoff",
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "BIND-005"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "resourceState": "denied",
+      "category": "unavailable",
+      "diagnosticCode": "EPX_RESOURCE_DENIED"
+    },
+    {
+      "id": "B06-REVISION",
+      "title": "Wrong external resource revision rejects execution",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "mock-handoff",
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "BIND-005"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "resourceState": "revision-mismatch",
+      "category": "unavailable",
+      "diagnosticCode": "EPX_RESOURCE_REVISION_MISMATCH"
+    },
+    {
+      "id": "E01",
+      "title": "Two-step deterministic calculation on the actual engine",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "CORE-001",
+        "CORE-002",
+        "CORE-003",
+        "CWL-001",
+        "CWL-002",
+        "CWL-003",
+        "CWL-004",
+        "CWL-005",
+        "BIND-001",
+        "BIND-003",
+        "BIND-004",
+        "OUT-001",
+        "ACC-001",
+        "ACC-002",
+        "CONF-001"
+      ],
+      "roles": [
+        "reader",
+        "binder",
+        "executor",
+        "adapter"
+      ],
+      "execution": "succeeded",
+      "acceptance": "pass",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume",
+        "main/mass"
+      ]
+    },
+    {
+      "id": "C-MCP01",
+      "title": "Three fixed MCP calls hand off results and record one mutation",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "mock-handoff",
+      "requirements": [
+        "CWL-001",
+        "CWL-003",
+        "CWL-005",
+        "RES-001",
+        "RES-003",
+        "OUT-001",
+        "ACC-002"
+      ],
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "execution": "succeeded",
+      "acceptance": "pass",
+      "toolCalls": 3,
+      "successfulNodes": [
+        "main/volume",
+        "main/mass",
+        "main/record"
+      ],
+      "mutations": 1
+    },
+    {
+      "id": "E03-TOOL",
+      "title": "MCP isError remains a tool execution failure",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "RES-003",
+        "OUT-001",
+        "OUT-002",
+        "OUT-003",
+        "DIAG-001"
+      ],
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "fault": "tool-error",
+      "faultTool": "engineering.mass",
+      "execution": "failed",
+      "acceptance": "indeterminate",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume"
+      ],
+      "diagnosticCode": "EPX_TOOL_ERROR"
+    },
+    {
+      "id": "E03-RPC",
+      "title": "JSON-RPC error remains distinct from tool isError",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "RES-003",
+        "OUT-003",
+        "DIAG-001"
+      ],
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "fault": "rpc-error",
+      "faultTool": "engineering.mass",
+      "execution": "failed",
+      "acceptance": "indeterminate",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume"
+      ]
+    },
+    {
+      "id": "E03-SCHEMA",
+      "title": "Malformed structured output cannot pass execution",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "BIND-004",
+        "OUT-003",
+        "ACC-002"
+      ],
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "fault": "malformed-output",
+      "faultTool": "engineering.mass",
+      "execution": "failed",
+      "acceptance": "indeterminate",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume"
+      ],
+      "diagnosticCode": "EPX_OUTPUT_INVALID"
+    },
+    {
+      "id": "C-MCP04",
+      "title": "Later failure retains identified successful partial output",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "mock-handoff",
+      "requirements": [
+        "CWL-005",
+        "OUT-001",
+        "OUT-002",
+        "OUT-003",
+        "ACC-002"
+      ],
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "fault": "tool-error",
+      "faultTool": "engineering.mass",
+      "execution": "failed",
+      "acceptance": "indeterminate",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume"
+      ],
+      "mutations": 0
+    },
+    {
+      "id": "C-MCP05",
+      "title": "Lost mutation response remains unknown with no replay",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "mock-handoff",
+      "requirements": [
+        "RES-003",
+        "OUT-001",
+        "OUT-002",
+        "OUT-003",
+        "ACC-002"
+      ],
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "fault": "disconnect-after-mutation",
+      "faultTool": "engineering.record",
+      "execution": "unknown",
+      "acceptance": "indeterminate",
+      "toolCalls": 3,
+      "successfulNodes": [
+        "main/volume",
+        "main/mass"
+      ],
+      "mutations": 1,
+      "diagnosticCode": "EPX_MUTATION_OUTCOME_UNKNOWN"
+    },
+    {
+      "id": "A01-FAIL",
+      "title": "Correct-schema wrong measurement fails engineering acceptance",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "OUT-003"
+      ],
+      "roles": [
+        "executor"
+      ],
+      "fault": "wrong-value",
+      "faultTool": "engineering.mass",
+      "execution": "succeeded",
+      "acceptance": "fail",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume",
+        "main/mass"
+      ]
+    },
+    {
+      "id": "A01-EVIDENCE",
+      "title": "Missing observed acceptance field is indeterminate",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "ACC-002"
+      ],
+      "roles": [
+        "executor"
+      ],
+      "edit": "missing-acceptance-field",
+      "execution": "succeeded",
+      "acceptance": "indeterminate",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume",
+        "main/mass"
+      ]
+    },
+    {
+      "id": "A02-INPUT-UNITS",
+      "title": "Equivalent declared input units produce the same mass",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "CWL-005"
+      ],
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "edit": "equivalent-input-units",
+      "execution": "succeeded",
+      "acceptance": "pass",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume",
+        "main/mass"
+      ]
+    },
+    {
+      "id": "A02-CRITERION-UNITS",
+      "title": "Acceptance converts only supported equivalent units",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "ACC-001",
+        "ACC-002"
+      ],
+      "roles": [
+        "executor"
+      ],
+      "edit": "criterion-grams",
+      "execution": "succeeded",
+      "acceptance": "pass",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume",
+        "main/mass"
+      ]
+    },
+    {
+      "id": "A02-DIMENSION",
+      "title": "Incompatible quantity dimensions are invalid",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "ACC-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "criterion-dimension",
+      "category": "invalid"
+    },
+    {
+      "id": "A02-UNSUPPORTED",
+      "title": "Undeclared acceptance units are unsupported, not guessed",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "ACC-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "criterion-unsupported",
+      "category": "unsupported"
+    },
+    {
+      "id": "A02-ARGUMENTS",
+      "title": "Invalid tool arguments fail before engineering invocation",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "BIND-004",
+        "RES-003",
+        "ACC-001"
+      ],
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "edit": "bad-tool-unit",
+      "execution": "failed",
+      "acceptance": "not-run",
+      "toolCalls": 0,
+      "successfulNodes": []
+    },
+    {
+      "id": "R01",
+      "title": "Explicit provider revision is validated while original stays intact",
+      "scope": "core",
+      "mandatory": true,
+      "action": "replacement",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-004",
+        "BIND-006",
+        "ACC-002"
+      ],
+      "roles": [
+        "reader",
+        "binder",
+        "executor",
+        "editor"
+      ]
+    },
+    {
+      "id": "OUT-NONOVERWRITE",
+      "title": "Existing run evidence is never overwritten",
+      "scope": "core",
+      "mandatory": true,
+      "action": "nonoverwrite",
+      "fixture": "calculation",
+      "requirements": [
+        "OUT-001",
+        "PKG-004"
+      ],
+      "roles": [
+        "executor"
+      ]
+    },
+    {
+      "id": "CWL-CONTEXT-SOURCE",
+      "title": "Task cannot replace reserved receiving context",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-003",
+        "CWL-004"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "rewired-context",
+      "category": "invalid"
+    },
+    {
+      "id": "CWL-SIGNATURE",
+      "title": "Adapter argument names remain fixed",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-003"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "adapter-signature",
+      "category": "invalid"
+    },
+    {
+      "id": "CWL-EXTRA-ARGS",
+      "title": "Tool cannot inject undeclared command arguments",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-003"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "adapter-extra-arguments",
+      "category": "unsupported"
+    },
+    {
+      "id": "CWL-OUTPUT-SOURCE",
+      "title": "Workflow outputSource must resolve",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-005"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "bad-output-source",
+      "category": "invalid"
+    },
+    {
+      "id": "CWL-OUTPUT-GLOB",
+      "title": "Missing required final File prevents workflow success",
+      "scope": "core",
+      "mandatory": true,
+      "action": "output-contract",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-005",
+        "OUT-001",
+        "OUT-002"
+      ],
+      "roles": [
+        "executor"
+      ],
+      "edit": "bad-output-glob"
+    },
+    {
+      "id": "CWL-OUTPUT-NO-GLOB",
+      "title": "A missing final output binding cannot masquerade as success",
+      "scope": "core",
+      "mandatory": true,
+      "action": "output-contract",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-005",
+        "OUT-001"
+      ],
+      "roles": [
+        "executor"
+      ],
+      "edit": "missing-output-glob"
+    },
+    {
+      "id": "E02",
+      "title": "Real Solid Edge two-executor handoff",
+      "scope": "real-cad",
+      "mandatory": false,
+      "action": "later",
+      "requirements": [
+        "RES-001",
+        "OUT-001",
+        "ACC-002"
+      ],
+      "roles": [
+        "executor"
+      ],
+      "reason": "Requires authenticated intended CAD/MCP identity and schemas, distributable native fixture bytes and an isolated supported CAD installation; no such integration was executed."
+    },
+    {
+      "id": "E04",
+      "title": "Real native-save then STEP-export failure",
+      "scope": "real-cad",
+      "mandatory": false,
+      "action": "later",
+      "requirements": [
+        "OUT-002"
+      ],
+      "roles": [
+        "executor"
+      ],
+      "reason": "Requires the real CAD prerequisites plus a controlled native-save/STEP-export failure and retained partial artifacts; the mock record tool does not demonstrate CAD saving."
+    },
+    {
+      "id": "E05",
+      "title": "Real CAD disconnect after possible mutation",
+      "scope": "real-cad",
+      "mandatory": false,
+      "action": "later",
+      "requirements": [
+        "RES-003",
+        "OUT-002"
+      ],
+      "roles": [
+        "executor"
+      ],
+      "reason": "Requires the real CAD prerequisites and an opt-in controlled disconnect after possible mutation, with reconciliation evidence; mock unknown-outcome behavior is separate."
+    },
+    {
+      "id": "A03",
+      "title": "Authorized human approval with exact subject revisions",
+      "scope": "approval",
+      "mandatory": false,
+      "action": "later",
+      "requirements": [
+        "ACC-003"
+      ],
+      "roles": [
+        "executor"
+      ],
+      "reason": "Requires a separately specified approval profile, authorized human identity, exact subject revisions, durable decisions and stale-approval tests; this core intentionally does not implement approval."
+    },
+    {
+      "id": "PKG-CRATE-DATE",
+      "title": "RO-Crate root missing date is invalid",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-002"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "missing-crate-date",
+      "category": "invalid"
+    },
+    {
+      "id": "PKG-CRATE-LICENSE",
+      "title": "RO-Crate root missing license is invalid",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "PKG-002"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "missing-crate-license",
+      "category": "invalid"
+    },
+    {
+      "id": "A02-OUTPUT-UNIT",
+      "title": "Wrong-dimension observed tool result is rejected before acceptance",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "BIND-004",
+        "OUT-003"
+      ],
+      "roles": [
+        "executor",
+        "adapter"
+      ],
+      "fault": "wrong-unit",
+      "faultTool": "engineering.mass",
+      "execution": "failed",
+      "acceptance": "indeterminate",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume"
+      ],
+      "diagnosticCode": "EPX_OUTPUT_INVALID"
+    },
+    {
+      "id": "CWL-UNKNOWN-FIELD",
+      "title": "Unrecognized CWL structural field is invalid",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-001"
+      ],
+      "roles": [
+        "reader"
+      ],
+      "edit": "unknown-cwl-field",
+      "category": "invalid"
+    },
+    {
+      "id": "A02-OVERFLOW",
+      "title": "Finite observed result with overflowing conversion remains indeterminate",
+      "scope": "core",
+      "mandatory": true,
+      "action": "run",
+      "fixture": "calculation",
+      "requirements": [
+        "ACC-001",
+        "ACC-002",
+        "OUT-001"
+      ],
+      "roles": [
+        "executor"
+      ],
+      "edit": "overflow-acceptance",
+      "execution": "succeeded",
+      "acceptance": "indeterminate",
+      "toolCalls": 2,
+      "successfulNodes": [
+        "main/volume",
+        "main/mass"
+      ],
+      "observedResults": {
+        "main/volume": {
+          "quantity": "volume",
+          "value": 1,
+          "unit": "m3"
+        },
+        "main/mass": {
+          "quantity": "mass",
+          "value": 1e+308,
+          "unit": "kg"
+        }
+      }
+    },
+    {
+      "id": "B06-UNKNOWN",
+      "title": "Unverifiable observed resource revision blocks execution",
+      "scope": "core",
+      "mandatory": true,
+      "action": "preflight-reject",
+      "fixture": "mock-handoff",
+      "requirements": [
+        "RES-001",
+        "RES-002",
+        "BIND-005"
+      ],
+      "roles": [
+        "binder"
+      ],
+      "category": "unavailable",
+      "diagnosticCode": "EPX_RESOURCE_REVISION_MISMATCH",
+      "edit": "unverifiable-resource"
+    },
+    {
+      "id": "P03-CWL-JOB-MISSING",
+      "title": "Missing required CWL record member invalidates the default job",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-001",
+        "CWL-004"
+      ],
+      "roles": [
+        "reader",
+        "executor"
+      ],
+      "edit": "missing-job-record-field",
+      "category": "invalid",
+      "attemptRun": true
+    },
+    {
+      "id": "P03-CWL-JOB-TYPE",
+      "title": "Wrong CWL record member type invalidates the default job",
+      "scope": "core",
+      "mandatory": true,
+      "action": "reject",
+      "fixture": "calculation",
+      "requirements": [
+        "CWL-001",
+        "CWL-004"
+      ],
+      "roles": [
+        "reader",
+        "executor"
+      ],
+      "edit": "wrong-job-record-type",
+      "category": "invalid",
+      "attemptRun": true
+    }
+  ]
+}

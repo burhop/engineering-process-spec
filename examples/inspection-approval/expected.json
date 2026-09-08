@@ -1,0 +1,9 @@
+{
+  "evidenceKind": "expected observations, not an execution report",
+  "execution": "blocked",
+  "acceptance": "not-run",
+  "approval": "not-granted",
+  "orderedNodes": [],
+  "structuredResults": {},
+  "diagnosticCategory": "unsupported"
+}

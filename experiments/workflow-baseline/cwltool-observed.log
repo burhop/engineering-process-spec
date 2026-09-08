@@ -1,0 +1,20 @@
+[1;30mINFO[0m /usr/local/lib/python3.12/site-packages/cwltool/__main__.py 3.2.20260720092025
+[1;30mINFO[0m Resolved 'cwl-handoff.cwl' to 'file:///work/cwl-handoff.cwl'
+[1;30mINFO[0m [workflow ] start
+[1;30mINFO[0m [workflow ] starting step produce
+[1;30mINFO[0m [step produce] start
+[1;30mINFO[0m [job produce] /tmp/8rgrud9h$ python \
+    -c \
+    'import json; print(json.dumps({'"'"'value'"'"': 2.5, '"'"'unit'"'"': '"'"'mm'"'"', '"'"'provider'"'"': '"'"'urn:engineering-process:experiment:mock'"'"'}))' > /tmp/8rgrud9h/quantity.json
+[1;30mINFO[0m [job produce] completed success
+[1;30mINFO[0m [step produce] completed success
+[1;30mINFO[0m [workflow ] starting step inspect
+[1;30mINFO[0m [step inspect] start
+[1;30mINFO[0m [job inspect] /tmp/rc_ln3hp$ python \
+    -c \
+    'import json,sys; q=json.load(open(sys.argv[1])); assert q['"'"'value'"'"']==2.5 and q['"'"'unit'"'"']=='"'"'mm'"'"'; print(json.dumps({'"'"'accepted'"'"':True,'"'"'received'"'"':q}))' \
+    /tmp/jofp7kwk/stg97f20e46-1d18-4fed-80b4-202d99aef719/quantity.json > /tmp/rc_ln3hp/receipt.json
+[1;30mINFO[0m [job inspect] completed success
+[1;30mINFO[0m [step inspect] completed success
+[1;30mINFO[0m [workflow ] completed success
+[1;30mINFO[0m Final process status is success

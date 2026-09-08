@@ -1,0 +1,87 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.2/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "inspection-approval",
+      "description": "Experimental fixed-call engineering process; mock provider, no CAD or material certification.",
+      "datePublished": "2026-09-07",
+      "license": "Licensing terms have not been selected; this metadata grants no additional permissions.",
+      "mainEntity": {
+        "@id": "workflow.cwl.json"
+      },
+      "conformsTo": [
+        {
+          "@id": "urn:engineering-process-spec:core:0.1.0-draft.1"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "contracts/engineering.mass.tool.json"
+        },
+        {
+          "@id": "contracts/engineering.volume.tool.json"
+        },
+        {
+          "@id": "expected.json"
+        },
+        {
+          "@id": "inputs/job.json"
+        },
+        {
+          "@id": "requirements.json"
+        },
+        {
+          "@id": "workflow.cwl.json"
+        }
+      ]
+    },
+    {
+      "@id": "contracts/engineering.mass.tool.json",
+      "@type": "File",
+      "sha256": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+      "contentSize": "1911"
+    },
+    {
+      "@id": "contracts/engineering.volume.tool.json",
+      "@type": "File",
+      "sha256": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+      "contentSize": "2419"
+    },
+    {
+      "@id": "expected.json",
+      "@type": "File",
+      "sha256": "dc2a7ec6758994af1c55b4a6a0f05d2c8c1b24d19db38e97aaf1349faea54162",
+      "contentSize": "241"
+    },
+    {
+      "@id": "inputs/job.json",
+      "@type": "File",
+      "sha256": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+      "contentSize": "330"
+    },
+    {
+      "@id": "requirements.json",
+      "@type": "File",
+      "sha256": "e0210945f5a6588a9584c38dbc6b8b1ae258f0bf9be1dc52b5644d10aeb121d2",
+      "contentSize": "2776"
+    },
+    {
+      "@id": "workflow.cwl.json",
+      "@type": "File",
+      "sha256": "49e2df2773de2286d1cfdb8f21509a60144d72408d9d324e728c32df2bd8f785",
+      "contentSize": "5214"
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.2/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "mock-handoff",
+      "description": "Experimental fixed-call engineering process; mock provider, no CAD or material certification.",
+      "datePublished": "2026-09-07",
+      "license": "Licensing terms have not been selected; this metadata grants no additional permissions.",
+      "mainEntity": {
+        "@id": "workflow.cwl.json"
+      },
+      "conformsTo": [
+        {
+          "@id": "urn:engineering-process-spec:core:0.1.0-draft.1"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "contracts/engineering.mass.tool.json"
+        },
+        {
+          "@id": "contracts/engineering.record.tool.json"
+        },
+        {
+          "@id": "contracts/engineering.volume.tool.json"
+        },
+        {
+          "@id": "expected.json"
+        },
+        {
+          "@id": "inputs/job.json"
+        },
+        {
+          "@id": "requirements.json"
+        },
+        {
+          "@id": "workflow.cwl.json"
+        }
+      ]
+    },
+    {
+      "@id": "contracts/engineering.mass.tool.json",
+      "@type": "File",
+      "sha256": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+      "contentSize": "1911"
+    },
+    {
+      "@id": "contracts/engineering.record.tool.json",
+      "@type": "File",
+      "sha256": "53a014825a124a0956f7df871a29e67cb014e454b4d87ca456844e936b72f2d4",
+      "contentSize": "2633"
+    },
+    {
+      "@id": "contracts/engineering.volume.tool.json",
+      "@type": "File",
+      "sha256": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+      "contentSize": "2419"
+    },
+    {
+      "@id": "expected.json",
+      "@type": "File",
+      "sha256": "77cdd17b4665e183f5549e4d7178eac7337ead922a5d20ed676fd5e76da7524d",
+      "contentSize": "759"
+    },
+    {
+      "@id": "inputs/job.json",
+      "@type": "File",
+      "sha256": "b03bfaed6dae81363842e3524add2f59c03e6d7bde0b161540c4e95b4da33d7e",
+      "contentSize": "330"
+    },
+    {
+      "@id": "requirements.json",
+      "@type": "File",
+      "sha256": "d53a3b3765ac4fc262ed72486849f22506095379d97c3ae2a84d6df26fd8eaad",
+      "contentSize": "2950"
+    },
+    {
+      "@id": "workflow.cwl.json",
+      "@type": "File",
+      "sha256": "1bca579e69a98be43a0ef1a6065e8576fa6d1c43be157b42a36ab3446b17863b",
+      "contentSize": "5931"
+    }
+  ]
+}

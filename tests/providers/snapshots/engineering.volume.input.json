@@ -1,0 +1,84 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "length": {
+      "additionalProperties": false,
+      "properties": {
+        "quantity": {
+          "const": "length"
+        },
+        "unit": {
+          "enum": [
+            "m",
+            "mm"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "type": "object"
+    },
+    "thickness": {
+      "additionalProperties": false,
+      "properties": {
+        "quantity": {
+          "const": "length"
+        },
+        "unit": {
+          "enum": [
+            "m",
+            "mm"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "type": "object"
+    },
+    "width": {
+      "additionalProperties": false,
+      "properties": {
+        "quantity": {
+          "const": "length"
+        },
+        "unit": {
+          "enum": [
+            "m",
+            "mm"
+          ],
+          "type": "string"
+        },
+        "value": {
+          "exclusiveMinimum": 0,
+          "type": "number"
+        }
+      },
+      "required": [
+        "value",
+        "unit"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "length",
+    "width",
+    "thickness"
+  ],
+  "type": "object"
+}

@@ -1,2 +1,20 @@
+# Local dependencies, build products and transient verification state
+.venv/
+venv/
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.cache/
+.tmp/
+.work/
+bin/
+obj/
+dist/
+build/
+*.egg-info/
 .DS_Store
-Thumbs.db
+
+# Explicitly retained reports belong in conformance/results or experiment reports.
+artifacts/local/

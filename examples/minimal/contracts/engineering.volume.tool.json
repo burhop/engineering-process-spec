@@ -1,0 +1,116 @@
+{
+  "annotations": {
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false,
+    "readOnlyHint": true
+  },
+  "description": "Mock rectangular-plate volume from positive lengths; no CAD operation.",
+  "inputSchema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "length": {
+        "additionalProperties": false,
+        "properties": {
+          "quantity": {
+            "const": "length"
+          },
+          "unit": {
+            "enum": [
+              "m",
+              "mm"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "exclusiveMinimum": 0,
+            "type": "number"
+          }
+        },
+        "required": [
+          "value",
+          "unit"
+        ],
+        "type": "object"
+      },
+      "thickness": {
+        "additionalProperties": false,
+        "properties": {
+          "quantity": {
+            "const": "length"
+          },
+          "unit": {
+            "enum": [
+              "m",
+              "mm"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "exclusiveMinimum": 0,
+            "type": "number"
+          }
+        },
+        "required": [
+          "value",
+          "unit"
+        ],
+        "type": "object"
+      },
+      "width": {
+        "additionalProperties": false,
+        "properties": {
+          "quantity": {
+            "const": "length"
+          },
+          "unit": {
+            "enum": [
+              "m",
+              "mm"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "exclusiveMinimum": 0,
+            "type": "number"
+          }
+        },
+        "required": [
+          "value",
+          "unit"
+        ],
+        "type": "object"
+      }
+    },
+    "required": [
+      "length",
+      "width",
+      "thickness"
+    ],
+    "type": "object"
+  },
+  "name": "engineering.volume",
+  "outputSchema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "quantity": {
+        "const": "volume"
+      },
+      "unit": {
+        "const": "m3"
+      },
+      "value": {
+        "exclusiveMinimum": 0,
+        "type": "number"
+      }
+    },
+    "required": [
+      "quantity",
+      "value",
+      "unit"
+    ],
+    "type": "object"
+  }
+}

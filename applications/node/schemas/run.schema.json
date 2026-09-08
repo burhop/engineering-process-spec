@@ -1,0 +1,41 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:engineering-process-spec:schema:run:0.1.0-draft.1",
+  "title": "Experimental execution evidence, distinct from process definition",
+  "type": "object",
+  "required": ["format", "version", "implementation", "runId", "process", "packageMetadataSha256", "execution", "acceptance", "approval", "calls", "outputs", "diagnostics", "engine"],
+  "properties": {
+    "format": {"const": "epx-run"},
+    "version": {"const": "0.1.0-draft.1"},
+    "implementation": {"type": "string", "minLength": 1},
+    "runId": {"type": "string", "minLength": 1},
+    "process": {"type": "object", "required": ["id", "revision"]},
+    "packageMetadataSha256": {"$ref": "#/$defs/digest"},
+    "inputSha256": {"$ref": "#/$defs/digest"},
+    "execution": {"type": "object", "required": ["status"], "properties": {"status": {"enum": ["succeeded", "failed", "unknown", "blocked"]}}},
+    "acceptance": {"type": "object", "required": ["status", "criteria"], "properties": {
+      "status": {"enum": ["pass", "fail", "indeterminate", "not-run"]},
+      "criteria": {"type": "array", "items": {"type": "object", "required": ["id", "status"], "properties": {"id": {"type": "string"}, "status": {"enum": ["pass", "fail", "indeterminate", "not-run"]}}}}
+    }},
+    "approval": {"const": "not-requested"},
+    "calls": {"type": "array", "items": {"$ref": "#/$defs/call"}},
+    "outputs": {"type": "array", "items": {"$ref": "#/$defs/artifact"}},
+    "diagnostics": {"type": "array", "items": {"$ref": "#/$defs/diagnostic"}},
+    "engine": {"type": "object", "required": ["name"], "properties": {"name": {"type": "string"}, "version": {"type": "string"}, "exitCode": {"type": ["integer", "null"]}}},
+    "transformation": {"type": "object", "required": ["sourceSha256", "derivedSha256"], "properties": {"sourceSha256": {"$ref": "#/$defs/digest"}, "derivedSha256": {"$ref": "#/$defs/digest"}}}
+  },
+  "$defs": {
+    "digest": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "diagnostic": {"type": "object", "required": ["code", "category", "requirement", "message"], "properties": {
+      "code": {"type": "string"}, "category": {"enum": ["invalid", "unsupported", "unavailable", "execution-failed", "outcome-unknown"]}, "requirement": {"type": "string"}, "message": {"type": "string"}
+    }},
+    "artifact": {"type": "object", "required": ["path", "sha256", "durability", "mediaType"], "properties": {
+      "path": {"type": "string"}, "sha256": {"$ref": "#/$defs/digest"}, "durability": {"enum": ["persistent", "session", "run"]}, "mediaType": {"type": "string"}
+    }},
+    "call": {"type": "object", "required": ["format", "version", "runId", "implementation", "node", "binding", "tool", "effect", "status", "diagnostics"], "properties": {
+      "format": {"const": "epx-call"}, "version": {"const": "0.1.0-draft.1"}, "runId": {"type": "string"}, "implementation": {"type": "string"},
+      "node": {"type": "string"}, "binding": {"type": "string"}, "tool": {"type": "string"}, "effect": {"enum": ["read-only", "mutation"]},
+      "status": {"enum": ["succeeded", "failed", "unknown", "blocked"]}, "diagnostics": {"type": "array", "items": {"$ref": "#/$defs/diagnostic"}}, "artifact": {"$ref": "#/$defs/artifact"}
+    }}
+  }
+}

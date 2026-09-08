@@ -1,0 +1,385 @@
+{
+  "format": "epx-adopter-walkthrough",
+  "observedAt": "2026-09-08T00:19:00.168626+00:00",
+  "status": "passed",
+  "scope": "Installed artifacts and copied public calculation/provider only; no source repository/Wright mount; execution networking disabled",
+  "artifacts": {
+    "wheelFilename": "engineering_process_kit-0.1.0.dev1-py3-none-any.whl",
+    "nodeFilename": "epx-node-adopter-0.1.0-draft.1.tgz",
+    "wheelSha256": "2965362c13a5132d19d8dbc6fd67066a0fb97d65c5f2d913886b26e5394509a3",
+    "nodePackageSha256": "84f5d664992274ae7d6c65433f7f386f96ea4aa4c8209d2461d6d96d07258843",
+    "providerSha256": "bdc4173533f1c7d265947f5cae51cb91131af74e110312cbd0685bde4c31446f",
+    "nodeConsumerLockSha256": "5a44d627ec67104e2768690634d27efdc9dd25c576fe41e2e515f17ea4a2875f",
+    "nodeDependencyVersions": {
+      "node_modules/ajv": "8.18.0",
+      "node_modules/buffer-crc32": "0.2.13",
+      "node_modules/epx-node-adopter": "0.1.0-draft.1",
+      "node_modules/fast-deep-equal": "3.1.3",
+      "node_modules/fast-uri": "3.1.7",
+      "node_modules/json-schema-traverse": "1.0.0",
+      "node_modules/pend": "1.2.0",
+      "node_modules/require-from-string": "2.0.2",
+      "node_modules/yauzl": "3.2.1"
+    },
+    "packageMetadataSha256": "05fa616c1a00e302eb2fdce99d7563393e45b5cdf414a138f3a2417aac93cec6",
+    "image": {
+      "name": "eps-workflow-baseline:20260907",
+      "id": "sha256:bc34601c3182659df5949c8ed8339bd0d44d2a6a8195a5f43e27d45bbd83a7fd",
+      "os": "linux",
+      "architecture": "amd64"
+    },
+    "harnessSha256": {
+      "run.py": "106a7166de60cb756f11f19752881fcd08401cc48cb712e96f4401c8736eccb3",
+      "consumer.py": "1f85da6b89b69729508dfd47ed0a8bf2bba67bb88c89ad653ae5f7cf64ef1b51",
+      "integration.mjs": "28c7b3801006505f0a2abf5bb14ed4260998f532d557b3793c585407f08f82c7"
+    }
+  },
+  "sourceEpochs": {
+    "python": {
+      "files": 16,
+      "treeSha256": "f3ab72c9dd3524c94b5a279575867efefd0c970bb72ab1f073b727aec96cbb82"
+    },
+    "node": {
+      "files": 16,
+      "treeSha256": "21f014052c836f8b947fafc7f32d9c1b06ab4eab350abc8cd847689a4dfbbb48"
+    }
+  },
+  "versions": {
+    "engineering-process-kit": "0.1.0.dev1",
+    "cwltool": "3.2.20260720092025",
+    "streamflow": "0.2.0rc2",
+    "jsonschema": "4.26.0"
+  },
+  "python": "3.12.14",
+  "node": "v24.13.1",
+  "noWrightPackages": true,
+  "sourceBytesPreserved": true,
+  "runReportSha256": {
+    "run-python": "a2b2f6e2cfa09a416b7331da20c477373b29e00a6e794e9277b99826ab36cd0e",
+    "run-node": "cd950e5cc4647a6884c4ebd71f9fb34329d366b4a4df837637494c305dab209c",
+    "run-node-api": "e1ee2da538994d3d40d9a8235d0c01226956da4b1b0527f294636d30fca6c6d4",
+    "run-replaced-python": "9da36184a78c30cfa42a21e617cb4819c018322a102872286689e6b32c223aa6",
+    "run-replaced-node": "e4a3b701145bb0483af969b92f79237d73cb497485c8421c5b6b21d9fe1639a3"
+  },
+  "commands": [
+    {
+      "id": "install-wheel",
+      "argv": [
+        "/usr/local/bin/python",
+        "-m",
+        "pip",
+        "install",
+        "--no-index",
+        "--no-deps",
+        "/consumer/engineering_process_kit-0.1.0.dev1-py3-none-any.whl"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "python-validate",
+      "argv": [
+        "epx",
+        "validate",
+        "package"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "python-inspect",
+      "argv": [
+        "epx",
+        "inspect",
+        "package"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "python-preserve",
+      "argv": [
+        "epx",
+        "preserve",
+        "package",
+        "saved-python"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "create-local-bindings",
+      "argv": [
+        "epx",
+        "demo-bindings",
+        "--provider",
+        "/consumer/mock_mcp_server.py",
+        "--out",
+        "/consumer/local-bindings.json"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "python-preflight",
+      "argv": [
+        "epx",
+        "preflight",
+        "package",
+        "--bindings",
+        "local-bindings.json"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "python-run",
+      "argv": [
+        "epx",
+        "run",
+        "package",
+        "--bindings",
+        "local-bindings.json",
+        "--engine",
+        "cwltool",
+        "--out",
+        "run-python"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "node-validate",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/node_modules/epx-node-adopter/cli.mjs",
+        "validate",
+        "package"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "node-inspect",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/node_modules/epx-node-adopter/cli.mjs",
+        "inspect",
+        "package"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "node-preserve",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/node_modules/epx-node-adopter/cli.mjs",
+        "preserve",
+        "package",
+        "--out",
+        "saved-node"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "node-preflight",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/node_modules/epx-node-adopter/cli.mjs",
+        "preflight",
+        "package",
+        "--bindings",
+        "local-bindings.json"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "node-run",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/node_modules/epx-node-adopter/cli.mjs",
+        "run",
+        "package",
+        "--bindings",
+        "local-bindings.json",
+        "--engine",
+        "streamflow",
+        "--out",
+        "run-node"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "node-public-api",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/integration.mjs"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "python-unavailable",
+      "argv": [
+        "epx",
+        "preflight",
+        "package",
+        "--bindings",
+        "missing-bindings.json"
+      ],
+      "expectedExit": 2,
+      "actualExit": 2
+    },
+    {
+      "id": "node-unavailable",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/node_modules/epx-node-adopter/cli.mjs",
+        "preflight",
+        "package",
+        "--bindings",
+        "missing-bindings.json"
+      ],
+      "expectedExit": 1,
+      "actualExit": 1
+    },
+    {
+      "id": "python-replace",
+      "argv": [
+        "epx",
+        "replace",
+        "package",
+        "--binding",
+        "engineering",
+        "--with",
+        "intended-binding.json",
+        "--revision",
+        "2",
+        "--out",
+        "replaced-python"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "python-replacement-old-binding",
+      "argv": [
+        "epx",
+        "preflight",
+        "replaced-python",
+        "--bindings",
+        "local-bindings.json"
+      ],
+      "expectedExit": 2,
+      "actualExit": 2
+    },
+    {
+      "id": "python-original-new-binding",
+      "argv": [
+        "epx",
+        "preflight",
+        "package",
+        "--bindings",
+        "replacement-bindings.json"
+      ],
+      "expectedExit": 2,
+      "actualExit": 2
+    },
+    {
+      "id": "python-replacement-run",
+      "argv": [
+        "epx",
+        "run",
+        "replaced-python",
+        "--bindings",
+        "replacement-bindings.json",
+        "--engine",
+        "cwltool",
+        "--out",
+        "run-replaced-python"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "node-replace",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/node_modules/epx-node-adopter/cli.mjs",
+        "replace",
+        "package",
+        "--binding",
+        "engineering",
+        "--with",
+        "intended-binding.json",
+        "--revision",
+        "2",
+        "--out",
+        "replaced-node"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    },
+    {
+      "id": "node-replacement-old-binding",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/node_modules/epx-node-adopter/cli.mjs",
+        "preflight",
+        "replaced-node",
+        "--bindings",
+        "local-bindings.json"
+      ],
+      "expectedExit": 1,
+      "actualExit": 1
+    },
+    {
+      "id": "node-original-new-binding",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/node_modules/epx-node-adopter/cli.mjs",
+        "preflight",
+        "package",
+        "--bindings",
+        "replacement-bindings.json"
+      ],
+      "expectedExit": 1,
+      "actualExit": 1
+    },
+    {
+      "id": "node-replacement-run",
+      "argv": [
+        "node",
+        "/consumer/node-consumer/node_modules/epx-node-adopter/cli.mjs",
+        "run",
+        "replaced-node",
+        "--bindings",
+        "replacement-bindings.json",
+        "--engine",
+        "streamflow",
+        "--out",
+        "run-replaced-node"
+      ],
+      "expectedExit": 0,
+      "actualExit": 0
+    }
+  ],
+  "outcomes": {
+    "python-cwltool": "2 actual MCP calls; execution succeeded; acceptance pass",
+    "node-streamflow": "2 actual MCP calls; execution succeeded; acceptance pass",
+    "publicNodeApi": "installed import + read/preflight/run passed",
+    "replacement": "Both CLIs produced revision 2, rejected cross-bindings and executed explicitly configured replacement with new acceptance",
+    "preflightEngineeringCalls": 0
+  },
+  "limits": [
+    "Mock provider only; no real Solid Edge test",
+    "No organizational adoption claim",
+    "This walkthrough complements rather than replaces the full conformance suite",
+    "npm dependency installation occurs before network-disabled execution"
+  ],
+  "reproduce": "python tools/adopter-walkthrough/run.py --wheel WHEEL --node-package TGZ --example CALCULATION_DIRECTORY --provider MOCK_SERVER --out NEW_DIRECTORY"
+}

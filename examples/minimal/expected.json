@@ -1,0 +1,16 @@
+{
+  "evidenceKind": "expected observations, not an execution report",
+  "execution": "succeeded",
+  "acceptance": "pass",
+  "approval": "not-requested",
+  "orderedNodes": [
+    "main/volume"
+  ],
+  "structuredResults": {
+    "main/volume": {
+      "quantity": "volume",
+      "value": 2e-05,
+      "unit": "m3"
+    }
+  }
+}

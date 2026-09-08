@@ -1,0 +1,169 @@
+{
+  "cwlVersion": "v1.2",
+  "$namespaces": {
+    "epx": "urn:engineering-process-spec:profile:"
+  },
+  "$graph": [
+    {
+      "id": "#main",
+      "class": "Workflow",
+      "requirements": {
+        "epx:ExchangeRequirement": {
+          "manifest": "requirements.json"
+        },
+        "InlineJavascriptRequirement": {},
+        "StepInputExpressionRequirement": {},
+        "MultipleInputFeatureRequirement": {}
+      },
+      "inputs": {
+        "epx_context": "File",
+        "length": {
+          "type": {
+            "type": "record",
+            "name": "lengthQuantity",
+            "fields": [
+              {
+                "name": "value",
+                "type": "double"
+              },
+              {
+                "name": "unit",
+                "type": "string"
+              },
+              {
+                "name": "quantity",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "width": {
+          "type": {
+            "type": "record",
+            "name": "widthQuantity",
+            "fields": [
+              {
+                "name": "value",
+                "type": "double"
+              },
+              {
+                "name": "unit",
+                "type": "string"
+              },
+              {
+                "name": "quantity",
+                "type": "string"
+              }
+            ]
+          }
+        },
+        "thickness": {
+          "type": {
+            "type": "record",
+            "name": "thicknessQuantity",
+            "fields": [
+              {
+                "name": "value",
+                "type": "double"
+              },
+              {
+                "name": "unit",
+                "type": "string"
+              },
+              {
+                "name": "quantity",
+                "type": "string"
+              }
+            ]
+          }
+        }
+      },
+      "outputs": {
+        "volume_result": {
+          "type": "File",
+          "outputSource": "volume/result"
+        }
+      },
+      "steps": {
+        "volume": {
+          "run": "#mcp-call",
+          "in": {
+            "context": "epx_context",
+            "node": {
+              "default": "main/volume"
+            },
+            "binding": {
+              "default": "engineering"
+            },
+            "tool": {
+              "default": "engineering.volume"
+            },
+            "arguments_json": {
+              "source": [
+                "length",
+                "width",
+                "thickness"
+              ],
+              "valueFrom": "$(JSON.stringify({length:self[0],width:self[1],thickness:self[2]}))",
+              "linkMerge": "merge_nested"
+            }
+          },
+          "out": [
+            "result"
+          ]
+        }
+      }
+    },
+    {
+      "id": "#mcp-call",
+      "class": "CommandLineTool",
+      "baseCommand": "epx-mcp-call",
+      "inputs": {
+        "context": {
+          "type": "File",
+          "inputBinding": {
+            "prefix": "--context",
+            "position": 1
+          }
+        },
+        "node": {
+          "type": "string",
+          "inputBinding": {
+            "prefix": "--node",
+            "position": 2
+          }
+        },
+        "binding": {
+          "type": "string",
+          "inputBinding": {
+            "prefix": "--binding",
+            "position": 3
+          }
+        },
+        "tool": {
+          "type": "string",
+          "inputBinding": {
+            "prefix": "--tool",
+            "position": 4
+          }
+        },
+        "arguments_json": {
+          "type": "string",
+          "inputBinding": {
+            "prefix": "--arguments-json",
+            "position": 5
+          }
+        }
+      },
+      "outputs": {
+        "result": {
+          "type": "File",
+          "outputBinding": {
+            "glob": "result.json",
+            "loadContents": true
+          }
+        }
+      }
+    }
+  ]
+}

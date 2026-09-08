@@ -1,0 +1,78 @@
+{
+  "@context": "https://w3id.org/ro/crate/1.2/context",
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.2"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "name": "minimal",
+      "description": "Experimental fixed-call engineering process; mock provider, no CAD or material certification.",
+      "datePublished": "2026-09-07",
+      "license": "Licensing terms have not been selected; this metadata grants no additional permissions.",
+      "mainEntity": {
+        "@id": "workflow.cwl.json"
+      },
+      "conformsTo": [
+        {
+          "@id": "urn:engineering-process-spec:core:0.1.0-draft.1"
+        }
+      ],
+      "hasPart": [
+        {
+          "@id": "contracts/engineering.volume.tool.json"
+        },
+        {
+          "@id": "expected.json"
+        },
+        {
+          "@id": "inputs/job.json"
+        },
+        {
+          "@id": "requirements.json"
+        },
+        {
+          "@id": "workflow.cwl.json"
+        }
+      ]
+    },
+    {
+      "@id": "contracts/engineering.volume.tool.json",
+      "@type": "File",
+      "sha256": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d",
+      "contentSize": "2419"
+    },
+    {
+      "@id": "expected.json",
+      "@type": "File",
+      "sha256": "02736936cb086cc111b06b53d55d06281c96b1a8d3aae70f3e8d9e3ad3496363",
+      "contentSize": "323"
+    },
+    {
+      "@id": "inputs/job.json",
+      "@type": "File",
+      "sha256": "3de2fd209761c9c20d7f505a2e4a39acf90e3217ba6bc78a66c5f30b0e180429",
+      "contentSize": "244"
+    },
+    {
+      "@id": "requirements.json",
+      "@type": "File",
+      "sha256": "6dc0beb968bd328f38711cd49874aab7d50778da39226e987c3ac05a0c11f034",
+      "contentSize": "1882"
+    },
+    {
+      "@id": "workflow.cwl.json",
+      "@type": "File",
+      "sha256": "5399a1463d42ed1753010188644f998c964235aec6481abec5abf51a3149f616",
+      "contentSize": "3918"
+    }
+  ]
+}

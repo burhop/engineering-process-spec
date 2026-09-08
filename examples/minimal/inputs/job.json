@@ -1,0 +1,17 @@
+{
+  "length": {
+    "value": 100,
+    "unit": "mm",
+    "quantity": "length"
+  },
+  "width": {
+    "value": 80,
+    "unit": "mm",
+    "quantity": "length"
+  },
+  "thickness": {
+    "value": 2.5,
+    "unit": "mm",
+    "quantity": "length"
+  }
+}

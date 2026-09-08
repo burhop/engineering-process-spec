@@ -1,0 +1,136 @@
+{
+  "suite": "mock-mcp-protocol",
+  "suiteVersion": "0.1.0-draft.1",
+  "protocolVersion": "2025-11-25",
+  "generatedAt": "2026-09-07T23:01:51.108111+00:00",
+  "command": [
+    "D:\\Users\\markb\\miniconda3\\python.exe",
+    "D:\\repos\\engineering-process-spec\\tests\\providers\\test_mock_mcp.py",
+    "--report",
+    "tests/providers/protocol-results.json"
+  ],
+  "python": "3.13.5 | packaged by Anaconda, Inc. | (main, Jun 12 2025, 16:37:03) [MSC v.1929 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "serverSha256": "bdc4173533f1c7d265947f5cae51cb91131af74e110312cbd0685bde4c31446f",
+  "testSha256": "91289eb1a765c34d1942e59ef13c9efa764fb9a1689e3a902dbf400cce245b11",
+  "snapshots": {
+    "engineering.mass.input.json": "08d7c45cd1a34cff0db8955061a5b49e7347386cdb5aca7a264a39ac4523a248",
+    "engineering.mass.output.json": "cca9c3857bd762fc9a9691489276b9cf38a27fd55ac0f8ef4f13f3e33a15f063",
+    "engineering.mass.tool.json": "1c8478c76c4f15db0e470edbef5c4592cc0323adf4f3bd31fb3857957b7bf5a9",
+    "engineering.record.input.json": "ee096e17209b254e1125f6e1de2896facd154a013b070b55f79f8e390a80b357",
+    "engineering.record.output.json": "53dce40cc85561a43d9225ce0692558b3e74e830ce584b2b6108fd0285fa6c62",
+    "engineering.record.tool.json": "53a014825a124a0956f7df871a29e67cb014e454b4d87ca456844e936b72f2d4",
+    "engineering.volume.input.json": "a79e9f6c32f35e614ce0bcbac35573c4c19f0dd1d84d1d79d7dfdbe184c13055",
+    "engineering.volume.output.json": "f9b54617552afafced2343c25d5667b1956c38642ae7b3620807f6a2b8263575",
+    "engineering.volume.tool.json": "1d01caffc98dcba611fe66b0ce8a79311345e91a9f62924a1af41c760010186d"
+  },
+  "scope": "Mock provider protocol behavior only; not full MCP certification, independent executor conformance or real CAD evidence",
+  "counts": {
+    "total": 25,
+    "passed": 25,
+    "failed": 0,
+    "notRun": 0
+  },
+  "cases": [
+    {
+      "id": "__main__.MockProtocolTests.test_declared_equivalent_units_have_same_result",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_deterministic_calculation_hands_volume_to_mass",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_disconnect_occurs_after_one_audited_mutation_without_response",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_faults_exercise_schema_and_engineering_acceptance_independently",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_finite_computation_overflow_is_refused",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_initialization_and_initialized_notification_gate_operations",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_initialize_and_discovery_match_reviewed_contract",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_invalid_envelopes_unknown_methods_and_malformed_calls_are_protocol_errors",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_invalid_json_nonfinite_numbers_and_duplicates_never_call_tools",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_protocol_negotiation_returns_supported_version",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_record_mutates_session_resource_and_audit",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_resource_absence_denial_and_revision_mismatch_remain_distinct",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_resource_read_has_stable_inputs_identity_and_revision",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_tool_error_fault_is_distinct_from_protocol_error",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_tool_limit_prevents_additional_mutation",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_tool_validation_returns_iserror_and_prevents_mutation",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_unknown_notification_has_no_response_and_ping_preserves_unicode_id",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_unsupported_task_augmentation_and_cursor_are_explicit_errors",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockProtocolTests.test_wrong_application_and_changed_default_are_observable",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockHTTPTests.test_http_accept_content_type_origin_protocol_and_session_errors",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockHTTPTests.test_http_disconnect_preserves_mutation_for_explicit_readback",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockHTTPTests.test_http_initialization_notification_gate_and_isolated_sessions",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockHTTPTests.test_http_malformed_json_has_error_response_without_execution",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockHTTPTests.test_http_real_loopback_path_runs_mcp_with_declared_target_platform",
+      "status": "passed"
+    },
+    {
+      "id": "__main__.MockHTTPTests.test_http_session_deletion_invalidates_access",
+      "status": "passed"
+    }
+  ]
+}

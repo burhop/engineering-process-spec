@@ -1,0 +1,18 @@
+2026-09-07 22:50:29.725 INFO     Processing workflow 205436a6-adce-457f-8ccf-7a4ea82dd1a4
+2026-09-07 22:50:29.726 INFO     Building workflow execution plan
+2026-09-07 22:50:29.811 INFO     COMPLETED building of workflow execution plan
+2026-09-07 22:50:29.812 INFO     EXECUTING workflow 205436a6-adce-457f-8ccf-7a4ea82dd1a4
+2026-09-07 22:50:29.835 INFO     EXECUTING step /produce (job /produce/0) locally into directory /tmp/streamflow/504e1b6f-cd3a-499e-b4b4-e55279713cb4:
+python -c \
+	'import json; print(json.dumps({'"'"'value'"'"': 2.5, '"'"'unit'"'"': '"'"'mm'"'"', '"'"'provider'"'"': '"'"'urn:engineering-process:experiment:mock'"'"'}))'
+2026-09-07 22:50:29.969 INFO     COMPLETED Step /produce
+2026-09-07 22:50:30.004 INFO     COPYING from /tmp/streamflow/504e1b6f-cd3a-499e-b4b4-e55279713cb4/quantity.json to /tmp/streamflow/d0734b91-01aa-488f-bef8-f14598f5dd0e/93d91fbe-12e5-4a03-b6a8-fc444a3f5c7c/quantity.json on local file-system
+2026-09-07 22:50:30.006 INFO     COMPLETED copy from /tmp/streamflow/504e1b6f-cd3a-499e-b4b4-e55279713cb4/quantity.json to /tmp/streamflow/d0734b91-01aa-488f-bef8-f14598f5dd0e/93d91fbe-12e5-4a03-b6a8-fc444a3f5c7c/quantity.json on local file-system
+2026-09-07 22:50:30.021 INFO     EXECUTING step /inspect (job /inspect/0) locally into directory /tmp/streamflow/e3dd0551-d10b-486e-892f-a0327d8f0a61:
+python -c \
+	'import json,sys; q=json.load(open(sys.argv[1])); assert q['"'"'value'"'"']==2.5 and q['"'"'unit'"'"']=='"'"'mm'"'"'; print(json.dumps({'"'"'accepted'"'"':True,'"'"'received'"'"':q}))' \
+	/tmp/streamflow/d0734b91-01aa-488f-bef8-f14598f5dd0e/93d91fbe-12e5-4a03-b6a8-fc444a3f5c7c/quantity.json
+2026-09-07 22:50:30.116 INFO     COMPLETED Step /inspect
+2026-09-07 22:50:30.164 INFO     COPYING from /tmp/streamflow/e3dd0551-d10b-486e-892f-a0327d8f0a61/receipt.json to /work/.work/streamflow-output/receipt.json on local file-system
+2026-09-07 22:50:30.203 INFO     COMPLETED copy from /tmp/streamflow/e3dd0551-d10b-486e-892f-a0327d8f0a61/receipt.json to /work/.work/streamflow-output/receipt.json on local file-system
+2026-09-07 22:50:30.242 INFO     COMPLETED workflow execution

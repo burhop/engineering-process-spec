@@ -1,0 +1,69 @@
+{
+  "format": "epx-repository-checks",
+  "checks": [
+    {
+      "check": "canonical schemas",
+      "status": "passed",
+      "detail": 3
+    },
+    {
+      "check": "example semantics and unsupported approval",
+      "status": "passed",
+      "detail": [
+        "calculation",
+        "calculation-replacement",
+        "inspection-approval",
+        "minimal",
+        "mock-handoff"
+      ]
+    },
+    {
+      "check": "deterministic fixture drift",
+      "status": "passed",
+      "detail": {
+        "argv": [
+          "/usr/local/bin/python",
+          "tools/build_examples.py",
+          "--check"
+        ],
+        "exitCode": 0
+      }
+    },
+    {
+      "check": "focused Python invariants",
+      "status": "passed",
+      "detail": {
+        "argv": [
+          "/usr/local/bin/python",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests",
+          "-p",
+          "test_*.py"
+        ],
+        "exitCode": 0
+      }
+    },
+    {
+      "check": "local documentation targets",
+      "status": "passed",
+      "detail": {
+        "localTargetsChecked": 317,
+        "externalLinks": "not fetched",
+        "anchors": "not checked"
+      }
+    },
+    {
+      "check": "requirement-to-test mapping",
+      "status": "passed",
+      "detail": {
+        "requirements": 29,
+        "mandatoryCases": 60
+      }
+    }
+  ],
+  "status": "passed",
+  "runtimeConformance": "not run by this command"
+}

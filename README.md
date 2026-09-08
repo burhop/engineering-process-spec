@@ -1,46 +1,66 @@
 # Engineering Process Specification
 
-An experimental, implementation-neutral specification for sharing engineering
-processes between human or AI creators and process executors.
+An experimental exchange profile and implementer kit for engineering processes
+that independent applications can read and execute without Wright.
 
-## Status
+Use existing **CWL v1.2** for workflow/data flow, **MCP 2025-11-25** for named tool
+communication, **RO-Crate 1.2** for exchange packaging, and JSON Schema for data
+contracts. The added profile specifies provider/resource identity, preservation,
+binding, diagnostics and acceptance evidence. There is no new workflow grammar.
 
-Early draft. No stable language, compatibility guarantee, or standards-body
-endorsement is claimed. The project name is provisional.
+A Solid Edge MCP process remains a Solid Edge MCP process when shared. A missing
+provider produces an availability diagnostic and preserves the received package.
+Changing provider is an explicit new process revision.
 
-## Scope
+## Start here
 
-Describe process inputs, operations, dependencies, required capabilities,
-outputs, and acceptance criteria so independent systems can exchange and
-execute a process with the same intended meaning.
+| Your task | Entry point |
+|---|---|
+| Run the calculation without Wright | [Quickstart](docs/quickstart.md) |
+| Author a process, as a person or AI | [Authoring guide](docs/authoring.md), [examples](examples/README.md) |
+| Implement a receiving application | [Integration guide](docs/implementer-guide.md), [diagnostics](docs/diagnostics.md) |
+| Understand the required behavior | [Core draft](spec/core-draft.md), [schemas](schemas/requirements.schema.json) |
+| Evaluate interoperability claims | [Conformance guide](conformance/README.md), [goal audit](docs/goal-audit.md) |
+| Understand Wright compatibility | [Versioned mapping and capture recipe](docs/wright-compatibility.md) |
+| Compare supported environments and layers | [Compatibility matrix](docs/compatibility.md) |
+| Change the draft | [Contribution rules](CONTRIBUTING.md), [maintenance](docs/maintenance.md) |
 
-## Relationship to Wright
+The two demonstration paths are Python/cwltool and Node/StreamFlow, with separate
+provider resolvers and MCP adapters. They share the profile, fixtures and some
+upstream CWL parsing libraries. Repository-authored demonstrations do not prove
+independent organizational adoption. [Progress and evidence](PROGRESS.md) records
+the actual tested scope; a successful example is not full conformance.
 
-[Wright](https://github.com/burhop/wright) is the initial implementation and
-experimentation environment. Its versioned implementation contracts define
-current behavior while the language is evolving.
+Both paths passed **60/60 mandatory core cases**; eight real-CAD/approval
+observations remain explicitly not run. The installed-artifact walkthrough
+passed 23 commands and five MCP runs without Wright. See the
+[retained results](conformance/results/2026-09-07/README.md) and
+[consumer evidence](docs/adopter-evidence.json).
 
-This repository will distinguish proposals from implemented behavior and link
-to exact Wright revisions. Once a portable subset is agreed and independently
-implemented, its specification can become authoritative for that subset.
+## Repository map
 
-## First milestone
+- `spec/`, `schemas/`: normative experimental requirements and structural rules.
+- `examples/`: minimal, quantity calculation, mock MCP handoff, explicit provider
+  replacement, and clearly scoped Solid Edge/approval capture cases.
+- `src/epx/`, `applications/node/`: locally installable CLI/library implementations.
+- `conformance/`, `tests/`, `tools/`: test catalog, results, provider fixture,
+  repository checks and adopter/capture utilities.
+- `docs/`: onboarding, integration, maintenance and compatibility.
+- `research/`, `use-cases/`, `decisions/`, `experiments/`: source-backed reasoning
+  and the working experiment that selected the profile.
 
-Exchange a process authored in Wright with a separate executor, retaining its
-inputs, required capabilities, expected outputs, and acceptance criteria.
+## Status and decisions
 
-Start with a quantity calculation, a CAD modification with measurable checks,
-and a process requiring human approval. Examples and language definitions will
-be added as their semantics become clear.
+This is draft **0.1.0-draft.1**, not stable 1.0 or a recognized standard.
+Real CAD execution, richer human approval, outside adoption, licensing,
+contributor-IP terms and public distribution are separate readiness gates.
+Nothing here chooses licensing terms or changes repository visibility.
 
-## Working process
+The [comparison](research/comparison.md), [findings](research/findings.md) and
+[source register](research/sources.md) preserve the research. The
+[CWL decision](decisions/003-cwl-core.md) follows actual OWS/CWL experiments and
+supersedes the earlier provisional OWS preference for this core. Wright was
+inspected read-only; its `.wflow` files do not already conform to this profile.
 
-Use issues for questions and proposals, and pull requests for specification
-changes. Keep implementation code in Wright for now. Licensing and external
-contribution terms will be decided before inviting outside adoption.
-
-## Project direction and research
-
-- [Vision and agreed boundaries](VISION.md)
-- [Research brief](RESEARCH.md)
-- [Agent instructions](AGENTS.md)
+Project boundaries remain in [VISION](VISION.md), [RESEARCH](RESEARCH.md),
+[AGENTS](AGENTS.md) and the active [implementation goal](IMPLEMENTATION_GOAL.md).

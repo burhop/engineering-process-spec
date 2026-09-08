@@ -1,0 +1,37 @@
+{
+  "format": "epx-node-local-installation-evidence",
+  "version": "0.1.0-draft.1",
+  "evidenceStatus": "historical-artifact-only",
+  "laterVerification": "../../docs/adopter-evidence.json",
+  "laterVerificationNote": "This receipt applies only to the package hash below. The maintained copied-artifact walkthrough records final distribution verification separately; this historical receipt does not certify later source or dependency changes.",
+  "observedAt": "2026-09-07T23:24:18.8941867Z",
+  "packageSha256": "eb8414bb82c2c2f24d396268b87c8e0234af0acb1d144ccc6f9d8140473e8226",
+  "package": "epx-node-adopter-0.1.0-draft.1.tgz",
+  "commands": [
+    "npm pack --pack-destination .work",
+    "npm install --offline --ignore-scripts --no-audit --no-fund ../epx-node-adopter-0.1.0-draft.1.tgz",
+    "node consumer.mjs"
+  ],
+  "scope": "Fresh Windows consumer installed from local tarball; copied calculation package validated and preserved using installed public API and bundled schemas; no engineering execution claimed by this check.",
+  "consumer": {
+    "format": "epx-installed-consumer-evidence",
+    "version": "0.1.0-draft.1",
+    "node": "v25.2.0",
+    "api": "epx-node-adopter",
+    "resolvedInsideConsumer": true,
+    "schemaOverride": false,
+    "bundledSchemas": [
+      "bindings.schema.json",
+      "requirements.schema.json",
+      "run.schema.json"
+    ],
+    "receivedPackageMetadataSha256": "42d2a03eb2f9a64704a57a372d9ec795b66aefeca542b91de9733ab2f22ebb0c",
+    "steps": [
+      "main/volume",
+      "main/mass"
+    ],
+    "preservedMetadataSha256": "42d2a03eb2f9a64704a57a372d9ec795b66aefeca542b91de9733ab2f22ebb0c",
+    "engineeringCalls": 0,
+    "status": "pass"
+  }
+}

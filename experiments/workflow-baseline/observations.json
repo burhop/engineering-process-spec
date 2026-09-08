@@ -1,0 +1,50 @@
+{
+  "observationDate": "2026-09-07",
+  "scope": "bounded existing-engine baseline selection, not profile conformance",
+  "wrightAccess": "none",
+  "versions": {
+    "cwlSpecification": "v1.2 (1.2.1 document/test revision remains the research baseline)",
+    "owsSpecification": "1.0.3",
+    "mcpProbeProtocol": "2025-11-25",
+    "cwltool": "3.2.20260720092025",
+    "cwltoolWheelSha256": "042d37c73cd4e85adb7f55ebb770f87944b2e72d54432437234ffff6be9abb39",
+    "streamflow": "0.2.0rc2",
+    "streamflowTagRevision": "7704a8e705abbd6338b6f049a60165b39a1f5e72",
+    "streamflowWheelSha256": "05f2c72d1089eaf8bca23e41f9418d5b0c3505b5f5112fc28a39b1e2bb9e1b28",
+    "synapseRevision": "ba3fbfd5125995bba9fb5900aed181a0775d538c",
+    "synapseDotnetSdk": "10.0.301",
+    "synapseTargetFramework": "net9.0",
+    "synapseServerlessWorkflowSdk": "1.0.1",
+    "owsJavaSdkRevision": "c481ddb4d42dc068343542ebeaa158d399b694b4",
+    "owsJavaSdkPomVersion": "8.0.0-SNAPSHOT",
+    "jq": "1.8.1",
+    "jqWindowsAmd64Sha256": "23cb60a1354eed6bcc8d9b9735e8c7b388cd1fdcb75726b93bc299ef22dd9334",
+    "python": "3.12.14",
+    "node": "24.13.1",
+    "engineImage": "eps-workflow-baseline:20260907",
+    "engineImageId": "sha256:bc34601c3182659df5949c8ed8339bd0d44d2a6a8195a5f43e27d45bbd83a7fd",
+    "pythonBaseDigest": "sha256:78387bc3881b8273120a12ebe6c1ab22b018ccc2c9adf565ae1ac9b536e184ea",
+    "nodeBaseDigest": "sha256:a81a03dd965b4052269a57fac857004022b522a4bf06e7a739e25e18bce45af2"
+  },
+  "tests": [
+    {"id":"OWS-STRUCTURE","status":"passed","observed":"Both supplied OWS documents validate against the official 1.0.3 schema using Draft202012Validator."},
+    {"id":"OWS-SYNAPSE-CONTROL","status":"passed","observed":{"received":{"value":2.5,"unit":"mm"}},"processExit":0},
+    {"id":"OWS-SYNAPSE-NATIVE-MCP","status":"unsupported","observed":"Unknown/unsupported function 'mcp'","processExit":0,"interpretation":"The engine rejected task initialization; process exit alone is not success evidence."},
+    {"id":"OWS-JAVA-NATIVE-MCP","status":"not-run","observed":"Source inspection found MCP in the schema but no native MCP CallableTaskBuilder in impl sources."},
+    {"id":"CWL-CWLTOOL-HANDOFF","status":"passed","observed":"Both CommandLineTool steps executed; consumer received the producer's JSON file."},
+    {"id":"CWL-STREAMFLOW-HANDOFF","status":"passed","observed":"StreamFlow's execution plan, command and transfer layers executed both steps; consumer received the producer's JSON file."},
+    {"id":"CWL-EQUAL-RECEIPT","status":"passed","observed":{"accepted":true,"received":{"value":2.5,"unit":"mm","provider":"urn:engineering-process:experiment:mock"}}},
+    {"id":"CWL-NAMED-MCP","status":"not-run","observed":"This experiment contains task-generated JSON only. Separate MCP adapters and conformance tests are required."}
+  ],
+  "sha256": {
+    "cwl-handoff.cwl": "134a1908f6d95c87a2c26f39a6e5084b29520145c21d197683e55789ff33a7c0",
+    "ows-mcp.json": "25361da8391aa82d1bae9ed9abf1771f688f2c2b28c84c98c60e83ed024bfeac",
+    "officialOws103WorkflowSchema": "df3326da907e17e743e9d9e888839481d1557abdf91c592e74f27506ff523f0b",
+    "cwltoolReceiptBytes": "9326cfdafc0f08c849f590599eacaa84deb9ea83987037a60d08183836ca9ec7",
+    "streamflowReceiptBytes": "9326cfdafc0f08c849f590599eacaa84deb9ea83987037a60d08183836ca9ec7",
+    "requirements.lock.txt": "25e580588c834895d5d52c7c0e5795ec032bba3416920f59b531ec78ce414683"
+  },
+  "sharedDependencies": ["Python runtime", "cwl-utils 0.41", "schema-salad 8.10.20260825112551", "RDF/JSON/YAML and other utility libraries in requirements.lock.txt"],
+  "independenceClaim": "Different existing workflow planning, command execution and transfer implementations. No cwltool imports found in the installed StreamFlow wheel's Python source. No claim of independent parsing, adapters or organizations.",
+  "limits": ["No live MCP exchange in CWL baseline", "No CAD or engineering acceptance claim", "No full upstream conformance suite run", "Linux/amd64 containers tested; native Windows engines untested", "Synapse transitive NuGet graph not locked"]
+}

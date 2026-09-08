@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "quantity": {
+      "const": "mass"
+    },
+    "unit": {
+      "const": "kg"
+    },
+    "value": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    }
+  },
+  "required": [
+    "quantity",
+    "value",
+    "unit"
+  ],
+  "type": "object"
+}

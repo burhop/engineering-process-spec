@@ -1,0 +1,91 @@
+{
+  "annotations": {
+    "destructiveHint": false,
+    "idempotentHint": true,
+    "openWorldHint": false,
+    "readOnlyHint": true
+  },
+  "description": "Mock mass from positive volume and density; no material certification.",
+  "inputSchema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "density": {
+        "additionalProperties": false,
+        "properties": {
+          "quantity": {
+            "const": "density"
+          },
+          "unit": {
+            "enum": [
+              "kg/m3",
+              "g/cm3"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "exclusiveMinimum": 0,
+            "type": "number"
+          }
+        },
+        "required": [
+          "value",
+          "unit"
+        ],
+        "type": "object"
+      },
+      "volume": {
+        "additionalProperties": false,
+        "properties": {
+          "quantity": {
+            "const": "volume"
+          },
+          "unit": {
+            "enum": [
+              "m3",
+              "mm3"
+            ],
+            "type": "string"
+          },
+          "value": {
+            "exclusiveMinimum": 0,
+            "type": "number"
+          }
+        },
+        "required": [
+          "value",
+          "unit"
+        ],
+        "type": "object"
+      }
+    },
+    "required": [
+      "volume",
+      "density"
+    ],
+    "type": "object"
+  },
+  "name": "engineering.mass",
+  "outputSchema": {
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "additionalProperties": false,
+    "properties": {
+      "quantity": {
+        "const": "mass"
+      },
+      "unit": {
+        "const": "kg"
+      },
+      "value": {
+        "exclusiveMinimum": 0,
+        "type": "number"
+      }
+    },
+    "required": [
+      "quantity",
+      "value",
+      "unit"
+    ],
+    "type": "object"
+  }
+}

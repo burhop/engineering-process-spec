@@ -1,0 +1,7 @@
+{
+  "document": {"dsl":"1.0.3","namespace":"engineering-process-experiment","name":"fixed-mcp-handoff","version":"0.0.1"},
+  "do": [
+    {"read": {"call":"mcp","with":{"protocolVersion":"2025-11-25","method":"tools/call","parameters":{"name":"read_quantity","arguments":{}},"transport":{"http":{"endpoint":"http://127.0.0.1:9/mcp"}}}}},
+    {"handoff": {"set":{"received":"${ .structuredContent }"}}}
+  ]
+}
