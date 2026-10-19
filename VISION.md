@@ -84,3 +84,31 @@ packaging, syntax, versioning, and compatibility commitments remain undecided.
 The first milestone is a small, independently understandable process exchange
 with declared dependencies and verifiable outcomes. Stable 1.0 and formal
 standards-body submission should follow implementation and interoperability evidence.
+
+## October 2026 clarification from implementation review
+
+The original goals above remain in force. The [current code review](research/wright-code-review.md)
+includes published development/feature revisions and unpublished local work.
+Wright now has a definition-only bundle, saved instruction bodies and typed policy,
+declared human-input waits, exact-output validation and optional reusable process
+interfaces. These concrete mechanisms inform the [draft interchange requirements](spec/interchange-draft.md);
+they do not establish an independent executor or a stable language standard.
+
+A complete exchange preserves behavior and engineering acceptance intent, as well
+as graph connections. Keep definition, local configuration, execution evidence
+and authority distinct. A recipient must resolve its own capability availability,
+credentials, input values and reviews. Unknown outcomes remain uncertain and
+must not be replayed merely because a UI reconnects or an import response is lost.
+
+Two complementary experiences can use the same process: authoring/inspection in
+blocks, source and inspectors, and an optional working view for inputs, results,
+questions, decisions and progress. Presentation has an explicit interaction
+contract and versioned bindings. The backend remains the execution/state authority;
+an imported UI is editable source requiring local compatibility/build/review,
+with a common-view fallback. No universal screen layout or UI framework is chosen.
+
+Model, adapter and presentation host remain replaceable subject to qualified
+contracts. A different model or frontend driving Wright still uses Wright's
+executor. Deterministic tool-only work must not depend on AI simply because the
+host offers conversation. Provider protocols remain external integration concerns;
+this specification does not require Wright-owned vendor implementations.

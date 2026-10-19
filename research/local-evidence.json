@@ -1,0 +1,406 @@
+{
+  "observation_date": "2026-10-19",
+  "observed_at_utc": "2026-10-19T17:31:56.000457+00:00",
+  "method": "Read-only code/diff/test-evidence inspection; no Wright runtime, provider or test execution in this review.",
+  "published_dev": "bcb5b52f1f7169eb0b5b71bc1a1ef704b6911a94",
+  "published_feature": {
+    "branch": "codex/desktop-file-download",
+    "head": "7e60329435cb28d8647f71477a6d7d2675e7b941"
+  },
+  "local_candidate": {
+    "branch": "codex/desktop-integration-completion",
+    "head": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+    "local_delta_from_feature": [
+      "bc9584aac5cbf2d9f89d48a86758397791b38e77",
+      "7a123ca5827f40de3862b63b0f3fb376a2ddd886"
+    ]
+  },
+  "remote_head_snapshot_sha256": "56e0a290270e0b2cad6a32f1ab6aca0cb6c5744b868ee1ed25a81a1de313fa05",
+  "reviewed_local_files": [
+    {
+      "path": "packages/workspace_service/src/workspace_service/workflow_source_execution.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "52a61edf08060d31d0df9dffb0f32b2ee69d7ae037197c0c0db19829e625d468",
+      "observed_working_sha256": "52a61edf08060d31d0df9dffb0f32b2ee69d7ae037197c0c0db19829e625d468",
+      "matches_commit": true
+    },
+    {
+      "path": "packages/workspace_service/src/workspace_service/workflow_model_routing.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "75b758907253972498f7b7738bc10d9d6e5db691307861225705b9135acbe4e7",
+      "observed_working_sha256": "75b758907253972498f7b7738bc10d9d6e5db691307861225705b9135acbe4e7",
+      "matches_commit": true
+    },
+    {
+      "path": "packages/workspace_service/src/workspace_service/workflow_sources.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "f8ead57ebf0acb2e1e27785bad793aaec91979412aac437fa6a07b4f3e632586",
+      "observed_working_sha256": "f8ead57ebf0acb2e1e27785bad793aaec91979412aac437fa6a07b4f3e632586",
+      "matches_commit": true
+    },
+    {
+      "path": "packages/workspace_service/src/workspace_service/workflow_bundles.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "73178c26b864658a81929899a3b75e7204ae107f301055f654e9041eea009195",
+      "observed_working_sha256": "73178c26b864658a81929899a3b75e7204ae107f301055f654e9041eea009195",
+      "matches_commit": true
+    },
+    {
+      "path": "packages/workspace_service/tests/test_workflow_mcp_execution.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "0e93c67902059dee054a255e5198537f1744a6050722bfbe57b3126287a09933",
+      "observed_working_sha256": "0e93c67902059dee054a255e5198537f1744a6050722bfbe57b3126287a09933",
+      "matches_commit": true
+    },
+    {
+      "path": "packages/workspace_service/tests/test_workflow_editor_drafts.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "4231babb56d001ddd13f30f1e4b719d3bbf6ae97611d62dcb1ece90016f48ccf",
+      "observed_working_sha256": "4231babb56d001ddd13f30f1e4b719d3bbf6ae97611d62dcb1ece90016f48ccf",
+      "matches_commit": true
+    },
+    {
+      "path": "packages/core/src/core/workflow_bundle.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "6201f5a5e958ab25a83716bb555029e2794e3837d9e94ab830f2b49690b54014",
+      "observed_working_sha256": "6201f5a5e958ab25a83716bb555029e2794e3837d9e94ab830f2b49690b54014",
+      "matches_commit": true
+    },
+    {
+      "path": "packages/core/src/core/workflow_instructions.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "e8d61c6d6f0cd7b9861292478f5d65333e2278f6007de8d2e7a659ea0b0519d4",
+      "observed_working_sha256": "e8d61c6d6f0cd7b9861292478f5d65333e2278f6007de8d2e7a659ea0b0519d4",
+      "matches_commit": true
+    },
+    {
+      "path": "packages/core/src/core/process_interactions.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "e4c56e94abe193835c8ce51488ede29fb360e3e345b63d8ff1ead71432edf47a",
+      "observed_working_sha256": "e4c56e94abe193835c8ce51488ede29fb360e3e345b63d8ff1ead71432edf47a",
+      "matches_commit": true
+    },
+    {
+      "path": "packages/core/src/core/desktop_reasoning.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "32b1c584f365dd8d97dd52208a769ae501f3ac0488d3d2234808e88da582d0f8",
+      "observed_working_sha256": "32b1c584f365dd8d97dd52208a769ae501f3ac0488d3d2234808e88da582d0f8",
+      "matches_commit": true
+    },
+    {
+      "path": "apps/web/src/prototypes/desktop-panel/NativeRunEvidence.tsx",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "32783a4eeab804bff999ed9df169e11014372d1851d9f79f2906399e3fb1ea64",
+      "observed_working_sha256": "32783a4eeab804bff999ed9df169e11014372d1851d9f79f2906399e3fb1ea64",
+      "matches_commit": true
+    },
+    {
+      "path": "prototypes/desktop-harness/desktop_backend.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "11ee82ffde0ac7ce609f636a46d52a43c0b5ea04235a27237e31d1f40f36099f",
+      "observed_working_sha256": "11ee82ffde0ac7ce609f636a46d52a43c0b5ea04235a27237e31d1f40f36099f",
+      "matches_commit": true
+    },
+    {
+      "path": "prototypes/desktop-harness/desktop_connection_template.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "01a79535b21b5aa46a36721c0a27d40db81ddbba8a47345a4b22c41b163adc5d",
+      "observed_working_sha256": "01a79535b21b5aa46a36721c0a27d40db81ddbba8a47345a4b22c41b163adc5d",
+      "matches_commit": true
+    },
+    {
+      "path": "prototypes/desktop-harness/preview_server.py",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "ed7eb9b72fa024ddd87982dca3e3e5cd667791a8affc02ee552c3b2e8574dc85",
+      "observed_working_sha256": "ed7eb9b72fa024ddd87982dca3e3e5cd667791a8affc02ee552c3b2e8574dc85",
+      "matches_commit": true
+    },
+    {
+      "path": "prototypes/desktop-harness/integration-status-20261019.md",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "e5a1d83042129d6c0f83494ffed49697e12e9595ae1f383d4e13028648b226e6",
+      "observed_working_sha256": "e5a1d83042129d6c0f83494ffed49697e12e9595ae1f383d4e13028648b226e6",
+      "matches_commit": true
+    },
+    {
+      "path": "prototypes/desktop-harness/ci-correction-20261019.md",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "35cddfe2bdf0582c55c4c84eb7036e2b1ee6d563020d40d27c7647d2ce05e3f3",
+      "observed_working_sha256": "35cddfe2bdf0582c55c4c84eb7036e2b1ee6d563020d40d27c7647d2ce05e3f3",
+      "matches_commit": true
+    },
+    {
+      "path": "scripts/check-dev-push.sh",
+      "commit": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "committed_sha256": "40db8d3726a14d0a7ed38682c022b7dc67dea5f532205e9501a69153e8b7f77b",
+      "observed_working_sha256": "40db8d3726a14d0a7ed38682c022b7dc67dea5f532205e9501a69153e8b7f77b",
+      "matches_commit": true
+    }
+  ],
+  "uncommitted_candidate_files": [],
+  "original_checkout_untracked_workflows": [
+    {
+      "path": "workflows/desktop-checkpoint.workflow.wflow",
+      "sha256": "6cf626953a22f8eccf0f9721c69bbe6c6e88bd078707f38f5caeeafcea0fd789",
+      "size_bytes": 32553,
+      "status": "untracked; contents not published or executed"
+    },
+    {
+      "path": "workflows/ui-bug-review.workflow.wflow",
+      "sha256": "6cf626953a22f8eccf0f9721c69bbe6c6e88bd078707f38f5caeeafcea0fd789",
+      "size_bytes": 32553,
+      "status": "untracked; contents not published or executed"
+    },
+    {
+      "path": "workflows/ui-walkthrough.workflow.wflow",
+      "sha256": "6cf626953a22f8eccf0f9721c69bbe6c6e88bd078707f38f5caeeafcea0fd789",
+      "size_bytes": 32553,
+      "status": "untracked; contents not published or executed"
+    }
+  ],
+  "registered_present_worktree_inventory": [
+    {
+      "label": "dev",
+      "head": "c1a8d00942d8a80ca6229ebed23d7b8f4153a7d9",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 1,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/stevecad-ui-rebase",
+      "head": "bcf031618280b1d524796625c514cc39217ae8b5",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/host-adaptive-ui-debug",
+      "head": "e3c4a4b7f4063450c9183b2316d4923a3bc61721",
+      "commits_not_in_dev": 26,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/083-workflow-trace-review",
+      "head": "c071225515ebe5ba7349da1b2c2518028ffd18a2",
+      "commits_not_in_dev": 1,
+      "dirty_status_entries": 3039,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/codex-platform-integration",
+      "head": "25f807f22bf099f8b98796fdd5f09e85ba06d75e",
+      "commits_not_in_dev": 3,
+      "dirty_status_entries": 4,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-continuation-candidate",
+      "head": "a7083736eef96912a8b3e871f97f604b6152e5ab",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-custom-candidate",
+      "head": "7afc90c48defa2fdd0fd645b780e597433d72706",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-custom-connections",
+      "head": "dab897874be15ed2947acdcbb50be8859091e104",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-engineering-demos",
+      "head": "6e894f3dd8ddcfac13d8793fb43386afadebfa46",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-engineering-demos-next",
+      "head": "753e6238e414700a55a3ce3339a3138ae879703c",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-engineering-execution",
+      "head": "d070e351812a72d662b694c0e4aad05257c04763",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-engineering-images",
+      "head": "b5da4090983b2654d11c457c994f2325199a3295",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-file-download",
+      "head": "11705f52fc4463aa476f860e8320a51bb18a6894",
+      "commits_not_in_dev": 6,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "wright-desktop-images-candidate",
+      "head": "3f7ad9b2495430863ea8f0fd0979bc542814bfab",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-integration-completion",
+      "head": "7a123ca5827f40de3862b63b0f3fb376a2ddd886",
+      "commits_not_in_dev": 39,
+      "dirty_status_entries": 7,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-process-input-upload",
+      "head": "5d6c58dfedd3550b02dd72f01fc96e476b0355cc",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-record-read-recovery",
+      "head": "dab897874be15ed2947acdcbb50be8859091e104",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-template-entry",
+      "head": "92cc2785cea27fbac3b870759586ae37d4b01126",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-ui-files-candidate",
+      "head": "268bf094e3ece2d1376fd8e73cc75ab90ed7a796",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-workflow-entry",
+      "head": "33afba8ae38e161465e8757eac8f3940866f8d53",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-workflow-entry-integration",
+      "head": "90e2f261467239df5b5c475d81b657aa7bf1f4c5",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/desktop-workflow-transfer",
+      "head": "0da734d0f7c16eebacff520b77f785bd334ac31b",
+      "commits_not_in_dev": 0,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/host-adaptive-native-editor",
+      "head": "72c4f86f3b6ab41e31da5613c8fbfce0c40253b5",
+      "commits_not_in_dev": 17,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/host-adaptive-native-working-view",
+      "head": "91da5d805342cb55435c2c4ed589933b37b901c6",
+      "commits_not_in_dev": 24,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/host-adaptive-ui-prototype",
+      "head": "814a763d3d2370ba49665ba8a8eab5fc065a4136",
+      "commits_not_in_dev": 15,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "wright-openai-desktop-harness-prototype",
+      "head": "a17acb851b8ab978fdb619d318c9a6b67458af3e",
+      "commits_not_in_dev": 1,
+      "dirty_status_entries": 0,
+      "scope": "status/history inventory; not all files reviewed"
+    },
+    {
+      "label": "codex/openai-desktop-harness-prototype",
+      "head": "c076931997becbf1e38e4d106150670aaf81c7a9",
+      "commits_not_in_dev": 9,
+      "dirty_status_entries": 15,
+      "scope": "status/history inventory; not all files reviewed"
+    }
+  ],
+  "limitations": [
+    "Local-only means absent from the inspected published branch ancestry, not proof an object has never been uploaded.",
+    "Generated file hashes identify observed bytes; no build or host acceptance is inferred.",
+    "Historical partial checkout deletions and older prototype drafts are not treated as current product changes.",
+    "Private workflow contents, credentials, answers, live runs and generated build contents are not copied."
+  ],
+  "initial_candidate_dirty_status": [
+    " M src/wright_engineering/runtime-extra-lock.json",
+    " M src/wright_engineering/static/web/asset-manifest.json",
+    " D src/wright_engineering/static/web/assets/NativeProcessPage-C7TZ2N1b.js",
+    " D src/wright_engineering/static/web/assets/index-CI0wkSAL.js",
+    " M src/wright_engineering/static/web/index.html",
+    "?? src/wright_engineering/static/web/assets/NativeProcessPage-BiK0Cxw6.js",
+    "?? src/wright_engineering/static/web/assets/index-P94J8v_m.js"
+  ],
+  "candidate_working_tree_at_content_snapshot": "clean; same pinned HEAD; earlier generated-file changes no longer present; review performed no writes to Wright",
+  "uncommitted_prototype_source": [
+    {
+      "worktree_branch": "codex/openai-desktop-harness-prototype",
+      "base_commit": "c076931997becbf1e38e4d106150670aaf81c7a9",
+      "path": "apps/web/src/components/pages/WorkflowRecoveryPage.tsx",
+      "working_sha256": "ba24571e362dde6ae68d01c9a7c77f03cfe9a5aa948cafa6ba7c53f06339972b",
+      "published_dev_sha256": "1d3d10d420512d7f7182145f730f9fba05cf98474e4d79d0cc15cf6788741ddd",
+      "same_bytes_as_published_dev": false,
+      "scope": "read-only reasoning status/editor integration; not an execution or interchange extension"
+    },
+    {
+      "worktree_branch": "codex/openai-desktop-harness-prototype",
+      "base_commit": "c076931997becbf1e38e4d106150670aaf81c7a9",
+      "path": "apps/web/src/prototypes/workflow-recovery/WorkflowRecoveryConcept.tsx",
+      "working_sha256": "0a6302a3054aa2bddf2ac3229efcbd2eeb0b80b2bce8447bff140e620f4a8312",
+      "published_dev_sha256": "530f9f35a4dc6606b28ae20627bcb9034b80ddc06bcc15dc15f3e48b4c56964c",
+      "same_bytes_as_published_dev": false,
+      "scope": "read-only reasoning status/editor integration; not an execution or interchange extension"
+    },
+    {
+      "worktree_branch": "codex/openai-desktop-harness-prototype",
+      "base_commit": "c076931997becbf1e38e4d106150670aaf81c7a9",
+      "path": "apps/web/src/services/desktop-reasoning-status.ts",
+      "working_sha256": "b80daad7a4284d106dc3308871f17e0024c58e1cbbf9e7f496e307c7e32eede4",
+      "published_dev_sha256": "3e322f686ac75e06bb8d5ffd405575aa6e33bbe444fd23e62677d61da12056c8",
+      "same_bytes_as_published_dev": false,
+      "scope": "read-only reasoning status/editor integration; not an execution or interchange extension"
+    },
+    {
+      "worktree_branch": "codex/openai-desktop-harness-prototype",
+      "base_commit": "c076931997becbf1e38e4d106150670aaf81c7a9",
+      "path": "apps/web/src/prototypes/workflow-recovery/useWorkflowReasoningStatus.ts",
+      "working_sha256": "8a6625f0a104382b34fada2ccacbb2f6f92e99b2366ced5d8ed5d07586c292d9",
+      "published_dev_sha256": "77a71988b16935bcae35a575ad4e1ae5089812ee24274997697f431a07f8966a",
+      "same_bytes_as_published_dev": false,
+      "scope": "read-only reasoning status/editor integration; not an execution or interchange extension"
+    }
+  ]
+}
