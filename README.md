@@ -3,17 +3,19 @@
 Share an engineering process between tools without losing its intended operations,
 chosen providers, inputs, instructions, checks or human decisions.
 
-**Status: experimental draft, reviewed 19 October 2026.** This repository now
-contains proposed interchange requirements and a documented Wright implementation
-profile. It does not yet define a stable independent language or demonstrate a
-second executor. No compatibility guarantee or standards-body endorsement is claimed.
+**Experimental draft, implementation profile updated 19 November 2026.** This
+repository describes what tools should preserve when they exchange an engineering
+process. The Wright profile records the source format, JSON bundle and fixed MCP
+calls that developers can use today. An independent implementation is the next
+interoperability milestone.
 
 ## Start here
 
 | You want to… | Read |
 |---|---|
 | Understand the sharing contract | [Interchange draft](spec/interchange-draft.md) |
-| Export or implement support for today's Wright files | [Wright implementation profile](profiles/wright.md) |
+| Read a native workflow or its JSON bundle | [Current Wright implementation profile](profiles/wright.md) |
+| Run a workflow and inspect a real result | [Wright quickstart](https://github.com/burhop/wright/tree/85f97930927b672ddf7da8cc65e89569236f4f44#run-the-example) |
 | See what was found in published and unpublished code | [Code review and evidence](research/wright-code-review.md) |
 | Choose an interoperability experiment | [Engineering use cases](use-cases/README.md) |
 | Evaluate an importer, editor or executor | [Conformance plan](conformance/README.md) |
@@ -36,22 +38,23 @@ approval authority or trusted executable UI builds.
 
 ## What exists today
 
-Wright implements `wright.workflow-bundle/1`: a JSON envelope containing accepted
-`.workflow.wflow` source, dependency declarations, optional assets/layout and
-optional editable process-interface source. Saved AI instructions, validation
-profile identities and declared human-input semantics are already represented.
-Import inspection explicitly returns `can_run: false`.
+The standalone Wright development version `0.1.0.dev2` reads native
+`.workflow.wflow` files and the `wright.workflow-bundle/1` JSON envelope.
+You can inspect a definition without a provider connection, then run its
+supported steps against caller-configured MCP servers. A portable fixed-call
+binding identifies the required provider, build, tool and contract digest.
+Local executable paths and access belong to the receiving installation.
+[Executable profile](profiles/wright.md) · [Wright schemas and source](https://github.com/burhop/wright/tree/85f97930927b672ddf7da8cc65e89569236f4f44/src/wright_workflow)
 
-The reviewed development baseline is
-[`bcb5b52f`](https://github.com/burhop/wright/commit/bcb5b52f1f7169eb0b5b71bc1a1ef704b6911a94)
-(15 October). The review also includes a published feature candidate at
-[`7e603294`](https://github.com/burhop/wright/commit/7e60329435cb28d8647f71477a6d7d2675e7b941),
-the local integration checkout at `7a123ca5` (19 October), and relevant uncommitted
-prototype source. Their status and content identities are recorded separately in the
-[review](research/wright-code-review.md). Local work is not presented as a release.
+In the runnable example, one server writes two coordinates and another measures
+the distance between them. The expected result is 5 mm. The receipt identifies
+the writer’s output port and the exact file consumed by the reader. This makes
+the example a starting point for testing another reader or executor.
+[Example files](https://github.com/burhop/wright/tree/85f97930927b672ddf7da8cc65e89569236f4f44/examples/handoff) · [Conformance plan](conformance/README.md)
 
-These are Wright contracts, not yet a portable standard. Another UI, model or
-MCP client using Wright's backend is still using the same executor.
+The October review records the earlier application’s import, authoring and review
+contracts and identifies the code revisions examined at that time.
+[October implementation snapshot](profiles/wright-october-2026.md) · [Evidence inventory](research/wright-code-review.md)
 
 ## Next milestone
 

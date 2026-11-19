@@ -4,6 +4,13 @@
 contains documentation and evidence references; it does not yet ship a second
 parser, validator or executor. No current implementation receives a conformance badge.
 
+Wright provides a runnable baseline for the fixed-call subset. Its example
+passes an 18-byte coordinate file between two independent MCP servers and
+measures 5 mm. An independent implementation can compare the named port, file
+digest and measurement. Wright’s tests also exercise changed bindings, stale
+input responses and interrupted calls. Record which of these cases the other
+implementation actually ran. [Example workflow](https://github.com/burhop/wright/tree/85f97930927b672ddf7da8cc65e89569236f4f44/examples/handoff) · [Wright test cases](https://github.com/burhop/wright/tree/85f97930927b672ddf7da8cc65e89569236f4f44/tests)
+
 ## Claim only the role actually tested
 
 | Role | Minimum proposed claim |

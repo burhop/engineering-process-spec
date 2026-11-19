@@ -59,11 +59,11 @@ read-only. Use exact public commit links for published code and content hashes f
 local-only material. Keep implementation, proposed work, retained test evidence,
 newly verified behavior and user acceptance distinct.
 
-Start with the current owners in `packages/core/src/core/` and
-`packages/workspace_service/src/workspace_service/`, their tests, and the canonical
-editor/source contracts. Features 080, 082 and 083 provide architectural context;
-old plans can contain historical findings superseded by code. Keep model adapters,
-frontend hosting and the shared executor separate in any portability claim.
+For the standalone format, start with the source parser, bundle model, local
+binding checks and execution tests linked from the [current Wright profile](profiles/wright.md).
+The October review examined `packages/core/src/core/` and
+`packages/workspace_service/src/workspace_service/` at its recorded revisions.
+Its editor and source contracts remain useful for tracing older files.
 
 Do not change Wright, install providers, start runs or consume review authority
 merely to update this review. Focused future interoperability experiments require
