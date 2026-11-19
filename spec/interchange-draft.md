@@ -14,7 +14,7 @@ contract using `wright.mcp-binding/1`. Run checkpoints and the recipient’s loc
 launch configuration have separate identities. The executable profile links to
 the field definitions, schemas and a two-provider example. Standardizing a common
 dialect and qualifying a second implementation still require independent evidence.
-[Current Wright profile](../profiles/wright.md) · [Reference workflow](https://github.com/burhop/wright/blob/e4b167ea16a5902bdc24e4b6c563191888975a17/examples/handoff/length.workflow.wflow)
+[Current Wright profile](../profiles/wright.md) · [Reference workflow](https://github.com/burhop/wright/blob/85f97930927b672ddf7da8cc65e89569236f4f44/examples/handoff/length.workflow.wflow)
 
 ## 1. Scope and participants
 
