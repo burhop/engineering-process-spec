@@ -5,6 +5,17 @@ not a new executable grammar or a ratified standard. MUST, MUST NOT and SHOULD
 express the proposed obligations of a conforming implementation. The
 [Wright profile](../profiles/wright.md) records current implementation separately.
 
+### Implemented format as of 19 November 2026
+
+Wright supplies a concrete dialect for evaluating these requirements. An exchange
+can carry UTF-8 `.workflow.wflow` source or a `wright.workflow-bundle/1` definition
+bundle. A fixed MCP call can name its specific provider, build, operation and tool
+contract using `wright.mcp-binding/1`. Run checkpoints and the recipient’s local
+launch configuration have separate identities. The executable profile links to
+the field definitions, schemas and a two-provider example. Standardizing a common
+dialect and qualifying a second implementation still require independent evidence.
+[Current Wright profile](../profiles/wright.md) · [Reference workflow](https://github.com/burhop/wright/blob/e4b167ea16a5902bdc24e4b6c563191888975a17/examples/handoff/length.workflow.wflow)
+
 ## 1. Scope and participants
 
 An author creates an engineering process. A reader inspects it, an editor changes
@@ -67,7 +78,9 @@ they change process semantics. Cross-language digest equivalence needs test vect
 operation, not merely a similarly named tool or matching parameter schema.
 Receiving applications bind that requirement to local installations/connections.
 Matching names, UUIDs or schema hashes alone MUST NOT establish semantic equivalence.
-The portable provider-identity/version representation remains an open design item.
+The current Wright profile implements a versioned provider/build/tool/contract
+binding. Agreement on an interoperable provider identity across implementations
+remains open. [Binding fields and local qualification](../profiles/wright.md#bind-the-intended-mcp-tool)
 
 **P06 — Separate checks.** An implementation MUST distinguish:
 
